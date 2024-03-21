@@ -87,7 +87,7 @@
       <ProgressBar layoutX="758.0" layoutY="439.0" prefHeight="34.0" prefWidth="210.0" progress="0.0" />
       <ImageView fitHeight="212.0" fitWidth="216.0" layoutX="402.0" layoutY="222.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Fotos%20cocodrilos/descarga-Photoroom.png-Photoroom.png" />
+            <Image url="@../../img/partida.png" />
          </image>
       </ImageView>
    </children>

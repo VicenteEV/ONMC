@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="1018.0" style="-fx-border-style: solid; -fx-border-width: 7px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="803.0" layoutY="41.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Configuración" id="btnConfig"/>
+      <Button id="btnConfig" layoutX="803.0" layoutY="41.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Configuración" />
       <Button layoutX="221.0" layoutY="368.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="220.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar solo">
          <font>
             <Font size="20.0" />
@@ -36,7 +36,7 @@
       </Button>
       <ImageView fitHeight="112.0" fitWidth="110.0" layoutX="590.0" layoutY="214.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Fotos%20cocodrilos/756f975f6259fa4811d0c8def5731044-Photoroom.png-Photoroom.png" />
+            <Image url="@../../img/fd.png" />
          </image>
       </ImageView>
    </children>
