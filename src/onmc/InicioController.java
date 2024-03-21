@@ -5,24 +5,7 @@
  */
 package onmc;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-/**
- *
- * @author Usuario
- */
 public class InicioController {
     
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Inicio.fxml"));
-        
-        Scene scene = new Scene(root);
-        
-        stage.setScene(scene);
-        stage.setFullScreen(true);
-        stage.show();
-    }
+   
 }

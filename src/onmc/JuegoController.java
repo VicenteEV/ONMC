@@ -5,10 +5,6 @@
  */
 package onmc;
 
-/**
- *
- * @author Usuario
- */
 public class JuegoController {
     
 }
