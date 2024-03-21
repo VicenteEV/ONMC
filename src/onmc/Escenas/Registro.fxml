@@ -2,12 +2,12 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="1089.0" style="-fx-border-style: solid; -fx-border-width: 7px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -30,7 +30,6 @@
                </font>
             </Label>
             <TextField layoutX="191.0" layoutY="42.0" prefHeight="25.0" prefWidth="321.0" />
-            <TextField layoutX="191.0" layoutY="90.0" prefHeight="25.0" prefWidth="321.0" AnchorPane.bottomAnchor="233.0" />
             <Label layoutX="53.0" layoutY="107.0" text="Correo:">
                <font>
                   <Font size="23.0" />
@@ -56,16 +55,17 @@
             </Label>
             <TextField layoutX="191.0" layoutY="222.0" prefHeight="25.0" prefWidth="321.0" />
             <Button layoutX="193.0" layoutY="272.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Aceptar" />
+            <PasswordField layoutX="191.0" layoutY="78.0" prefHeight="25.0" prefWidth="321.0" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="275.0" fitWidth="243.0" layoutX="23.0" layoutY="217.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Fotos%20cocodrilos/coco2-Photoroom.png-Photoroom.png" />
+            <Image url="@../../img/asd.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="309.0" fitWidth="237.0" layoutX="800.0" layoutY="195.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Fotos%20cocodrilos/coco1-Photoroom.png-Photoroom.png" />
+            <Image url="@../../img/dsa.png" />
          </image>
       </ImageView>
    </children>
