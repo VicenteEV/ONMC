@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" style="-fx-border-style: solid; -fx-border-width: 7px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" style="-fx-border-style: solid; -fx-border-width: 7px;" xmlns="http://javafx.com/javafx/21" fx:controller="onmc.FXMLDocumentController" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="377.0" layoutY="73.0" prefHeight="73.0" prefWidth="332.0" text="Inicio de sesión" textAlignment="JUSTIFY">
          <font>
