@@ -5,10 +5,13 @@
  */
 package onmc;
 
+import javafx.fxml.*;
+
 /**
  *
  * @author Usuario
  */
 public class pagina1Controller {
-    
+    @FXML
+    Button boton=new Button();
 }
