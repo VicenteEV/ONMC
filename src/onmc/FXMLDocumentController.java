@@ -13,8 +13,7 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label label;
-    @FXML
-    private Button boton=new Button();
+
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
