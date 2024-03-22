@@ -3,9 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Z:/Haohui/ABP/ONMC/src/onmc/FXMLDocumentController.java</file>
-            <file>file:/Z:/Haohui/ABP/ONMC/src/onmc/FXMLDocument.fxml</file>
-            <file>file:/Z:/Haohui/ABP/ONMC/src/onmc/ONMC.java</file>
+            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/PerfilController.java</file>
+            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/Escenas/Juego.fxml</file>
+            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/Escenas/Registro.fxml</file>
+            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/Escenas/Inicio.fxml</file>
+            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/RegistroController.java</file>
+            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/Escenas/Perfil.fxml</file>
         </group>
     </open-files>
 </project-private>
