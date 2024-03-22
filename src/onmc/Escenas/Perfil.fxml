@@ -7,10 +7,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="1018.0" style="-fx-border-style: solid; -fx-border-width: 7px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="1018.0" style="-fx-border-style: solid; -fx-border-width: 7px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.PerfilController">
    <children>
-      <Button id="btnConfig" layoutX="803.0" layoutY="41.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Configuración" />
-      <Button layoutX="221.0" layoutY="368.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="220.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar solo">
+      <Button id="btnConfig" fx:id="config" layoutX="803.0" layoutY="41.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="34.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Configuración" />
+      <Button fx:id="jugarSolo" layoutX="221.0" layoutY="368.0" mnemonicParsing="false" onAction="#btnJugarSolo" prefHeight="73.0" prefWidth="220.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar solo">
          <font>
             <Font size="20.0" />
          </font>
@@ -24,12 +24,12 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="414.0" layoutY="214.0" mnemonicParsing="false" prefHeight="112.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="&quot;Puntuación&quot;">
+      <Button fx:id="puntuacion" layoutX="414.0" layoutY="214.0" mnemonicParsing="false" onAction="#btnPuntuacion" prefHeight="112.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="&quot;Puntuación&quot;">
          <font>
             <Font size="26.0" />
          </font>
       </Button>
-      <Button layoutX="578.0" layoutY="368.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="220.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar contra usuario">
+      <Button fx:id="jugar" layoutX="578.0" layoutY="368.0" mnemonicParsing="false" onAction="#btnJugar" prefHeight="73.0" prefWidth="220.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar contra usuario">
          <font>
             <Font size="20.0" />
          </font>
