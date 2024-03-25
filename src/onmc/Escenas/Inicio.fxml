@@ -10,41 +10,41 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.InicioController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" style="-fx-background-color: PINK;" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.InicioController">
    <children>
     <AnchorPane maxHeight="622.0" maxWidth="1084.0">
        <children>
-          <Label layoutX="367.0" layoutY="57.0" prefHeight="66.0" prefWidth="338.0" text="Inicio de sesión" textAlignment="JUSTIFY" AnchorPane.bottomAnchor="492.0" AnchorPane.leftAnchor="367.0" AnchorPane.rightAnchor="379.0" AnchorPane.topAnchor="57.0">
+          <Label layoutX="298.0" layoutY="-5.0" prefHeight="70.0" prefWidth="489.0" text=". . . Inicio de sesión . . ." textAlignment="JUSTIFY" AnchorPane.bottomAnchor="554.0" AnchorPane.leftAnchor="298.0" AnchorPane.rightAnchor="297.0" AnchorPane.topAnchor="-5.0">
              <font>
                 <Font name="System Bold" size="45.0" />
              </font>
           </Label>
-          <AnchorPane layoutX="227.0" layoutY="140.0" minWidth="-Infinity" prefHeight="343.0" prefWidth="617.0" style="-fx-border-style: solid; -fx-border-width: 7px;" AnchorPane.bottomAnchor="132.0" AnchorPane.topAnchor="140.0">
+          <AnchorPane layoutX="295.0" layoutY="89.0" minWidth="-Infinity" prefHeight="356.0" prefWidth="489.0" style="-fx-border-style: solid; -fx-border-width: 7px;" AnchorPane.bottomAnchor="172.0" AnchorPane.topAnchor="89.0">
              <children>
-                <Label layoutX="76.0" layoutY="66.0" prefHeight="34.0" prefWidth="92.0" text="Usuario:" textAlignment="JUSTIFY">
+                <Label layoutX="48.0" layoutY="86.0" prefHeight="34.0" prefWidth="92.0" text="Usuario:" textAlignment="JUSTIFY">
                    <font>
                       <Font name="System Italic" size="23.0" />
                    </font>
                 </Label>
-                <Label layoutX="62.0" layoutY="155.0" text="Contraseña:">
+                <Label layoutX="34.0" layoutY="161.0" text="Contraseña:">
                    <font>
                       <Font size="23.0" />
                    </font>
                 </Label>
-                <TextField layoutX="247.0" layoutY="66.0" prefHeight="34.0" prefWidth="272.0" />
-                <Button fx:id="inicioSesion" layoutX="182.0" layoutY="241.0" mnemonicParsing="false" onAction="#btnInicioSesion" prefHeight="44.0" prefWidth="185.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Iniciar sesion" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="182.0" />
-                <PasswordField layoutX="247.0" layoutY="155.0" prefHeight="34.0" prefWidth="272.0" />
+                <TextField layoutX="171.0" layoutY="86.0" prefHeight="34.0" prefWidth="272.0" />
+                <Button fx:id="inicioSesion" layoutX="175.0" layoutY="248.0" mnemonicParsing="false" onAction="#btnInicioSesion" prefHeight="60.0" prefWidth="167.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Iniciar sesion" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" />
+                <PasswordField layoutX="170.0" layoutY="161.0" prefHeight="34.0" prefWidth="272.0" />
              </children>
           </AnchorPane>
-          <ImageView fitHeight="264.0" fitWidth="228.0" layoutX="22.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="172.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="841.8445281982422" AnchorPane.topAnchor="181.0">
+          <ImageView fitHeight="338.0" fitWidth="272.0" layoutX="45.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="172.83050537109375" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="767.0" AnchorPane.topAnchor="118.0">
              <image>
                 <Image url="@../../img/dsa.png" />
              </image>
           </ImageView>
-          <Button fx:id="config" layoutX="866.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="58.0" prefWidth="185.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Configuración" AnchorPane.bottomAnchor="526.0" AnchorPane.leftAnchor="866.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="31.0" />
-          <Button fx:id="jugarInvitado" layoutX="261.0" layoutY="514.0" mnemonicParsing="false" onAction="#btnJugarInvitado" prefHeight="66.0" prefWidth="213.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar como invitado" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="261.0" />
-          <Button fx:id="registro" layoutX="599.0" layoutY="514.0" mnemonicParsing="false" onAction="#btnRegistro" prefHeight="66.0" prefWidth="213.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Registrase" AnchorPane.bottomAnchor="37.0" AnchorPane.rightAnchor="272.0" />
-          <ImageView fitHeight="267.0" fitWidth="244.0" layoutX="837.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="183.98651123046875" AnchorPane.leftAnchor="837.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="168.0">
+          <Button fx:id="config" layoutX="883.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="46.0" prefWidth="136.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Configuración" AnchorPane.bottomAnchor="541.0" AnchorPane.leftAnchor="883.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="30.0" />
+          <Button fx:id="jugarInvitado" layoutX="295.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnJugarInvitado" prefHeight="70.0" prefWidth="226.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar como invitado" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="295.0" />
+          <Button fx:id="registro" layoutX="571.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnRegistro" prefHeight="70.0" prefWidth="226.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Registrase" AnchorPane.bottomAnchor="64.0" AnchorPane.rightAnchor="300.0" />
+          <ImageView fitHeight="340.0" fitWidth="304.0" layoutX="771.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="172.06515502929688" AnchorPane.leftAnchor="771.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="117.0">
              <image>
                 <Image url="@../../img/asd.png" />
              </image>
