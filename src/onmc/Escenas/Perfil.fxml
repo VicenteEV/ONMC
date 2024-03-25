@@ -8,40 +8,50 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.PerfilController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" styleClass="root" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.PerfilController">
 <children>
-    <AnchorPane maxHeight="625.0" maxWidth="1084.0" prefHeight="625.0" prefWidth="1084.0">   
+    <AnchorPane maxHeight="625.0" maxWidth="1154.0" prefHeight="622.0" prefWidth="1154.0">   
     <children>
-      <Button id="btnConfig" fx:id="config" layoutX="475.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="34.0" prefWidth="135.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Configuración" />
-      <Button fx:id="jugarSolo" layoutX="162.0" layoutY="491.0" mnemonicParsing="false" onAction="#btnJugarSolo" prefHeight="96.0" prefWidth="277.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar solo">
+            <ImageView fitHeight="635.0" fitWidth="1207.0" layoutY="-80.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="95.8177490234375" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="-80.0">
+               <image>
+                  <Image url="@si.png" />
+               </image>
+            </ImageView>
+      <Button id="btnConfig" fx:id="config" layoutX="523.0" layoutY="147.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="34.0" prefWidth="135.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Configuración" />
+      <Button fx:id="jugarSolo" layoutX="186.0" layoutY="491.0" mnemonicParsing="false" onAction="#btnJugarSolo" prefHeight="96.0" prefWidth="277.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar solo">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <AnchorPane layoutX="307.0" layoutY="32.0" prefHeight="87.0" prefWidth="471.0" style="-fx-border-style: solid; -fx-border-width: 3px;">
+      <AnchorPane layoutX="403.0" layoutY="43.0" prefHeight="89.0" prefWidth="368.0" style="-fx-border-style: solid; -fx-border-width: 3px;">
          <children>
-            <Label layoutX="87.0" layoutY="9.0" prefHeight="88.0" prefWidth="298.0" text=" &quot;Usuario&quot;" textAlignment="JUSTIFY">
+            <Label layoutX="65.0" layoutY="7.0" prefHeight="75.0" prefWidth="304.0" text=" &quot;Usuario&quot;" textAlignment="JUSTIFY">
                <font>
-                  <Font name="System Bold" size="60.0" />
+                  <Font name="System Bold" size="48.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="puntuacion" layoutX="433.0" layoutY="231.0" mnemonicParsing="false" onAction="#btnPuntuacion" prefHeight="161.0" prefWidth="219.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="&quot;Puntuación&quot;">
+      <Button fx:id="puntuacion" layoutX="481.0" layoutY="211.0" mnemonicParsing="false" onAction="#btnPuntuacion" prefHeight="161.0" prefWidth="219.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="&quot;Puntuación&quot;">
          <font>
             <Font size="26.0" />
          </font>
       </Button>
-      <Button fx:id="jugar" layoutX="644.0" layoutY="491.0" mnemonicParsing="false" onAction="#btnJugar" prefHeight="96.0" prefWidth="277.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar contra usuario">
+      <Button fx:id="jugar" layoutX="684.0" layoutY="491.0" mnemonicParsing="false" onAction="#btnJugar" prefHeight="96.0" prefWidth="277.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar contra usuario">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <ImageView fitHeight="161.0" fitWidth="154.0" layoutX="629.0" layoutY="231.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="161.0" fitWidth="154.0" layoutX="677.0" layoutY="211.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/fd.png" />
          </image>
       </ImageView>
+            <ImageView fitHeight="161.0" fitWidth="154.0" layoutX="350.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/fd.png" />
+               </image>
+            </ImageView>
    </children>
 </AnchorPane>
 </children>
