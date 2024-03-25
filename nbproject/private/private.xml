@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/PerfilController.java</file>
-            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/Escenas/Juego.fxml</file>
-            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/Escenas/Registro.fxml</file>
-            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/Escenas/Inicio.fxml</file>
-            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/RegistroController.java</file>
-            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/Escenas/Perfil.fxml</file>
+            <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/InicioController.java</file>
+            <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/Escenas/Perfil.fxml</file>
+            <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/Escenas/Inicio.fxml</file>
+            <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/ONMC.java</file>
+            <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/Escenas/estilo.css</file>
         </group>
     </open-files>
 </project-private>
