@@ -10,46 +10,41 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-      
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" 
-            alignment="CENTER"
-            xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.InicioController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.InicioController">
    <children>
-    <AnchorPane maxHeight="622.0" maxWidth="1084.0" >
+    <AnchorPane maxHeight="622.0" maxWidth="1084.0">
        <children>
-          <Label layoutX="373.0" layoutY="74.0" prefHeight="66.0" prefWidth="348.0" text="Inicio de sesión" textAlignment="JUSTIFY" AnchorPane.topAnchor="74.0">
+          <Label layoutX="367.0" layoutY="57.0" prefHeight="66.0" prefWidth="338.0" text="Inicio de sesión" textAlignment="JUSTIFY" AnchorPane.bottomAnchor="492.0" AnchorPane.leftAnchor="367.0" AnchorPane.rightAnchor="379.0" AnchorPane.topAnchor="57.0">
              <font>
                 <Font name="System Bold" size="45.0" />
              </font>
           </Label>
-          <AnchorPane layoutX="275.0" layoutY="176.0" minWidth="-Infinity" prefHeight="242.0" prefWidth="542.0" style="-fx-border-style: solid; -fx-border-width: 7px;" AnchorPane.bottomAnchor="197.0" AnchorPane.topAnchor="176.0">
+          <AnchorPane layoutX="227.0" layoutY="140.0" minWidth="-Infinity" prefHeight="343.0" prefWidth="617.0" style="-fx-border-style: solid; -fx-border-width: 7px;" AnchorPane.bottomAnchor="132.0" AnchorPane.topAnchor="140.0">
              <children>
-                <Label layoutX="53.0" layoutY="45.0" prefHeight="34.0" prefWidth="92.0" text="Usuario:" textAlignment="JUSTIFY">
+                <Label layoutX="76.0" layoutY="66.0" prefHeight="34.0" prefWidth="92.0" text="Usuario:" textAlignment="JUSTIFY">
                    <font>
                       <Font name="System Italic" size="23.0" />
                    </font>
                 </Label>
-                <Label layoutX="53.0" layoutY="105.0" text="Contraseña:">
+                <Label layoutX="62.0" layoutY="155.0" text="Contraseña:">
                    <font>
                       <Font size="23.0" />
                    </font>
                 </Label>
-                <TextField layoutX="195.0" layoutY="49.0" prefHeight="26.0" prefWidth="272.0" />
-                <Button fx:id="inicioSesion" layoutX="177.0" layoutY="154.0" mnemonicParsing="false" onAction="#btnInicioSesion" prefHeight="44.0" prefWidth="185.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Iniciar sesion" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="166.0" />
-                <PasswordField layoutX="195.0" layoutY="110.0" prefHeight="25.0" prefWidth="272.0" />
+                <TextField layoutX="247.0" layoutY="66.0" prefHeight="34.0" prefWidth="272.0" />
+                <Button fx:id="inicioSesion" layoutX="182.0" layoutY="241.0" mnemonicParsing="false" onAction="#btnInicioSesion" prefHeight="44.0" prefWidth="185.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Iniciar sesion" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="182.0" />
+                <PasswordField layoutX="247.0" layoutY="155.0" prefHeight="34.0" prefWidth="272.0" />
              </children>
           </AnchorPane>
-          <ImageView fitHeight="264.0" fitWidth="228.0" layoutX="74.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="74.0">
+          <ImageView fitHeight="264.0" fitWidth="228.0" layoutX="22.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="172.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="841.8445281982422" AnchorPane.topAnchor="181.0">
              <image>
                 <Image url="@../../img/dsa.png" />
              </image>
           </ImageView>
-          <Button fx:id="config" layoutX="814.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="83.0" prefWidth="185.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Configuración" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="73.0" />
-          <Button fx:id="jugarInvitado" layoutX="316.0" layoutY="461.0" mnemonicParsing="false" onAction="#btnJugarInvitado" prefHeight="66.0" prefWidth="213.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar como invitado" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="316.0" />
-          <Button fx:id="registro" layoutX="594.0" layoutY="461.0" mnemonicParsing="false" onAction="#btnRegistro" prefHeight="66.0" prefWidth="213.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Registrase" AnchorPane.bottomAnchor="95.0" AnchorPane.rightAnchor="277.0" />
-          <ImageView fitHeight="267.0" fitWidth="244.0" layoutX="807.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="33.0">
+          <Button fx:id="config" layoutX="866.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="58.0" prefWidth="185.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Configuración" AnchorPane.bottomAnchor="526.0" AnchorPane.leftAnchor="866.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="31.0" />
+          <Button fx:id="jugarInvitado" layoutX="261.0" layoutY="514.0" mnemonicParsing="false" onAction="#btnJugarInvitado" prefHeight="66.0" prefWidth="213.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Jugar como invitado" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="261.0" />
+          <Button fx:id="registro" layoutX="599.0" layoutY="514.0" mnemonicParsing="false" onAction="#btnRegistro" prefHeight="66.0" prefWidth="213.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Registrase" AnchorPane.bottomAnchor="37.0" AnchorPane.rightAnchor="272.0" />
+          <ImageView fitHeight="267.0" fitWidth="244.0" layoutX="837.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="183.98651123046875" AnchorPane.leftAnchor="837.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="168.0">
              <image>
                 <Image url="@../../img/asd.png" />
              </image>
