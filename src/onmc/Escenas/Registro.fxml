@@ -10,63 +10,63 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" style="-fx-background-color: PINK;" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.RegistroController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.RegistroController">
    <children>
-        <AnchorPane maxHeight="622.0" maxWidth="1084.0">
+        <AnchorPane maxHeight="624.0" maxWidth="1084.0" prefHeight="624.0" prefWidth="1084.0">
            <children>
-              <Button fx:id="config" layoutX="850.0" layoutY="42.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="34.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Configuración" />
-              <Label layoutX="461.0" layoutY="66.0" prefHeight="73.0" prefWidth="179.0" text="Registro" textAlignment="JUSTIFY">
+              <Button fx:id="config" layoutX="890.0" layoutY="37.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="44.0" prefWidth="167.0" text="Configuración" />
+              <Label layoutX="453.0" layoutY="1.0" prefHeight="73.0" prefWidth="179.0" text="Registro" textAlignment="JUSTIFY">
                  <font>
                     <Font name="System Bold" size="45.0" />
                  </font>
               </Label>
-              <AnchorPane layoutX="260.0" layoutY="139.0" minWidth="-Infinity" prefHeight="341.0" prefWidth="581.0" style="-fx-border-style: solid; -fx-border-width: 7px;">
+              <AnchorPane layoutX="263.0" layoutY="90.0" minWidth="-Infinity" prefHeight="443.0" prefWidth="559.0" style="-fx-border-style: solid; -fx-border-width: 7px;">
                  <children>
                     <Label layoutX="53.0" layoutY="38.0" prefHeight="34.0" prefWidth="92.0" text="Usuario:" textAlignment="JUSTIFY">
                        <font>
                           <Font name="System Italic" size="23.0" />
                        </font>
                     </Label>
-                    <Label layoutX="53.0" layoutY="73.0" text="Contraseña:">
+                    <Label layoutX="53.0" layoutY="86.0" text="Contraseña:">
                        <font>
                           <Font size="23.0" />
                        </font>
                     </Label>
                     <TextField layoutX="191.0" layoutY="42.0" prefHeight="25.0" prefWidth="321.0" />
-                    <Label layoutX="53.0" layoutY="107.0" text="Correo:">
+                    <Label layoutX="50.0" layoutY="134.0" text="Correo:">
                        <font>
                           <Font size="23.0" />
                        </font>
                     </Label>
-                    <TextField layoutX="191.0" layoutY="112.0" prefHeight="25.0" prefWidth="321.0" />
-                    <Label layoutX="54.0" layoutY="141.0" text="Nombre:">
+                    <TextField layoutX="191.0" layoutY="139.0" prefHeight="25.0" prefWidth="321.0" />
+                    <Label layoutX="54.0" layoutY="180.0" text="Nombre:">
                        <font>
                           <Font size="23.0" />
                        </font>
                     </Label>
-                    <TextField layoutX="191.0" layoutY="146.0" prefHeight="25.0" prefWidth="321.0" />
-                    <Label layoutX="50.0" layoutY="176.0" text="Apellidos:">
+                    <TextField layoutX="191.0" layoutY="185.0" prefHeight="25.0" prefWidth="321.0" />
+                    <Label layoutX="50.0" layoutY="228.0" text="Apellidos:">
                        <font>
                           <Font size="23.0" />
                        </font>
                     </Label>
-                    <TextField layoutX="191.0" layoutY="180.0" prefHeight="25.0" prefWidth="321.0" />
-                    <Label layoutX="50.0" layoutY="217.0" text="Nacimiento:">
+                    <TextField layoutX="191.0" layoutY="233.0" prefHeight="25.0" prefWidth="321.0" />
+                    <Label layoutX="52.0" layoutY="279.0" text="Nacimiento:">
                        <font>
                           <Font size="23.0" />
                        </font>
                     </Label>
-                    <TextField layoutX="191.0" layoutY="222.0" prefHeight="25.0" prefWidth="321.0" />
-                    <Button fx:id="rAceptar" layoutX="193.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnRAceptar" prefHeight="34.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Aceptar" />
-                    <PasswordField layoutX="191.0" layoutY="78.0" prefHeight="25.0" prefWidth="321.0" />
+                    <TextField layoutX="191.0" layoutY="284.0" prefHeight="25.0" prefWidth="321.0" />
+                    <Button fx:id="rAceptar" layoutX="170.0" layoutY="355.0" mnemonicParsing="false" onAction="#btnRAceptar" prefHeight="54.0" prefWidth="220.0" text="Aceptar" />
+                    <PasswordField layoutX="191.0" layoutY="91.0" prefHeight="25.0" prefWidth="321.0" />
                  </children>
               </AnchorPane>
-              <ImageView fitHeight="271.0" fitWidth="249.0" layoutX="21.0" layoutY="210.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+              <ImageView fitHeight="318.0" fitWidth="291.0" layoutX="-20.0" layoutY="207.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                  <image>
                     <Image url="@../../img/asd.png" />
                  </image>
               </ImageView>
-              <ImageView fitHeight="269.0" fitWidth="229.0" layoutX="818.0" layoutY="210.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+              <ImageView fitHeight="336.0" fitWidth="273.0" layoutX="797.0" layoutY="201.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                  <image>
                     <Image url="@../../img/dsa.png" />
                  </image>
