@@ -6,12 +6,15 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="1018.0" style="-fx-border-style: solid; -fx-border-width: 7px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.JuegoController">
-   <children>
-      <Button fx:id="config" layoutX="414.0" layoutY="188.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="34.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Configuración" />
-      <AnchorPane layoutX="53.0" layoutY="54.0" prefHeight="43.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 3px;">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.JuegoController">
+    <children>
+    <AnchorPane maxHeight="633.0" maxWidth="1084.0" prefHeight="633.0" prefWidth="1084.0">
+        <children>
+         <Button fx:id="config" layoutX="456.0" layoutY="170.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="43.0" prefWidth="150.0" text="Configuración" />
+         <AnchorPane layoutX="59.0" layoutY="54.0" prefHeight="43.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-background-color: white; -fx-border-width: 3px;">
          <children>
             <Label layoutX="54.0" layoutY="8.0" prefHeight="27.0" prefWidth="85.0" text="&quot;Usuario&quot;" textAlignment="JUSTIFY">
                <font>
@@ -19,17 +22,17 @@
                </font>
             </Label>
          </children>
-      </AnchorPane>
-      <AnchorPane layoutX="776.0" layoutY="54.0" prefHeight="43.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 3px;">
-         <children>
+    </AnchorPane>
+    <AnchorPane layoutX="812.0" layoutY="55.0" prefHeight="43.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-background-color: white; -fx-border-width: 3px;">
+        <children>
             <Label layoutX="54.0" layoutY="8.0" prefHeight="27.0" prefWidth="85.0" text="&quot;Usuario&quot;" textAlignment="JUSTIFY">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="255.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-border-width: 3px;">
+        </children>
+    </AnchorPane>
+    <AnchorPane layoutX="276.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
          <children>
             <Label layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="&quot;Puntos&quot;" textAlignment="JUSTIFY">
                <font>
@@ -37,8 +40,8 @@
                </font>
             </Label>
          </children>
-      </AnchorPane>
-      <AnchorPane layoutX="669.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-border-width: 3px;">
+    </AnchorPane>
+    <AnchorPane layoutX="680.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
          <children>
             <Label layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="&quot;Puntos&quot;" textAlignment="JUSTIFY">
                <font>
@@ -46,26 +49,17 @@
                </font>
             </Label>
          </children>
-      </AnchorPane>
-      <AnchorPane layoutX="443.0" layoutY="97.0" prefHeight="73.0" prefWidth="134.0" style="-fx-border-style: solid; -fx-border-width: 3px;">
+    </AnchorPane>
+    <AnchorPane layoutX="446.0" layoutY="76.0" prefHeight="73.0" prefWidth="169.0" style="-fx-border-style: solid; -fx-border-width: 3px;">
          <children>
-            <Label layoutX="14.0" layoutY="23.0" prefHeight="27.0" prefWidth="107.0" text="&quot;ID Partida&quot;" textAlignment="JUSTIFY">
+            <Label layoutX="31.0" layoutY="23.0" prefHeight="27.0" prefWidth="107.0" text="&quot;ID Partida&quot;" textAlignment="JUSTIFY">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
          </children>
-      </AnchorPane>
-      <AnchorPane layoutX="277.0" layoutY="434.0" prefHeight="43.0" prefWidth="71.0" style="-fx-border-style: solid; -fx-border-width: 3px;">
-         <children>
-            <Label layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="58.0" text="&quot;Vida&quot;" textAlignment="JUSTIFY">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="669.0" layoutY="434.0" prefHeight="43.0" prefWidth="73.0" style="-fx-border-style: solid; -fx-border-width: 3px;">
+    </AnchorPane>
+    <AnchorPane layoutX="314.0" layoutY="500.0" prefHeight="43.0" prefWidth="71.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
          <children>
             <Label layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="58.0" text="&quot;Vida&quot;" textAlignment="JUSTIFY">
                <font>
@@ -73,14 +67,25 @@
                </font>
             </Label>
          </children>
-      </AnchorPane>
-      <ProgressBar layoutX="53.0" layoutY="439.0" prefHeight="34.0" prefWidth="210.0" progress="0.0" />
-      <ProgressBar layoutX="758.0" layoutY="439.0" prefHeight="34.0" prefWidth="210.0" progress="0.0" />
-      <ImageView fitHeight="231.0" fitWidth="255.0" layoutX="391.0" layoutY="222.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+    </AnchorPane>
+    <AnchorPane layoutX="691.0" layoutY="499.0" prefHeight="43.0" prefWidth="73.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
+         <children>
+            <Label layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="58.0" text="&quot;Vida&quot;" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+    </AnchorPane>
+    <ProgressBar layoutX="59.0" layoutY="504.0" prefHeight="34.0" prefWidth="210.0" progress="0.0" />
+    <ProgressBar layoutX="812.0" layoutY="504.0" prefHeight="34.0" prefWidth="210.0" progress="0.0" />
+    <ImageView fitHeight="307.0" fitWidth="320.0" layoutX="371.0" layoutY="213.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/partida.png" />
          </image>
-      </ImageView>
-      <Button fx:id="salir" layoutX="414.0" layoutY="441.0" mnemonicParsing="false" onAction="#btnSalir" prefHeight="30.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-border-width: 1.5px;" text="Salir" />
+    </ImageView>
+      <Button fx:id="salir" layoutX="446.0" layoutY="514.0" mnemonicParsing="false" onAction="#btnSalir" prefHeight="56.0" prefWidth="192.0" text="Salir" />
    </children>
 </AnchorPane>
+    </children>
+</VBox>
