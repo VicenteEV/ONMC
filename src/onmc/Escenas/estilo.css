@@ -6,5 +6,7 @@
 .button{
     -fx-background-image: url("guau.png");
     -fx-background-size: 100% 100%;
-    -fx-border-width:50000;
+    -fx-font-weight: bold;
+    -fx-font-color:black;
+    -fx-font-size:16.3px; 
 }
