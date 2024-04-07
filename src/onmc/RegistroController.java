@@ -24,12 +24,12 @@ public class RegistroController {
     
     @FXML
     public void btnConfig(ActionEvent event) {
-        System.out.println("caca");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Inicio.fxml"));
             Stage stage = (Stage) config.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
+            stage.setFullScreen(true);
         }catch (IOException io){
             io.printStackTrace();
         }
@@ -37,12 +37,12 @@ public class RegistroController {
     
     @FXML
     public void btnRAceptar(ActionEvent event) {
-        System.out.println("caca");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Inicio.fxml"));
             Stage stage = (Stage) rAceptar.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
+            stage.setFullScreen(true);
         }catch (IOException io){
             io.printStackTrace();
         }

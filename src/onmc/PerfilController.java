@@ -24,12 +24,12 @@ public class PerfilController {
     
     @FXML
     public void btnConfig(ActionEvent event) {
-        System.out.println("caca");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Inicio.fxml"));
             Stage stage = (Stage) config.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
+            stage.setFullScreen(true);
         }catch (IOException io){
             io.printStackTrace();
         }
@@ -37,12 +37,12 @@ public class PerfilController {
     
     @FXML
     public void btnPuntuacion(ActionEvent event) {
-        System.out.println("caca");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Inicio.fxml"));
             Stage stage = (Stage) puntuacion.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
+            stage.setFullScreen(true);
         }catch (IOException io){
             io.printStackTrace();
         }
@@ -50,12 +50,12 @@ public class PerfilController {
     
     @FXML
     public void btnJugar(ActionEvent event) {
-        System.out.println("caca");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Juego.fxml"));
             Stage stage = (Stage) jugar.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
+            stage.setFullScreen(true);
         }catch (IOException io){
             io.printStackTrace();
         }
@@ -63,12 +63,12 @@ public class PerfilController {
     
     @FXML
     public void btnJugarSolo(ActionEvent event) {
-        System.out.println("caca");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Juego.fxml"));
             Stage stage = (Stage) jugarSolo.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
+            stage.setFullScreen(true);
         }catch (IOException io){
             io.printStackTrace();
         }

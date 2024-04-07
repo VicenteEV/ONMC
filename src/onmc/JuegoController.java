@@ -21,12 +21,12 @@ public class JuegoController {
     
     @FXML
     public void btnConfig(ActionEvent event) {
-        System.out.println("caca");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Inicio.fxml"));
             Stage stage = (Stage) config.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
+            stage.setFullScreen(true);
         }catch (IOException io){
             io.printStackTrace();
         }
@@ -34,12 +34,12 @@ public class JuegoController {
     
     @FXML
     public void btnSalir(ActionEvent event) {
-        System.out.println("caca");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Inicio.fxml"));
             Stage stage = (Stage) salir.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
+            stage.setFullScreen(true);
         }catch (IOException io){
             io.printStackTrace();
         }
