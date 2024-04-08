@@ -9,3 +9,6 @@
     -fx-font-weight: bold;
     -fx-font-size: 16.3px; 
 }
+#panel{
+    background-color: blue;
+}

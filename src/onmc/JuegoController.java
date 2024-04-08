@@ -1,20 +1,28 @@
 
 package onmc;
 
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class JuegoController {
     
     @FXML
     private Button config, salir;
+    private GridPane tablero;
     
-    
+    @FXML
+    public void btn1(ActionEvent event) {
+       
+    }
+   
+
     @FXML
     public void btnConfig(ActionEvent event) {
         try {
