@@ -14,7 +14,7 @@ public class tablajuego {
     tablajuego(){
     }
 
-    public void pantanoPersonas(int p, int c){	
+    public void pantanoPersonas(){	
 		//Colocacion de personas en el Pantano
 		Random rnd=new Random();
 		
@@ -28,7 +28,7 @@ public class tablajuego {
 			int x=rnd.nextInt(PANTANO.length);
 			int y=rnd.nextInt(PANTANO[0].length);
 			if (PANTANO[x][y]!=1)
-				PANTANO[x][y]=2;
+                            PANTANO[x][y]=2;
 		}
     }
     
