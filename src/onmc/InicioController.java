@@ -44,12 +44,14 @@ public class InicioController {
     
        @FXML
     public void btnJugarInvitado(ActionEvent event) {
+        tablajuego crearTabla=new tablajuego();
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Juego.fxml"));
             Stage stage = (Stage) jugarInvitado.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
             stage.setFullScreen(true);
+            crearTabla.pantanoPersonas();
         }catch (IOException io){
             io.printStackTrace();
         }
