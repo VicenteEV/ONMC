@@ -47,7 +47,9 @@ public class JuegoController {
         }catch (IOException io){
             io.printStackTrace();
         }
-    } 
+    }
+    
+   
     public void b00(ActionEvent event){
         int x=0,y=0;
         
