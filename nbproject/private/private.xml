@@ -6,6 +6,9 @@
             <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/InicioController.java</file>
             <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/Escenas/Perfil.fxml</file>
             <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/Escenas/Inicio.fxml</file>
+            <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/JuegoController.java</file>
+            <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/RegistroController.java</file>
+            <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/Escenas/Juego.fxml</file>
             <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/ONMC.java</file>
             <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/Escenas/estilo.css</file>
         </group>
