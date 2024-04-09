@@ -32,33 +32,33 @@
                           <Font size="23.0" />
                        </font>
                     </Label>
-                    <TextField layoutX="191.0" layoutY="42.0" prefHeight="25.0" prefWidth="321.0" />
+                    <TextField fx:id="rUsuario" layoutX="191.0" layoutY="42.0" prefHeight="25.0" prefWidth="321.0" />
                     <Label layoutX="50.0" layoutY="134.0" text="Correo:">
                        <font>
                           <Font size="23.0" />
                        </font>
                     </Label>
-                    <TextField layoutX="191.0" layoutY="139.0" prefHeight="25.0" prefWidth="321.0" />
+                    <TextField fx:id="rCorreo" layoutX="191.0" layoutY="139.0" prefHeight="25.0" prefWidth="321.0" />
                     <Label layoutX="54.0" layoutY="180.0" text="Nombre:">
                        <font>
                           <Font size="23.0" />
                        </font>
                     </Label>
-                    <TextField layoutX="191.0" layoutY="185.0" prefHeight="25.0" prefWidth="321.0" />
+                    <TextField fx:id="rNombre" layoutX="191.0" layoutY="185.0" prefHeight="25.0" prefWidth="321.0" />
                     <Label layoutX="50.0" layoutY="228.0" text="Apellidos:">
                        <font>
                           <Font size="23.0" />
                        </font>
                     </Label>
-                    <TextField layoutX="191.0" layoutY="233.0" prefHeight="25.0" prefWidth="321.0" />
+                    <TextField fx:id="rApellidos" layoutX="191.0" layoutY="233.0" prefHeight="25.0" prefWidth="321.0" />
                     <Label layoutX="52.0" layoutY="279.0" text="Nacimiento:">
                        <font>
                           <Font size="23.0" />
                        </font>
                     </Label>
-                    <TextField layoutX="191.0" layoutY="284.0" prefHeight="25.0" prefWidth="321.0" />
+                    <TextField fx:id="rNacimiento" layoutX="191.0" layoutY="284.0" prefHeight="25.0" prefWidth="321.0" />
                     <Button fx:id="rAceptar" layoutX="170.0" layoutY="355.0" mnemonicParsing="false" onAction="#btnRAceptar" prefHeight="54.0" prefWidth="220.0" text="Aceptar" />
-                    <PasswordField layoutX="191.0" layoutY="91.0" prefHeight="25.0" prefWidth="321.0" />
+                    <PasswordField fx:id="rContrasenya" layoutX="191.0" layoutY="91.0" prefHeight="25.0" prefWidth="321.0" />
                  </children>
               </AnchorPane>
               <ImageView fitHeight="318.0" fitWidth="291.0" layoutX="-20.0" layoutY="207.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
