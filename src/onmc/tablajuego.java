@@ -18,13 +18,13 @@ public class tablajuego {
 		//Colocacion de personas en el Pantano
 		Random rnd=new Random();
 		
-		for (int i=0; i<PS; i++){				//Bañistas aleatorios
+		for (int i=0; i<=PS; i++){				//Bañistas aleatorios
 			int x=rnd.nextInt(PANTANO.length);
 			int y=rnd.nextInt(PANTANO[0].length);
 			PANTANO[x][y]=1;
 		}
 		
-		for (int i=0; i<CZ; i++){				//Cazadores aleatorios
+		for (int i=0; i<=CZ; i++){				//Cazadores aleatorios
 			int x=rnd.nextInt(PANTANO.length);
 			int y=rnd.nextInt(PANTANO[0].length);
 			if (PANTANO[x][y]!=1)

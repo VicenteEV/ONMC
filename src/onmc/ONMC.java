@@ -20,14 +20,9 @@ public class ONMC extends Application {
         stage.setFullScreen(true);
         stage.show();
     }
-
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         launch(args);
-        
-        System.out.println("Hola, esto es una prueba");
     }
     
 }
