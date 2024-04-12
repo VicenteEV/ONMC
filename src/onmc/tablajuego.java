@@ -14,22 +14,27 @@ public class tablajuego {
     tablajuego(){
     }
 
-    public void pantanoPersonas(){	
-		//Colocacion de personas en el Pantano
-		Random rnd=new Random();
-		
-		for (int i=0; i<=PS; i++){				//Bañistas aleatorios
-			int x=rnd.nextInt(PANTANO.length);
-			int y=rnd.nextInt(PANTANO[0].length);
-			PANTANO[x][y]=1;
-		}
-		
-		for (int i=0; i<=CZ; i++){				//Cazadores aleatorios
-			int x=rnd.nextInt(PANTANO.length);
-			int y=rnd.nextInt(PANTANO[0].length);
-			if (PANTANO[x][y]!=1)
-                            PANTANO[x][y]=2;
-		}
+    public boolean pantanoPersonas(){	
+        //Colocacion de personas en el Pantano
+        Random rnd=new Random();
+        Boolean tabla=false;
+
+        for (int i=0; i<=PS; i++){				//Bañistas aleatorios
+                int x=rnd.nextInt(PANTANO.length);
+                int y=rnd.nextInt(PANTANO[0].length);
+                PANTANO[x][y]=1;
+                tabla=true;
+        }
+
+        for (int i=0; i<=CZ; i++){				//Cazadores aleatorios
+                int x=rnd.nextInt(PANTANO.length);
+                int y=rnd.nextInt(PANTANO[0].length);
+                if (PANTANO[x][y]!=1)
+                    PANTANO[x][y]=2;
+                tabla=true;
+        }
+        
+        return tabla;
     }
     
     public int comprobarCasilla(int x, int y){
