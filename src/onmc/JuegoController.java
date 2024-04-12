@@ -54,175 +54,175 @@ public class JuegoController {
     public void b00(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn0=new tablajuego();
+        casillatabla btn0=new casillatabla();
         
         System.out.println(btn0.comprobarCasilla(x, y));
     }
     public void b01(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn1=new tablajuego();
+        casillatabla btn1=new casillatabla();
         
         System.out.println(btn1.comprobarCasilla(x, y));
     }
     public void b02(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn2=new tablajuego();
+        casillatabla btn2=new casillatabla();
         
         System.out.println(btn2.comprobarCasilla(x, y));
     }
     public void b03(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn3=new tablajuego();
+        casillatabla btn3=new casillatabla();
         
         System.out.println(btn3.comprobarCasilla(x, y));
     }
     public void b04(ActionEvent event){
         int x=0,y=0;
        
-        tablajuego btn4=new tablajuego();
+        casillatabla btn4=new casillatabla();
         
         System.out.println(btn4.comprobarCasilla(x, y));
     }
     public void b10(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn5=new tablajuego();
+        casillatabla btn5=new casillatabla();
         
         System.out.println(btn5.comprobarCasilla(x, y));
     }
     public void b11(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn6=new tablajuego();
+        casillatabla btn6=new casillatabla();
         
         System.out.println(btn6.comprobarCasilla(x, y));
     }
     public void b12(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn7=new tablajuego();
+        casillatabla btn7=new casillatabla();
         
         System.out.println(btn7.comprobarCasilla(x, y));
     }
     public void b13(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn8=new tablajuego();
+        casillatabla btn8=new casillatabla();
         
         System.out.println(btn8.comprobarCasilla(x, y));
     }
     public void b14(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn9=new tablajuego();
+        casillatabla btn9=new casillatabla();
         
         System.out.println(btn9.comprobarCasilla(x, y));
     }
     public void b20(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn10=new tablajuego();
+        casillatabla btn10=new casillatabla();
         
         System.out.println(btn10.comprobarCasilla(x, y));
     }
     public void b21(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn11=new tablajuego();
+        casillatabla btn11=new casillatabla();
         
         System.out.println(btn11.comprobarCasilla(x, y));
     }
     public void b22(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn12=new tablajuego();
+        casillatabla btn12=new casillatabla();
         
         System.out.println(btn12.comprobarCasilla(x, y));
     }
     public void b23(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn13=new tablajuego();
+        casillatabla btn13=new casillatabla();
         
         System.out.println(btn13.comprobarCasilla(x, y));
     }
     public void b24(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn14=new tablajuego();
+        casillatabla btn14=new casillatabla();
         
         System.out.println(btn14.comprobarCasilla(x, y));
     }
     public void b30(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn15=new tablajuego();
+        casillatabla btn15=new casillatabla();
         
         System.out.println(btn15.comprobarCasilla(x, y));
     }
     public void b31(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn16=new tablajuego();
+        casillatabla btn16=new casillatabla();
         
         System.out.println(btn16.comprobarCasilla(x, y));
     }
     public void b32(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn17=new tablajuego();
+        casillatabla btn17=new casillatabla();
         
         System.out.println(btn17.comprobarCasilla(x, y));
     }
     public void b33(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn18=new tablajuego();
+        casillatabla btn18=new casillatabla();
         
         System.out.println(btn18.comprobarCasilla(x, y));
     }
     public void b34(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn19=new tablajuego();
+        casillatabla btn19=new casillatabla();
         
         System.out.println(btn19.comprobarCasilla(x, y));
     }
     public void b40(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn20=new tablajuego();
+        casillatabla btn20=new casillatabla();
         
         System.out.println(btn20.comprobarCasilla(x, y));
     }
     public void b41(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn21=new tablajuego();
+        casillatabla btn21=new casillatabla();
         
         System.out.println(btn21.comprobarCasilla(x, y));
     }
     public void b42(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn22=new tablajuego();
+        casillatabla btn22=new casillatabla();
         
         System.out.println(btn22.comprobarCasilla(x, y));
     }
     public void b43(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn23=new tablajuego();
+        casillatabla btn23=new casillatabla();
         
         System.out.println(btn23.comprobarCasilla(x, y));
     }
     public void b44(ActionEvent event){
         int x=0,y=0;
         
-        tablajuego btn24=new tablajuego();
+        casillatabla btn24=new casillatabla();
         
         System.out.println(btn24.comprobarCasilla(x, y));
     }
