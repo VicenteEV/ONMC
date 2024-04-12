@@ -31,7 +31,7 @@ public class tablajuego {
                 int y=rnd.nextInt(PANTANO[0].length);
                 if (PANTANO[x][y]!=1)
                     PANTANO[x][y]=2;
-                tabla=true;
+                    tabla=true;
         }
         
         return tabla;
