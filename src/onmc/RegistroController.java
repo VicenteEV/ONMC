@@ -52,10 +52,11 @@ public class RegistroController {
         String password = "'" + rContrasenya.getText()+"'";
         String mail = "'" + rCorreo.getText()+ "'";
         String name =  "'" + rNombre.getText()+ "'";
-        String secondName =  "'" + rApellidos.getText()+ "'";
+        String secondName =  "'" + rApellidos.getText() + "'";
+        String bData = "'" + rNacimiento.getValue() + "'";
         
         
-        consulta = "insert into usuario (usuario, contrasenya, correo_electronico, nombre, apellidos) values ("+ user + "," + password + "," + mail + "," + name + "," + secondName + ");";
+        consulta = "insert into usuario (usuario, contrasenya, correo_electronico, nombre, apellidos, fecha_nacimiento) values ("+ user + "," + password + "," + mail + "," + name + "," + secondName + "," + bData + ");";
         
         Bd.consultaModificacion(conection, consulta);
         
