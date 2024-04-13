@@ -66,6 +66,7 @@ public class RegistroController {
         consulta = "insert into usuario (usuario, contrasenya, correo_electronico, nombre, apellidos, fecha_nacimiento) values ("+ user + "," + sha256 + "," + mail + "," + name + "," + secondName + "," + bData + ");";
         
         Bd.consultaModificacion(conection, consulta);
+        System.out.println("Te has registrado");
         
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Inicio.fxml"));
