@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.InicioController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.InicioController">
    <children>
     <AnchorPane maxHeight="622.0" maxWidth="1084.0">
        <children>
@@ -31,9 +31,9 @@
                       <Font size="23.0" />
                    </font>
                 </Label>
-                <TextField layoutX="171.0" layoutY="86.0" prefHeight="34.0" prefWidth="272.0" />
+                <TextField fx:id="iUsuario" layoutX="171.0" layoutY="86.0" prefHeight="34.0" prefWidth="272.0" />
                 <Button fx:id="inicioSesion" layoutX="175.0" layoutY="248.0" mnemonicParsing="false" onAction="#btnInicioSesion" prefHeight="60.0" prefWidth="167.0" text="Iniciar sesion" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" />
-                <PasswordField layoutX="170.0" layoutY="161.0" prefHeight="34.0" prefWidth="272.0" />
+                <PasswordField fx:id="iContrasenya" layoutX="170.0" layoutY="161.0" prefHeight="34.0" prefWidth="272.0" />
              </children>
           </AnchorPane>
           <ImageView fitHeight="338.0" fitWidth="272.0" layoutX="45.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="172.83050537109375" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="767.0" AnchorPane.topAnchor="118.0">
