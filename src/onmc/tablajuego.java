@@ -12,23 +12,38 @@ public class tablajuego {
 
     public void pantanoPersonas(){
         Random rnd=new Random();
+        int contador=0;
 
-        for (int i=0; i<PS; i++){                //Bañistas aleatorios
+        for (int i=0; i<=TABLA.length; i++){                //Bañistas aleatorios
                 int x=rnd.nextInt(TABLA.length);
                 int y=rnd.nextInt(TABLA[0].length);
-                TABLA[x][y]=1;
+                if(contador < PS){
+                    TABLA[x][y]=1;
+                    contador++;
+                }
         }
     }
 
     public void pantanoCazadores(){
         Random rnd=new Random();
+        int contador=0;
 
-        for (int i=0; i<CZ; i++){                //Cazador aleatorios
+        for (int i=0; i<TABLA.length; i++){                //Cazador aleatorios
                 int x=rnd.nextInt(TABLA.length);
                 int y=rnd.nextInt(TABLA[0].length);
-                if (TABLA[x][y]!=1){
-                    TABLA[x][y]=2;
+                if(contador < CZ){
+                    if (TABLA[x][y]!=1){
+                        TABLA[x][y]=2;
+                        contador++;
+                    }
                 }
+        }
+        
+        for (int i = 0; i < TABLA.length; i++) {
+            for (int j = 0; j < TABLA[0].length; j++) {
+                System.out.print(TABLA[i][j] + " ");
+            }
+            System.out.println();
         }
     }
 
