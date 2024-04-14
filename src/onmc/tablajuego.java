@@ -2,6 +2,7 @@
 package onmc;
 import java.util.Random;
 
+
 public class tablajuego {
     public final int[][] TABLA=new int [5][5];
     private final int PS=7;
@@ -42,6 +43,7 @@ public class tablajuego {
                 }
             }
         }
+    
         
         for (int i = 0; i < TABLA.length; i++) {
             for (int j = 0; j < TABLA[0].length; j++) {
@@ -49,6 +51,10 @@ public class tablajuego {
             }
             System.out.println();
         }
+    }
+    
+    public void restaurarCasilla(int x, int y){
+        TABLA[x][y]=0;
     }
 
     public int comprobarCasilla(int x, int y){

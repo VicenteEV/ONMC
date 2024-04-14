@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -82,8 +83,10 @@
             </Label>
          </children>
     </AnchorPane>
-    <ProgressBar layoutX="59.0" layoutY="521.0" prefHeight="34.0" prefWidth="243.0" progress="0.0" />
-    <ProgressBar layoutX="761.0" layoutY="521.0" prefHeight="34.0" prefWidth="243.0" progress="0.0" />
+    <ProgressBar fx:id="vida1" layoutX="59.0" layoutY="521.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="34.0" prefWidth="243.0" progress="1.0">
+               <effect>
+                  <ColorAdjust brightness="0.14" contrast="0.19" hue="1.0" />
+               </effect></ProgressBar>
     <ImageView fitHeight="293.0" fitWidth="295.0" layoutX="383.0" layoutY="244.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/partida.png" />
@@ -93,7 +96,7 @@
                </viewport>
     </ImageView>
       <Button fx:id="salir" layoutX="435.0" layoutY="510.0" mnemonicParsing="false" onAction="#btnSalir" prefHeight="56.0" prefWidth="192.0" text="Salir" />
-            <GridPane gridLinesVisible="true" hgap="5.0" layoutX="28.0" layoutY="112.0" prefHeight="387.0" prefWidth="392.0" style="-fx-border-style: solid; -fx-border-width: 3px;" vgap="5.0">
+            <GridPane hgap="5.0" layoutX="28.0" layoutY="112.0" prefHeight="387.0" prefWidth="392.0" style="-fx-border-style: solid; -fx-border-width: 3px;" vgap="5.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -139,7 +142,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </GridPane>
-            <GridPane gridLinesVisible="true" hgap="5.0" layoutX="638.0" layoutY="112.0" prefHeight="387.0" prefWidth="392.0" style="-fx-border-style: solid; -fx-border-width: 3px;" vgap="5.0">
+            <GridPane hgap="5.0" layoutX="638.0" layoutY="112.0" prefHeight="387.0" prefWidth="392.0" style="-fx-border-style: solid; -fx-border-width: 3px;" stylesheets="@estilo.css" vgap="5.0">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -185,6 +188,11 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </GridPane>
+            <ProgressBar fx:id="vida2" layoutX="761.0" layoutY="521.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="34.0" prefWidth="243.0" progress="1.0">
+               <effect>
+                  <ColorAdjust brightness="0.14" contrast="0.19" hue="1.0" />
+               </effect>
+            </ProgressBar>
    </children>
 </AnchorPane>
     </children>
