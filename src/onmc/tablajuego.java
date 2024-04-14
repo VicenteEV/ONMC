@@ -1,39 +1,48 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package onmc;
 import java.util.Random;
 
 public class tablajuego {
-    public final int[][] PANTANO=new int [5][5];
+    public final int[][] TABLA=new int [5][5];
     private final int PS=7;
     private final int CZ=1;
     
     tablajuego(){
     }
 
-    public boolean pantanoPersonas(){	
-        //Colocacion de personas en el Pantano
+    public void pantanoPersonas(){	
         Random rnd=new Random();
-        Boolean tabla=false;
 
-        for (int i=0; i<=PS; i++){				//Bañistas aleatorios
-                int x=rnd.nextInt(PANTANO.length);
-                int y=rnd.nextInt(PANTANO[0].length);
-                PANTANO[x][y]=1;
-                tabla=true;
+        for (int i=0; i<PS; i++){				//Bañistas aleatorios
+                int x=rnd.nextInt(TABLA.length);
+                int y=rnd.nextInt(TABLA[0].length);
+                TABLA[x][y]=1;
         }
-
-        for (int i=0; i<=CZ; i++){				//Cazadores aleatorios
-                int x=rnd.nextInt(PANTANO.length);
-                int y=rnd.nextInt(PANTANO[0].length);
-                if (PANTANO[x][y]!=1)
-                    PANTANO[x][y]=2;
-                    tabla=true;
-        }
+    }
+    
+    public void pantanoCazadores(){	
+        Random rnd=new Random();
         
-        return tabla;
+        for (int i=0; i<CZ; i++){				//Cazador aleatorios
+                int x=rnd.nextInt(TABLA.length);
+                int y=rnd.nextInt(TABLA[0].length);
+                if (TABLA[x][y]!=1){
+                    TABLA[x][y]=2;
+                }
+        }
+    }
+    
+    public int comprobarCasilla(int x, int y){
+        int resultado = 0;
+        if (TABLA[x][y]==0){
+            resultado=0;
+        }
+        else if (TABLA[x][y]==1){
+            resultado=1;
+        }
+        else if (TABLA[x][y]==2){
+            resultado=2;
+        }
+        return resultado; 
     }
 }

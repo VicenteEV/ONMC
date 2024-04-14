@@ -121,12 +121,7 @@ public class InicioController {
     }
     
        @FXML
-    public void btnJugarInvitado(ActionEvent event) {
-        tablajuego crearTabla=new tablajuego();
-        if(crearTabla.pantanoPersonas()==true){
-            System.out.println("Caca");
-        }
-            
+    public void btnJugarInvitado(ActionEvent event) {        
         
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Juego.fxml"));
@@ -151,6 +146,4 @@ public class InicioController {
             io.printStackTrace();
         }
     }
-    
-    
 }
