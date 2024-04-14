@@ -40,7 +40,7 @@
     </AnchorPane>
     <AnchorPane layoutX="276.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
          <children>
-            <Label layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="&quot;Puntos&quot;" textAlignment="JUSTIFY">
+            <Label fx:id="puntoA" layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="" textAlignment="JUSTIFY">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -49,7 +49,7 @@
     </AnchorPane>
     <AnchorPane layoutX="680.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
          <children>
-            <Label layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="&quot;Puntos&quot;" textAlignment="JUSTIFY">
+            <Label fx:id="puntoB" layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="" textAlignment="JUSTIFY">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

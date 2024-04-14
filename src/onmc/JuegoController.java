@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.stage.Stage;
 
@@ -21,6 +22,10 @@ public class JuegoController {
     private ProgressBar vida1;
     private ProgressBar vida2;
    
+    @FXML
+    private Label puntoA;
+    private Label puntoB;
+    
     @FXML
     public void initialize(){
         pantano1=new tablajuego();
@@ -54,67 +59,81 @@ public class JuegoController {
         }
     }
     
-    public double barraVida(ProgressBar barra, int x, int y){
-        if(pantano1.comprobarCasilla(x,y) == 2){
+    public double barraVida(ProgressBar vida, int x, int y){
+       
+        if (pantano1.comprobarCasilla(x,y) == 2){
             pantano1.restaurarCasilla(x,y);
             pantano1.pantanoCazadores();
-            return barra.getProgress()-0.33333333333;
+            
+            return vida.getProgress()-0.33333333333;
         }
-        return barra.getProgress();
+        return vida.getProgress();
     }
    
+    //BOTONES
+    
     public void b00(ActionEvent event){
         int x=0,y=0;
    
         System.out.println(pantano1.comprobarCasilla(x, y));
+        puntoA.setText(pantano1.puntuacion(x, y)+" pt.");
         vida1.setProgress(barraVida(vida1,x,y));
     }
     public void b01(ActionEvent event){
         int x=0,y=1;
         
         System.out.println(pantano1.comprobarCasilla(x, y));
+        puntoA.setText(pantano1.puntuacion(x, y)+" pt.");
         vida1.setProgress(barraVida(vida1,x,y));
     }
     public void b02(ActionEvent event){
         int x=0,y=2;
         
         System.out.println(pantano1.comprobarCasilla(x, y));
+        puntoA.setText(pantano1.puntuacion(x, y)+" pt.");
         vida1.setProgress(barraVida(vida1,x,y));
     }
     public void b03(ActionEvent event){
         int x=0,y=3;
         
         System.out.println(pantano1.comprobarCasilla(x, y));
+        puntoA.setText(pantano1.puntuacion(x, y)+" pt.");
         vida1.setProgress(barraVida(vida1,x,y));
     }
     public void b04(ActionEvent event){
         int x=0,y=4;
        
         System.out.println(pantano1.comprobarCasilla(x, y));
+        puntoA.setText(pantano1.puntuacion(x, y)+" pt.");
         vida1.setProgress(barraVida(vida1,x,y));
     }
     public void b10(ActionEvent event){
         int x=1,y=0;
         
         System.out.println(pantano1.comprobarCasilla(x, y));
+        puntoA.setText(pantano1.puntuacion(x, y)+" pt.");
         vida1.setProgress(barraVida(vida1,x,y));
     }
     public void b11(ActionEvent event){
         int x=1,y=1;
         
         System.out.println(pantano1.comprobarCasilla(x, y));
+        puntoA.setText(pantano1.puntuacion(x, y)+" pt.");
         vida1.setProgress(barraVida(vida1,x,y));
     }
     public void b12(ActionEvent event){
         int x=1,y=2;
         
         System.out.println(pantano1.comprobarCasilla(x, y));
+        puntoA.setText(pantano1.puntuacion(x, y)+" pt.");
         vida1.setProgress(barraVida(vida1,x,y));
     }
     public void b13(ActionEvent event){
         int x=1,y=3;
         
         System.out.println(pantano1.comprobarCasilla(x, y));
+        puntoA.setText(pantano1.puntuacion(x, y)+" pt.");
+        vida1.setProgress(barraVida(vida1,x,y));
     }
     public void b14(ActionEvent event){
         int x=1,y=4;

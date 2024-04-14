@@ -70,4 +70,15 @@ public class tablajuego {
         }
         return resultado; 
     }
+    
+    public int puntuacion(int x, int y){
+        int pt=0;
+        if (comprobarCasilla(x,y)==1){
+            return pt+135;
+        }
+        if (comprobarCasilla(x,y)==2){
+            return pt-85;
+        }
+        return pt;
+    }
 }
