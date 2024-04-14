@@ -71,14 +71,15 @@ public class tablajuego {
         return resultado; 
     }
     
-    public int puntuacion(int x, int y){
-        int pt=0;
+    public int puntuacion(int x, int y, int puntuacion){
+
         if (comprobarCasilla(x,y)==1){
-            return pt+135;
+            puntuacion=puntuacion+135;
         }
         if (comprobarCasilla(x,y)==2){
-            return pt-85;
+            puntuacion=puntuacion -85;
         }
-        return pt;
+        
+        return puntuacion;
     }
 }
