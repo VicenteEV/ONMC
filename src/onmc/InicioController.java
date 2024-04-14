@@ -32,6 +32,7 @@ public class InicioController {
     private Button registro, inicioSesion, jugarInvitado, config;
     @FXML
     PasswordField iContrasenya;
+    @FXML
     TextField iUsuario;
     Gestor_conexion_POSTGRE conection = new Gestor_conexion_POSTGRE("juego", true);
        @FXML
@@ -50,34 +51,64 @@ public class InicioController {
        @FXML
     public void btnInicioSesion(ActionEvent event) throws Exception{
         
-        //String [][] vec;
+        String vec [][];
+        String vec2 [][];
         boolean temp = false;
         String consultaUsuario, consultaContrasenya;
-        String user =  "'" + iUsuario.getText()+"'";
-        String password = "'" + iContrasenya.getText()+"'";
+        String user =  iUsuario.getText();
+        String password = iContrasenya.getText();
         
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         byte[] digest = md.digest(password.getBytes(StandardCharsets.UTF_8));
-        String sha256 = "'" + DatatypeConverter.printHexBinary(digest).toLowerCase() + "'";
+        String sha256 = DatatypeConverter.printHexBinary(digest).toLowerCase();
         
-        consultaUsuario = "select usuario from usuario where usuario = user";
-        consultaContrasenya = "select contrasenya from usuario where contrasenya = sha256";
+        consultaUsuario = "select usuario from usuario where usuario= " + "'" + user + "'";
+        consultaContrasenya = "select contrasenya from usuario where usuario =" + "'" + user + "'";
         
-        Bd.consultaSelect(conection, consultaUsuario);
-        Bd.consultaSelect(conection, consultaContrasenya);
-        //if (vec != null) {
-            //mostrar(vec);
-        //}
-        //System.out.print(vec = );
-        if (consultaUsuario != null && consultaContrasenya != null) {
-            if (user.equals(consultaUsuario)){
-                if (sha256.equals(consultaContrasenya)) {
-                    temp = true;
-                    System.out.println("Has entrado");
+        vec = Bd.consultaSelect(conection, consultaUsuario);
+        vec2 = Bd.consultaSelect(conection, consultaContrasenya);
+        //System.out.println(vec = Bd.consultaSelect(conection, consultaContrasenya));
+        if(vec != null) {
+            mostrar(vec);
+            mostrar(vec2);
+        }
+        
+           System.out.println(sha256);
+        
+        
+        
+        for (int i = 0; i < vec.length; i++) {
+            for (int j = 0; j < vec.length; j++) {
+                if(vec != null) {
+                    System.out.println("Valorant");
+                    if (user.equals(vec[i][j])){
+                        System.out.println("usuario bien");
+                    }  
+                }
+            }
+        }
+        
+        for (int i = 0; i < vec2.length; i++) {
+            for (int j = 0; j < vec2.length; j++) {
+                if(vec2 != null) {
+                    System.out.println("Valorant");
+                    if (sha256.equals(vec2[i][j])){
+                        System.out.println("contrasenya bien");
+                    }  
                 }
             }
         }
           
+
+        /*if (user.equals("") && password.equals("")) {
+            System.out.println("Sin rellenar");
+        } else if (user.equals(consultaUsuario)){
+                if (sha256.equals(consultaContrasenya)) {
+                    temp = true;
+                    System.out.println("Has entrado");
+                }
+            }*/
+                  
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Perfil.fxml"));
             Stage stage = (Stage) inicioSesion.getScene().getWindow();
