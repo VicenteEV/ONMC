@@ -64,7 +64,7 @@
             </Label>
          </children>
     </AnchorPane>
-    <AnchorPane layoutX="314.0" layoutY="500.0" prefHeight="43.0" prefWidth="71.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
+    <AnchorPane layoutX="324.0" layoutY="517.0" prefHeight="43.0" prefWidth="71.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
          <children>
             <Label layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="58.0" text="&quot;Vida&quot;" textAlignment="JUSTIFY">
                <font>
@@ -73,7 +73,7 @@
             </Label>
          </children>
     </AnchorPane>
-    <AnchorPane layoutX="691.0" layoutY="500.0" prefHeight="43.0" prefWidth="73.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
+    <AnchorPane layoutX="661.0" layoutY="517.0" prefHeight="43.0" prefWidth="73.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
          <children>
             <Label layoutX="8.0" layoutY="8.0" prefHeight="27.0" prefWidth="58.0" text="&quot;Vida&quot;" textAlignment="JUSTIFY">
                <font>
@@ -82,8 +82,8 @@
             </Label>
          </children>
     </AnchorPane>
-    <ProgressBar layoutX="59.0" layoutY="504.0" prefHeight="34.0" prefWidth="243.0" progress="0.0" />
-    <ProgressBar layoutX="779.0" layoutY="504.0" prefHeight="34.0" prefWidth="243.0" progress="0.0" />
+    <ProgressBar layoutX="59.0" layoutY="521.0" prefHeight="34.0" prefWidth="243.0" progress="0.0" />
+    <ProgressBar layoutX="761.0" layoutY="521.0" prefHeight="34.0" prefWidth="243.0" progress="0.0" />
     <ImageView fitHeight="293.0" fitWidth="295.0" layoutX="383.0" layoutY="244.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/partida.png" />
@@ -159,7 +159,7 @@
                   <Button layoutX="90.0" layoutY="90.0" mnemonicParsing="false" onAction="#b01" prefHeight="96.0" prefWidth="109.0" text=".0-1." GridPane.columnIndex="1" />
                   <Button layoutX="90.0" layoutY="13.0" mnemonicParsing="false" onAction="#b02" prefHeight="96.0" prefWidth="109.0" text=".0-2." GridPane.columnIndex="2" />
                   <Button layoutX="90.0" layoutY="13.0" mnemonicParsing="false" onAction="#b03" prefHeight="96.0" prefWidth="109.0" text=".0-3." GridPane.columnIndex="3" />
-                  <Button layoutX="90.0" layoutY="13.0" mnemonicParsing="false" onAction="#b04" prefHeight="96.0" prefWidth="109.0" text=".0-4." GridPane.columnIndex="4"/>
+                  <Button layoutX="90.0" layoutY="13.0" mnemonicParsing="false" onAction="#b04" prefHeight="96.0" prefWidth="109.0" text=".0-4." GridPane.columnIndex="4" />
                   <Button layoutX="90.0" layoutY="13.0" mnemonicParsing="false" onAction="#b10" prefHeight="96.0" prefWidth="109.0" text=".1-0." GridPane.rowIndex="1" />
                   <Button layoutX="90.0" layoutY="13.0" mnemonicParsing="false" onAction="#b11" prefHeight="96.0" prefWidth="109.0" text=".1-1." GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Button layoutX="90.0" layoutY="13.0" mnemonicParsing="false" onAction="#b12" prefHeight="96.0" prefWidth="109.0" text=".1-2." GridPane.columnIndex="2" GridPane.rowIndex="1" />
