@@ -15,12 +15,14 @@ public class tablajuego {
         int contador=0;
 
         for (int i=0; i<=TABLA.length; i++){                //Bañistas aleatorios
+            for (int j=0; j<=TABLA[0].length; j++){  
                 int x=rnd.nextInt(TABLA.length);
                 int y=rnd.nextInt(TABLA[0].length);
-                if(contador < PS){
+                if(contador < PS && TABLA[x][y]==0){
                     TABLA[x][y]=1;
                     contador++;
                 }
+            }
         }
     }
 
@@ -29,6 +31,7 @@ public class tablajuego {
         int contador=0;
 
         for (int i=0; i<TABLA.length; i++){                //Cazador aleatorios
+            for (int j=0; j<=TABLA[0].length; j++){     
                 int x=rnd.nextInt(TABLA.length);
                 int y=rnd.nextInt(TABLA[0].length);
                 if(contador < CZ){
@@ -37,6 +40,7 @@ public class tablajuego {
                         contador++;
                     }
                 }
+            }
         }
         
         for (int i = 0; i < TABLA.length; i++) {
