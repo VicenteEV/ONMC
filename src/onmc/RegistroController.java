@@ -78,8 +78,6 @@ public class RegistroController {
         }catch (IOException io){
             io.printStackTrace();
         }
-        
+   
     }
-    
-
-}
+}   
