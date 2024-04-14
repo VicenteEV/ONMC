@@ -8,7 +8,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class JuegoController {
@@ -17,7 +16,6 @@ public class JuegoController {
     
     @FXML
     private Button config, salir;
-    private GridPane tablero;
     
     @FXML
     public void initialize(){
