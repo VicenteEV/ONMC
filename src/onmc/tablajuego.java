@@ -26,7 +26,23 @@ public class tablajuego {
             }
         }
     }
+    
+    public void imgPersonas(){
+        Random rnd=new Random();
+        int contador=0;
 
+        for (int i=0; i<=TABLA.length; i++){                //Bañistas aleatorios
+            for (int j=0; j<=TABLA[0].length; j++){  
+                int x=rnd.nextInt(TABLA.length);
+                int y=rnd.nextInt(TABLA[0].length);
+                if(contador < PS && TABLA[x][y]==0){
+                    TABLA[x][y]=1;
+                    contador++;
+                }
+            }
+        }
+    }
+    
     public void pantanoCazadores(){
         Random rnd=new Random();
         int contador=0;
@@ -74,10 +90,10 @@ public class tablajuego {
     public int puntuacion(int x, int y, int puntuacion){
 
         if (comprobarCasilla(x,y)==1){
-            puntuacion=puntuacion+135;
+            puntuacion=puntuacion+235;
         }
         if (comprobarCasilla(x,y)==2){
-            puntuacion=puntuacion -85;
+            puntuacion=puntuacion -50;
         }
         
         return puntuacion;

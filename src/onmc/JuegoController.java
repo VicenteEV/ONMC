@@ -12,7 +12,11 @@ import javafx.scene.control.ProgressBar;
 import javafx.stage.Stage;
 
 public class JuegoController {
+
+    @FXML
+    private Button b00, b01, b02, b03, b04, b10, b11, b12, b13, b14, b20, b21, b22, b23, b24, b30, b31, b32, b33, b34, b40, b41, b42, b43, b44;
     
+    private Button[][] tabla1= {{b00, b01, b02, b03, b04},{b10, b11, b12, b13, b14}, {b20, b21, b22, b23, b24},{b30, b31, b32, b33, b34},{b40, b41, b42, b43, b44}};
     private tablajuego pantano1;
     
     @FXML
@@ -34,6 +38,7 @@ public class JuegoController {
         pantano1=new tablajuego();
         pantano1.pantanoPersonas();
         pantano1.pantanoCazadores();
+        
     }
 
    @FXML
@@ -72,207 +77,149 @@ public class JuegoController {
         }
         return vida.getProgress();
     }
-   
-    //BOTONES
     
-    public void b00(ActionEvent event){
+    public void Casilla(int x, int y){
+        
+        pt=pantano1.puntuacion(x, y, pt);
+        System.out.println(pantano1.comprobarCasilla(x, y));
+        puntoA.setText(pt + " pt.");
+        vida1.setProgress(barraVida(vida1,x,y));
+        
+        Button actual = tabla1[x][y];
+    }
+   
+    //BOTONES TABLA
+    
+    @FXML
+    public void b00(){
         int x=0,y=0;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b01(ActionEvent event){
+    
+    @FXML
+    public void b01(){
         int x=0,y=1;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b02(ActionEvent event){
+    @FXML
+    public void b02(){
         int x=0,y=2;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b03(ActionEvent event){
+    @FXML
+    public void b03(){
         int x=0,y=3;
-        
-       pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b04(ActionEvent event){
+    @FXML
+    public void b04(){
         int x=0,y=4;
-       
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b10(ActionEvent event){
+    @FXML
+    public void b10(){
         int x=1,y=0;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b11(ActionEvent event){
+    @FXML
+    public void b11(){
         int x=1,y=1;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b12(ActionEvent event){
+    @FXML
+    public void b12(){
         int x=1,y=2;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b13(ActionEvent event){
+    @FXML
+    public void b13(){
         int x=1,y=3;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b14(ActionEvent event){
+    
+    @FXML
+    public void b14(){
         int x=1,y=4;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b20(ActionEvent event){
+    
+    @FXML
+    public void b20(){
         int x=2,y=0;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b21(ActionEvent event){
+    
+    @FXML
+    public void b21(){
         int x=2,y=1;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b22(ActionEvent event){
+    
+    @FXML
+    public void b22(){
         int x=2,y=2;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b23(ActionEvent event){
+    
+    @FXML
+    public void b23(){
         int x=2,y=3;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b24(ActionEvent event){
+    
+    @FXML
+    public void b24(){
         int x=2,y=4;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b30(ActionEvent event){
+    @FXML
+    public void b30(){
         int x=3,y=0;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b31(ActionEvent event){
+    @FXML
+    public void b31(){
         int x=3,y=1;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b32(ActionEvent event){
+    @FXML
+    public void b32(){
         int x=3,y=2;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b33(ActionEvent event){
+    @FXML
+    public void b33(){
         int x=3,y=3;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");;
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b34(ActionEvent event){
+    @FXML
+    public void b34(){
         int x=3,y=4;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b40(ActionEvent event){
+    @FXML
+    public void b40(){
         int x=4,y=0;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b41(ActionEvent event){
+    @FXML
+    public void b41(){
         int x=4,y=1;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b42(ActionEvent event){
+    @FXML
+    public void b42(){
         int x=4,y=2;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b43(ActionEvent event){
+    @FXML
+    public void b43(){
         int x=4,y=3;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
-    public void b44(ActionEvent event){
+    @FXML
+    public void b44(){
         int x=4,y=4;
-        
-        pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
-        puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
+        Casilla(x, y);
     }
 }
