@@ -2,6 +2,7 @@
 package onmc;
 
 import java.io.IOException;
+import javafx.beans.property.DoubleProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,8 +16,8 @@ public class JuegoController {
 
     @FXML
     private Button b00, b01, b02, b03, b04, b10, b11, b12, b13, b14, b20, b21, b22, b23, b24, b30, b31, b32, b33, b34, b40, b41, b42, b43, b44;
-    
-    private Button[][] tabla1= {{b00, b01, b02, b03, b04},{b10, b11, b12, b13, b14}, {b20, b21, b22, b23, b24},{b30, b31, b32, b33, b34},{b40, b41, b42, b43, b44}};
+   
+    private final Button[][] TABLA1= {{b00, b01, b02, b03, b04},{b10, b11, b12, b13, b14},{b20, b21, b22, b23, b24},{b30, b31, b32, b33, b34},{b40, b41, b42, b43, b44}};
     private tablajuego pantano1;
     
     @FXML
@@ -24,10 +25,14 @@ public class JuegoController {
     
     @FXML
     private ProgressBar vida1;
+    
+    @FXML
     private ProgressBar vida2;
    
     @FXML
     private Label puntoA;
+    
+    @FXML
     private Label puntoB;
     
     @FXML
@@ -80,12 +85,24 @@ public class JuegoController {
     
     public void Casilla(int x, int y){
         
+        Button actual = TABLA1[x][y];
+        switch(pantano1.comprobarCasilla(x,y)){
+            case 0:{                                  //Desaparece el boton
+                System.out.println("Agua"); 
+                break;
+            }
+            case 1:{                                 //Cambia el boton por una imagen de las mismas dimensiones
+               System.out.println("Bañista"); 
+               break;
+            }
+            case 2:{                                //Cambia el boton por una imagen de las mismas dimensiones
+               System.out.println("Cazador");
+               break;
+            }
+        }
         pt=pantano1.puntuacion(x, y, pt);
-        System.out.println(pantano1.comprobarCasilla(x, y));
         puntoA.setText(pt + " pt.");
-        vida1.setProgress(barraVida(vida1,x,y));
-        
-        Button actual = tabla1[x][y];
+        vida1.setProgress(barraVida(vida1,x,y));     
     }
    
     //BOTONES TABLA
