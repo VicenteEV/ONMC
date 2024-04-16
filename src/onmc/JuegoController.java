@@ -17,10 +17,10 @@ public class JuegoController {
     private Button b00, b01, b02, b03, b04, b10, b11, b12, b13, b14, b20, b21, b22, b23, b24, b30, b31, b32, b33, b34, b40, b41, b42, b43, b44;
    
     @FXML
-    private Button a00, a01, a02, a03, a04, a10, a11, a12, a13, a14, a20, a21, a22, a23, a24, a30, a31, a32, a33, a34, a40, a41, a42, a43, a44;
+    private final Button[][] TABLA1= {{b00, b01, b02, b03, b04},{b10, b11, b12, b13, b14},{b20, b21, b22, b23, b24},{b30, b31, b32, b33, b34},{b40, b41, b42, b43, b44}};
     
     @FXML
-    private final Button[][] TABLA1= {{b00, b01, b02, b03, b04},{b10, b11, b12, b13, b14},{b20, b21, b22, b23, b24},{b30, b31, b32, b33, b34},{b40, b41, b42, b43, b44}};
+    private Button a00, a01, a02, a03, a04, a10, a11, a12, a13, a14, a20, a21, a22, a23, a24, a30, a31, a32, a33, a34, a40, a41, a42, a43, a44;
    
     @FXML
     private final Button[][] TABLA2= {{a00, a01, a02, a03, a04},{a10, a11, a12, a13, a14},{a20, a21, a22, a23, a24},{a30, a31, a32, a33, a34},{a40, a41, a42, a43, a44}};
@@ -133,7 +133,7 @@ public class JuegoController {
         }
         if(z=='a'){
             Button actual = TABLA2[x][y];
-          /*  switch(pantano2.comprobarCasilla(x,y)){
+         /*   switch(pantano2.comprobarCasilla(x,y)){
                 case 0:{                                  //Desaparece el boton
                     System.out.println("Agua"); 
                     b00.setVisible(false);
