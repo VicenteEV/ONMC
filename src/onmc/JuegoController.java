@@ -26,30 +26,19 @@ public class JuegoController {
     private final Button[][] TABLA2= {{b00, b01, b02, b03, b04},{b10, b11, b12, b13, b14},{b20, b21, b22, b23, b24},{b30, b31, b32, b33, b34},{b40, b41, b42, b43, b44}};
     
     @FXML
-    private tablajuego pantano1;
-   
-    @FXML
-    private tablajuego pantano2;
-    
+    private tablajuego pantano1, pantano2;
+  
     @FXML
     private Button config, salir;
     
     @FXML
-    private ProgressBar vida1;
-    
-    @FXML
-    private ProgressBar vida2;
+    private ProgressBar vida1, vida2;
    
     @FXML
-    private Label puntoA;
+    private Label puntoA, puntoB;
     
     @FXML
-    private Label puntoB;
-    
-    @FXML
-    private int pt1 = 0;
-    @FXML
-    private int pt2 = 0;
+    private int pt1=0, pt2=0;
     
     @FXML
     public void initialize(){
@@ -111,7 +100,7 @@ public class JuegoController {
     public void Casilla(int x, int y, char z){
       
         if(z=='a'){
-            Button actual = TABLA1[x][y];
+            Button actual1 = TABLA1[x][y];
          /*   switch(pantano2.comprobarCasilla(x,y)){
                 case 0:{                                  //Desaparece el boton
                     System.out.println("Agua"); 
