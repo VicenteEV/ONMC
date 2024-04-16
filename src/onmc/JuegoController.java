@@ -12,19 +12,19 @@ import javafx.scene.control.ProgressBar;
 import javafx.stage.Stage;
 
 public class JuegoController {
-
-    @FXML
-    private Button b00, b01, b02, b03, b04, b10, b11, b12, b13, b14, b20, b21, b22, b23, b24, b30, b31, b32, b33, b34, b40, b41, b42, b43, b44;
-   
-    @FXML
-    private final Button[][] TABLA1= {{b00, b01, b02, b03, b04},{b10, b11, b12, b13, b14},{b20, b21, b22, b23, b24},{b30, b31, b32, b33, b34},{b40, b41, b42, b43, b44}};
     
     @FXML
     private Button a00, a01, a02, a03, a04, a10, a11, a12, a13, a14, a20, a21, a22, a23, a24, a30, a31, a32, a33, a34, a40, a41, a42, a43, a44;
    
     @FXML
-    private final Button[][] TABLA2= {{a00, a01, a02, a03, a04},{a10, a11, a12, a13, a14},{a20, a21, a22, a23, a24},{a30, a31, a32, a33, a34},{a40, a41, a42, a43, a44}};
+    private final Button[][] TABLA1= {{a00, a01, a02, a03, a04},{a10, a11, a12, a13, a14},{a20, a21, a22, a23, a24},{a30, a31, a32, a33, a34},{a40, a41, a42, a43, a44}};
    
+    @FXML
+    private Button b00, b01, b02, b03, b04, b10, b11, b12, b13, b14, b20, b21, b22, b23, b24, b30, b31, b32, b33, b34, b40, b41, b42, b43, b44;
+   
+    @FXML
+    private final Button[][] TABLA2= {{b00, b01, b02, b03, b04},{b10, b11, b12, b13, b14},{b20, b21, b22, b23, b24},{b30, b31, b32, b33, b34},{b40, b41, b42, b43, b44}};
+    
     @FXML
     private tablajuego pantano1;
    
@@ -89,7 +89,7 @@ public class JuegoController {
     
     public double barraVida(ProgressBar vida, int x, int y, char z){
        
-        if(z=='b'){
+        if(z=='a'){
             if (pantano1.comprobarCasilla(x,y) == 2){
                 pantano1.restaurarCasilla(x,y);
                 pantano1.pantanoCazadores();
@@ -97,7 +97,7 @@ public class JuegoController {
                 return vida.getProgress()-0.33333333333;
             }
         }
-        if(z=='a'){
+        if(z=='b'){
             if (pantano2.comprobarCasilla(x,y) == 2){
                 pantano2.restaurarCasilla(x,y);
                 pantano2.pantanoCazadores();
@@ -109,30 +109,9 @@ public class JuegoController {
     }
     
     public void Casilla(int x, int y, char z){
-       
-        if(z=='b'){
-            Button actual = TABLA1[x][y];
-          /*  switch(pantano1.comprobarCasilla(x,y)){
-                case 0:{                                  //Desaparece el boton
-                    System.out.println("Agua"); 
-                    actual.setVisible(false);
-                    break;
-                }
-                case 1:{                                 //Cambia el boton por una imagen de las mismas dimensiones
-                   System.out.println("Bañista"); 
-                   break;
-                }
-                case 2:{                                //Cambia el boton por una imagen de las mismas dimensiones
-                   System.out.println("Cazador");
-                   break;
-                }
-            }*/
-            pt1=pantano1.puntuacion(x, y, pt1);
-            puntoA.setText(pt1 + " pt.");
-            vida1.setProgress(barraVida(vida1,x,y,z));     
-        }
+      
         if(z=='a'){
-            Button actual = TABLA2[x][y];
+            Button actual = TABLA1[x][y];
          /*   switch(pantano2.comprobarCasilla(x,y)){
                 case 0:{                                  //Desaparece el boton
                     System.out.println("Agua"); 
@@ -148,13 +127,209 @@ public class JuegoController {
                    break;
                 }
             }*/
-            pt2=pantano2.puntuacion(x, y, pt2);
+            pt1=pantano1.puntuacion(x, y, pt1);
+            puntoA.setText(pt1 + " pt.");
+            vida1.setProgress(barraVida(vida1,x,y,z));     
+        }
+        if(z=='b'){
+            Button actual = TABLA2[x][y];
+          /*  switch(pantano1.comprobarCasilla(x,y)){
+                case 0:{                                  //Desaparece el boton
+                    System.out.println("Agua"); 
+                    actual.setVisible(false);
+                    break;
+                }
+                case 1:{                                 //Cambia el boton por una imagen de las mismas dimensiones
+                   System.out.println("Bañista"); 
+                   break;
+                }
+                case 2:{                                //Cambia el boton por una imagen de las mismas dimensiones
+                   System.out.println("Cazador");
+                   break;
+                }
+            }*/
+            pt1=pantano2.puntuacion(x, y, pt2);
             puntoB.setText(pt2 + " pt.");
             vida2.setProgress(barraVida(vida2,x,y,z));     
         }
     }
    
     //BOTONES TABLA
+    
+    @FXML
+    public void a00(){
+        int x=0,y=0;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a01(){
+        int x=0,y=1;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a02(){
+        int x=0,y=2;
+        char z='a';
+        Casilla(x, y, z); 
+    }
+    
+    @FXML
+    public void a03(){
+        int x=0,y=3;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a04(){
+        int x=0,y=4;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a10(){
+        int x=1,y=0;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a11(){
+        int x=1,y=1;
+        char z='a';
+        Casilla(x, y, z);   
+    }
+    
+    @FXML
+    public void a12(){
+        int x=1,y=2;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a13(){
+        int x=1,y=3;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a14(){
+        int x=1,y=4;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a20(){
+        int x=2,y=0;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a21(){
+        int x=2,y=1;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a22(){
+        int x=2,y=2;
+        char z='a';
+        Casilla(x, y, z);   
+    }
+    
+    @FXML
+    public void a23(){
+        int x=2,y=3;
+        char z='a';
+        Casilla(x, y, z);   
+    }
+    
+    @FXML
+    public void a24(){
+        int x=2,y=4;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a30(){
+        int x=3,y=0;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a31(){
+        int x=3,y=1;
+        char z='a';
+        Casilla(x, y, z);  
+    }
+    
+    @FXML
+    public void a32(){
+        int x=3,y=2;
+        char z='a';
+        Casilla(x, y, z);   
+    }
+    
+    @FXML
+    public void a33(){
+        int x=3,y=3;
+        char z='a';
+        Casilla(x, y, z);    
+    }
+    
+    @FXML
+    public void a34(){
+        int x=3,y=4;
+        char z='a';
+        Casilla(x, y, z);    
+    }
+    
+    @FXML
+    public void a40(){
+        int x=4,y=0;
+        char z='a';
+        Casilla(x, y, z);    
+    }
+    
+    @FXML
+    public void a41(){
+        int x=4,y=1;
+        char z='a';
+        Casilla(x, y, z);    
+    }
+    
+    @FXML
+    public void a42(){
+        int x=4,y=2;
+        char z='a';
+        Casilla(x, y, z);    
+    }
+    
+    @FXML
+    public void a43(){
+        int x=4,y=3;
+        char z='a';
+        Casilla(x, y, z);    
+    }
+    
+    @FXML
+    public void a44(){
+        int x=4,y=4;
+        char z='a';
+        Casilla(x, y, z);    
+    }
     
     @FXML
     public void b00(){
@@ -330,180 +505,5 @@ public class JuegoController {
         int x=4,y=4;
         char z='b';
         Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a00(){
-        int x=0,y=0;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a01(){
-        int x=0,y=1;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a02(){
-        int x=0,y=2;
-        char z='a';
-        Casilla(x, y, z); 
-    }
-    
-    @FXML
-    public void a03(){
-        int x=0,y=3;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a04(){
-        int x=0,y=4;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a10(){
-        int x=1,y=0;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a11(){
-        int x=1,y=1;
-        char z='a';
-        Casilla(x, y, z);   
-    }
-    
-    @FXML
-    public void a12(){
-        int x=1,y=2;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a13(){
-        int x=1,y=3;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a14(){
-        int x=1,y=4;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a20(){
-        int x=2,y=0;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a21(){
-        int x=2,y=1;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a22(){
-        int x=2,y=2;
-        char z='a';
-        Casilla(x, y, z);   
-    }
-    
-    @FXML
-    public void a23(){
-        int x=2,y=3;
-        char z='a';
-        Casilla(x, y, z);   
-    }
-    
-    @FXML
-    public void a24(){
-        int x=2,y=4;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a30(){
-        int x=3,y=0;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a31(){
-        int x=3,y=1;
-        char z='a';
-        Casilla(x, y, z);  
-    }
-    
-    @FXML
-    public void a32(){
-        int x=3,y=2;
-        char z='a';
-        Casilla(x, y, z);   
-    }
-    
-    @FXML
-    public void a33(){
-        int x=3,y=3;
-        char z='a';
-        Casilla(x, y, z);    
-    }
-    
-    @FXML
-    public void a34(){
-        int x=3,y=4;
-        char z='a';
-        Casilla(x, y, z);    
-    }
-    
-    @FXML
-    public void a40(){
-        int x=4,y=0;
-        char z='a';
-        Casilla(x, y, z);    
-    }
-    
-    @FXML
-    public void a41(){
-        int x=4,y=1;
-        char z='a';
-        Casilla(x, y, z);    
-    }
-    
-    @FXML
-    public void a42(){
-        int x=4,y=2;
-        char z='a';
-        Casilla(x, y, z);    
-    }
-    
-    @FXML
-    public void a43(){
-        int x=4,y=3;
-        char z='a';
-        Casilla(x, y, z);    
-    }
-    
-    @FXML
-    public void a44(){
-        int x=4,y=4;
-        char z='a';
-        Casilla(x, y, z);    
     }
 }
