@@ -161,6 +161,7 @@ public class JuegoController {
         int x=0,y=0;
         char z='b';
         Casilla(x, y, z);
+         System.out.println("TABLA1"); 
     }
     
     @FXML
