@@ -95,15 +95,12 @@ public class tablajuego {
         }
         return vida.getProgress();
     }
-    /*
-    public void Casilla(tablajuego pantano, ProgressBar vida, int x, int y){
-      
-        if(z=='a'){
-            Button actual = TABLA1[x][y];
+    
+    public void casillaTabla(tablajuego pantano, ProgressBar vida, int x, int y){
+        
             switch(pantano.comprobarCasilla(x,y)){
                 case 0:{                                  //Desaparece el boton
                     System.out.println("Agua"); 
-                    .setVisible(false);
                     break;
                 }
                 case 1:{                                 //Cambia el boton por una imagen de las mismas dimensiones
@@ -115,31 +112,8 @@ public class tablajuego {
                    break;
                 }
             }
-            pt=pantano.puntuacion(x, y, pt1);
-            puntoA.setText(pt1 + " pt.");
-            vida1.setProgress(barraVida(vida1,x,y,z));     
-        }
-        if(z=='b'){
-            Button actual = TABLA2[x][y];
-            switch(pantano1.comprobarCasilla(x,y)){
-                case 0:{                                  //Desaparece el boton
-                    System.out.println("Agua"); 
-                    actual.setVisible(false);
-                    break;
-                }
-                case 1:{                                 //Cambia el boton por una imagen de las mismas dimensiones
-                   System.out.println("Bañista"); 
-                   break;
-                }
-                case 2:{                                //Cambia el boton por una imagen de las mismas dimensiones
-                   System.out.println("Cazador");
-                   break;
-                }
-            }
-            pt2=pantano2.puntuacion(x, y, pt2);
-            puntoB.setText(pt2 + " pt.");
-            vida2.setProgress(barraVida(vida2,x,y,z));     
-        }
-    }*/
+            vida.setProgress(barraVida(vida,x,y));         
+        
+    }
    
 }
