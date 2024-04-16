@@ -27,7 +27,7 @@ public class tablajuego {
         }
     }
     
-    public void imgPersonas(){
+    /*public void imgPersonas(){
         Random rnd=new Random();
         int contador=0;
 
@@ -35,13 +35,13 @@ public class tablajuego {
             for (int j=0; j<=TABLA[0].length; j++){  
                 int x=rnd.nextInt(TABLA.length);
                 int y=rnd.nextInt(TABLA[0].length);
-                if(contador < PS && TABLA[x][y]==0){
+                if(contador < PS && TABLA[x][y]==0){           LAURA EXPLICA!!!!!!!!.
                     TABLA[x][y]=1;
                     contador++;
                 }
             }
         }
-    }
+    }*/
     
     public void pantanoCazadores(){
         Random rnd=new Random();

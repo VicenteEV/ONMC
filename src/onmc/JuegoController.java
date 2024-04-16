@@ -88,6 +88,7 @@ public class JuegoController {
         switch(pantano1.comprobarCasilla(x,y)){
             case 0:{                                  //Desaparece el boton
                 System.out.println("Agua"); 
+                b00.setVisible(false);
                 break;
             }
             case 1:{                                 //Cambia el boton por una imagen de las mismas dimensiones
@@ -245,6 +246,149 @@ public class JuegoController {
     
     @FXML
     public void b44(){
+        int x=4,y=4;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a00(){
+        int x=0,y=0;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a01(){
+        int x=0,y=1;
+        Casilla(x, y);
+    }
+    @FXML
+    public void a02(){
+        int x=0,y=2;
+        Casilla(x, y);
+    }
+    @FXML
+    public void a03(){
+        int x=0,y=3;
+        Casilla(x, y);
+    }
+    @FXML
+    public void a04(){
+        int x=0,y=4;
+        Casilla(x, y);
+    }
+    @FXML
+    public void a10(){
+        int x=1,y=0;
+        Casilla(x, y);
+    }
+    @FXML
+    public void a11(){
+        int x=1,y=1;
+        Casilla(x, y);
+    }
+    @FXML
+    public void a12(){
+        int x=1,y=2;
+        Casilla(x, y);
+    }
+    @FXML
+    public void a13(){
+        int x=1,y=3;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a14(){
+        int x=1,y=4;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a20(){
+        int x=2,y=0;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a21(){
+        int x=2,y=1;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a22(){
+        int x=2,y=2;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a23(){
+        int x=2,y=3;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a24(){
+        int x=2,y=4;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a30(){
+        int x=3,y=0;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a31(){
+        int x=3,y=1;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a32(){
+        int x=3,y=2;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a33(){
+        int x=3,y=3;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a34(){
+        int x=3,y=4;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a40(){
+        int x=4,y=0;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a41(){
+        int x=4,y=1;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a42(){
+        int x=4,y=2;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a43(){
+        int x=4,y=3;
+        Casilla(x, y);
+    }
+    
+    @FXML
+    public void a44(){
         int x=4,y=4;
         Casilla(x, y);
     }
