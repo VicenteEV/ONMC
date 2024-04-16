@@ -75,36 +75,16 @@ public class JuegoController {
             io.printStackTrace();
         }
     }
-    
-    public double barraVida(ProgressBar vida, int x, int y, char z){
-       
-        if(z=='a'){
-            if (pantano1.comprobarCasilla(x,y) == 2){
-                pantano1.restaurarCasilla(x,y);
-                pantano1.pantanoCazadores();
 
-                return vida.getProgress()-0.33333333333;
-            }
-        }
-        if(z=='b'){
-            if (pantano2.comprobarCasilla(x,y) == 2){
-                pantano2.restaurarCasilla(x,y);
-                pantano2.pantanoCazadores();
-
-                return vida.getProgress()-0.33333333333;
-            }
-        }
-        return vida.getProgress();
-    }
-    
     public void Casilla(int x, int y, char z){
       
         if(z=='a'){
-            Button actual1 = TABLA1[x][y];
-         /*   switch(pantano2.comprobarCasilla(x,y)){
-                case 0:{                                  //Desaparece el boton
+            Button actual = TABLA1[x][y];
+            switch(pantano1.comprobarCasilla(x,y)){
+                case 0:{
+                    //actual="0";
                     System.out.println("Agua"); 
-                    b00.setVisible(false);
+                    actual.setVisible(false);
                     break;
                 }
                 case 1:{                                 //Cambia el boton por una imagen de las mismas dimensiones
@@ -115,14 +95,14 @@ public class JuegoController {
                    System.out.println("Cazador");
                    break;
                 }
-            }*/
+            }
             pt1=pantano1.puntuacion(x, y, pt1);
             puntoA.setText(pt1 + " pt.");
-            vida1.setProgress(barraVida(vida1,x,y,z));     
+            vida1.setProgress(pantano1.barraVida(vida1, x, y));     
         }
         if(z=='b'){
             Button actual = TABLA2[x][y];
-          /*  switch(pantano1.comprobarCasilla(x,y)){
+            switch(pantano2.comprobarCasilla(x,y)){
                 case 0:{                                  //Desaparece el boton
                     System.out.println("Agua"); 
                     actual.setVisible(false);
@@ -136,17 +116,17 @@ public class JuegoController {
                    System.out.println("Cazador");
                    break;
                 }
-            }*/
+            }
             pt2=pantano2.puntuacion(x, y, pt2);
             puntoB.setText(pt2 + " pt.");
-            vida2.setProgress(barraVida(vida2,x,y,z));     
+           vida2.setProgress(pantano2.barraVida(vida2, x, y));
         }
     }
    
     //BOTONES TABLA
     
     @FXML
-    public void a00(){
+    public void a00(ActionEvent event){
         int x=0,y=0;
         char z='a';
         Casilla(x, y, z);  
