@@ -148,7 +148,7 @@ public class JuegoController {
                    break;
                 }
             }*/
-            pt1=pantano2.puntuacion(x, y, pt2);
+            pt2=pantano2.puntuacion(x, y, pt2);
             puntoB.setText(pt2 + " pt.");
             vida2.setProgress(barraVida(vida2,x,y,z));     
         }
