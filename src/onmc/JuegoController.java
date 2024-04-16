@@ -43,7 +43,6 @@ public class JuegoController {
         pantano1=new tablajuego();
         pantano1.pantanoPersonas();
         pantano1.pantanoCazadores();
-        
     }
 
    @FXML
@@ -189,51 +188,61 @@ public class JuegoController {
         int x=2,y=4;
         Casilla(x, y);
     }
+    
     @FXML
     public void b30(){
         int x=3,y=0;
         Casilla(x, y);
     }
+    
     @FXML
     public void b31(){
         int x=3,y=1;
         Casilla(x, y);
     }
+    
     @FXML
     public void b32(){
         int x=3,y=2;
         Casilla(x, y);
     }
+    
     @FXML
     public void b33(){
         int x=3,y=3;
         Casilla(x, y);
     }
+    
     @FXML
     public void b34(){
         int x=3,y=4;
         Casilla(x, y);
     }
+    
     @FXML
     public void b40(){
         int x=4,y=0;
         Casilla(x, y);
     }
+    
     @FXML
     public void b41(){
         int x=4,y=1;
         Casilla(x, y);
     }
+    
     @FXML
     public void b42(){
         int x=4,y=2;
         Casilla(x, y);
     }
+    
     @FXML
     public void b43(){
         int x=4,y=3;
         Casilla(x, y);
     }
+    
     @FXML
     public void b44(){
         int x=4,y=4;

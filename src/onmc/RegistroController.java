@@ -52,7 +52,7 @@ public class RegistroController {
         
         String consulta;
         String user = "'" + rUsuario.getText()+"'";
-        String password = "'" + rContrasenya.getText()+"'";
+        String password = rContrasenya.getText();
         String mail = "'" + rCorreo.getText()+ "'";
         String name =  "'" + rNombre.getText()+ "'";
         String secondName =  "'" + rApellidos.getText() + "'";

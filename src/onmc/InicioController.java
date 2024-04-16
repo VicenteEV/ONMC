@@ -51,10 +51,8 @@ public class InicioController {
        @FXML
     public void btnInicioSesion(ActionEvent event) throws Exception{
         
-        String vec [][];
-        String vec2 [][];
         boolean temp = false;
-        String consultaUsuario, consultaContrasenya;
+        String consultaUsuario;
         String user =  iUsuario.getText();
         String password = iContrasenya.getText();
         
@@ -62,61 +60,23 @@ public class InicioController {
         byte[] digest = md.digest(password.getBytes(StandardCharsets.UTF_8));
         String sha256 = DatatypeConverter.printHexBinary(digest).toLowerCase();
         
-        consultaUsuario = "select usuario from usuario where usuario= " + "'" + user + "'";
-        consultaContrasenya = "select contrasenya from usuario where usuario =" + "'" + user + "'";
+        consultaUsuario = "select usuario, contrasenya from usuario where usuario= " + "'" + user + "'" + "and" + " contrasenya="+ "'" + sha256 + "'";
+            
         
-        vec = Bd.consultaSelect(conection, consultaUsuario);
-        vec2 = Bd.consultaSelect(conection, consultaContrasenya);
-        //System.out.println(vec = Bd.consultaSelect(conection, consultaContrasenya));
-        if(vec != null) {
-            mostrar(vec);
-            mostrar(vec2);
+        if (Bd.consultaSelect(conection, consultaUsuario) != null) {
+            temp = true;
         }
-        
-           System.out.println(sha256);
-        
-        
-        
-        for (int i = 0; i < vec.length; i++) {
-            for (int j = 0; j < vec.length; j++) {
-                if(vec != null) {
-                    System.out.println("Valorant");
-                    if (user.equals(vec[i][j])){
-                        System.out.println("usuario bien");
-                    }  
-                }
-            }
-        }
-        
-        for (int i = 0; i < vec2.length; i++) {
-            for (int j = 0; j < vec2.length; j++) {
-                if(vec2 != null) {
-                    System.out.println("Valorant");
-                    if (sha256.equals(vec2[i][j])){
-                        System.out.println("contrasenya bien");
-                    }  
-                }
-            }
-        }
-          
 
-        /*if (user.equals("") && password.equals("")) {
-            System.out.println("Sin rellenar");
-        } else if (user.equals(consultaUsuario)){
-                if (sha256.equals(consultaContrasenya)) {
-                    temp = true;
-                    System.out.println("Has entrado");
-                }
-            }*/
-                  
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Perfil.fxml"));
-            Stage stage = (Stage) inicioSesion.getScene().getWindow();
-            Scene scene = new Scene(loader.load());
-            stage.setScene(scene);
-            stage.setFullScreen(true);
-        }catch (IOException io){
-            io.printStackTrace();
+        if (temp == true){     
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Perfil.fxml"));
+                Stage stage = (Stage) inicioSesion.getScene().getWindow();
+                Scene scene = new Scene(loader.load());
+                stage.setScene(scene);
+                stage.setFullScreen(true);
+            }catch (IOException io){
+                io.printStackTrace();
+            }
         }
     }
     
