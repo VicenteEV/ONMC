@@ -27,22 +27,6 @@ public class tablajuego {
         }
     }
     
-    /*public void imgPersonas(){
-        Random rnd=new Random();
-        int contador=0;
-
-        for (int i=0; i<=TABLA.length; i++){                //Bañistas aleatorios
-            for (int j=0; j<=TABLA[0].length; j++){  
-                int x=rnd.nextInt(TABLA.length);
-                int y=rnd.nextInt(TABLA[0].length);
-                if(contador < PS && TABLA[x][y]==0){           LAURA EXPLICA!!!!!!!!.
-                    TABLA[x][y]=1;
-                    contador++;
-                }
-            }
-        }
-    }*/
-    
     public void pantanoCazadores(){
         Random rnd=new Random();
         int contador=0;
@@ -67,6 +51,7 @@ public class tablajuego {
             }
             System.out.println();
         }
+        System.out.println("--------------------");
     }
     
     public void restaurarCasilla(int x, int y){
