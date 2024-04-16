@@ -1,6 +1,7 @@
 
 package onmc;
 
+import java.awt.Image;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -49,7 +50,6 @@ public class JuegoController {
         pantano2.pantanoPersonas();
         pantano2.pantanoCazadores();
     }
-
    @FXML
     public void btnConfig(ActionEvent event) {
         try {
@@ -77,6 +77,7 @@ public class JuegoController {
     }
 
     public void Casilla(int x, int y, char z){
+        
         if(z=='a'){
             pantano1.casillaTabla(pantano1, vida1, x, y);
             pt1= pantano1.puntuacion(x, y, pt1);
@@ -87,7 +88,7 @@ public class JuegoController {
             pt2= pantano1.puntuacion(x, y, pt2);
             puntoB.setText(pt2 + " pt.");
         }
-    }
+    } 
    
     //BOTONES TABLA
     
@@ -98,6 +99,13 @@ public class JuegoController {
         if(pantano1.comprobarCasilla(x,y)==0){
             a00.setVisible(false);
         }
+        if(pantano1.comprobarCasilla(x,y)==1){
+            a00.setText(1+"");
+        }
+        if(pantano1.comprobarCasilla(x,y)==2){
+            a00.setText(2+"");
+        }
+        
         pantano1.casillaTabla(pantano1, vida1, x, y);
         Casilla(x, y, z);  
     }
@@ -109,6 +117,12 @@ public class JuegoController {
         if(pantano1.comprobarCasilla(x,y)==0){
             a01.setVisible(false);
         }
+        if(pantano1.comprobarCasilla(x,y)==1){
+            a01.setText(1+"");
+        }
+        if(pantano1.comprobarCasilla(x,y)==2){
+            a01.setText(2+"");
+        }
         Casilla(x, y, z);  
     }
     
@@ -119,7 +133,13 @@ public class JuegoController {
         if(pantano1.comprobarCasilla(x,y)==0){
             a02.setVisible(false);
         }
-        Casilla(x, y, z); 
+        if(pantano1.comprobarCasilla(x,y)==1){
+            a02.setText(1+"");
+        }
+        if(pantano1.comprobarCasilla(x,y)==2){
+            a02.setText(2+"");
+        }
+        Casilla(x, y, z);  
     }
     
     @FXML
@@ -129,6 +149,12 @@ public class JuegoController {
         if(pantano1.comprobarCasilla(x,y)==0){
             a03.setVisible(false);
         }
+        if(pantano1.comprobarCasilla(x,y)==1){
+            a03.setText(1+"");
+        }
+        if(pantano1.comprobarCasilla(x,y)==2){
+            a03.setText(2+"");
+        }
         Casilla(x, y, z);  
     }
     
@@ -136,6 +162,15 @@ public class JuegoController {
     public void a04(){
         int x=0,y=4;
         char z='a';
+        if(pantano1.comprobarCasilla(x,y)==0){
+            a04.setVisible(false);
+        }
+        if(pantano1.comprobarCasilla(x,y)==1){
+            a04.setText(1+"");
+        }
+        if(pantano1.comprobarCasilla(x,y)==2){
+            a04.setText(2+"");
+        }
         Casilla(x, y, z);  
     }
     
