@@ -38,7 +38,7 @@
             </Label>
         </children>
     </AnchorPane>
-    <AnchorPane layoutX="276.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
+    <AnchorPane layoutX="661.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
          <children>
             <Label fx:id="puntoA" layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="" textAlignment="JUSTIFY">
                <font>
@@ -47,7 +47,7 @@
             </Label>
          </children>
     </AnchorPane>
-    <AnchorPane layoutX="680.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
+    <AnchorPane layoutX="288.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
          <children>
             <Label fx:id="puntoB" layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="" textAlignment="JUSTIFY">
                <font>
@@ -83,10 +83,6 @@
             </Label>
          </children>
     </AnchorPane>
-    <ProgressBar fx:id="vida1" layoutX="59.0" layoutY="521.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="34.0" prefWidth="243.0" progress="1.0">
-               <effect>
-                  <ColorAdjust brightness="0.14" contrast="0.19" hue="1.0" />
-               </effect></ProgressBar>
     <ImageView fitHeight="293.0" fitWidth="295.0" layoutX="383.0" layoutY="244.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/partida.png" />
@@ -188,7 +184,12 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </GridPane>
-            <ProgressBar fx:id="vida2" layoutX="761.0" layoutY="521.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="34.0" prefWidth="243.0" progress="1.0">
+            <ProgressBar fx:id="vida2" layoutX="59.0" layoutY="522.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="34.0" prefWidth="243.0" progress="1.0">
+               <effect>
+                  <ColorAdjust brightness="0.14" contrast="0.19" hue="1.0" />
+               </effect>
+            </ProgressBar>
+    <ProgressBar fx:id="vida1" layoutX="761.0" layoutY="522.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="34.0" prefWidth="243.0" progress="1.0">
                <effect>
                   <ColorAdjust brightness="0.14" contrast="0.19" hue="1.0" />
                </effect>
