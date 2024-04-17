@@ -1,20 +1,19 @@
 
 package onmc;
 import java.util.Random;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 
 
 public class tablajuego {
     public final int[][] TABLA=new int [5][5];
     private final int PS=7;
-    private final int CZ=1;
-    
-
-
+    private final int CZ=3;
+    int pt;
     tablajuego(){
     }
     
-
     public void pantanoPersonas(){
         Random rnd=new Random();
         int contador=0;
@@ -47,7 +46,6 @@ public class tablajuego {
                 }
             }
         }
-    
         
         for (int i = 0; i < TABLA.length; i++) {
             for (int j = 0; j < TABLA[0].length; j++) {
@@ -56,10 +54,6 @@ public class tablajuego {
             System.out.println();
         }
         System.out.println("--------------------");
-    }
-    
-    public void restaurarCasilla(int x, int y){
-        TABLA[x][y]=0;
     }
 
     public int comprobarCasilla(int x, int y){
@@ -76,52 +70,42 @@ public class tablajuego {
         return resultado; 
     }
     
-    public int puntuacion(int x, int y, int puntuacion){
-
-        if (comprobarCasilla(x,y)==1){
-            puntuacion=puntuacion+235;
-        }
-        if (comprobarCasilla(x,y)==2){
-            puntuacion=puntuacion -50;
-        }
-        
-        return puntuacion;
-    }
-    
     public double barraVida(ProgressBar vida, int x, int y){
       
         if (comprobarCasilla(x,y) == 2){
-       //   restaurarCasilla(x,y);
-            pantanoCazadores();
-
             return vida.getProgress()-0.33333333333;
         }
         return vida.getProgress();
     }
     
-    public void casillaTabla(tablajuego pantano, ProgressBar vida, int x, int y){
-        
+    public void Casilla(Label lb, Button btn, tablajuego pantano, ProgressBar vida, int x, int y){
+            
             switch(pantano.comprobarCasilla(x,y)){
                 case 0:{                                  //Desaparece el boton
-                    System.out.println("Agua"); 
-                    break;
+                        System.out.println("Agua");
+                        btn.setVisible(false);
+                        break;
                 }
                 case 1:{                                 //Cambia el boton por una imagen de las mismas dimensiones
-                   System.out.println("Bañista"); 
-                   break;
+                        System.out.println("Bañista");
+                        pt=pt+150;
+                        btn.setText("");
+                        btn.setStyle("-fx-background-image: url(\"/img/personita1.png\");");
+                        break;
                 }
                 case 2:{                                //Cambia el boton por una imagen de las mismas dimensiones
                    System.out.println("Cazador");
-                   break;
+                   pt=pt-50;
+                        btn.setText("");
+                        btn.setStyle("-fx-background-image: url(\"/img/caza.png\");");
+                        break;
                 }
             }
-            vida.setProgress(barraVida(vida,x,y));         
-        
+            vida.setProgress(barraVida(vida, x, y));
+            lb.setText(pt +" pt.");
     }
     
     public void finalizarPartida (int x, ProgressBar vida){
-        
-        
         
         if (vida.getProgress() < 0.33333333333) {
             System.out.println("Fin partida");

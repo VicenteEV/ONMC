@@ -39,9 +39,6 @@ public class JuegoController {
     private Label puntoA, puntoB;
     
     @FXML
-    private int pt1=0, pt2=0;
-    
-    @FXML
     public void initialize(){
         pantano1=new tablajuego();
         pantano1.pantanoPersonas();
@@ -76,448 +73,307 @@ public class JuegoController {
         }
     }
    
-    
-
-    public void Casilla(int x, int y, char z){
-        
-        if(z=='a'){
-            pantano1.casillaTabla(pantano1, vida1, x, y);
-            pt1= pantano1.puntuacion(x, y, pt1);
-            puntoA.setText(pt1 + " pt.");
-            pantano1.finalizarPartida(pt1, vida1);
-        }
-        if(z=='b'){
-            pantano2.casillaTabla(pantano2, vida2, x, y);
-            pt2= pantano1.puntuacion(x, y, pt2);
-            puntoB.setText(pt2 + " pt.");
-            pantano2.finalizarPartida(pt2, vida2);
-        }
-    }
-    
-
-   
-    //BOTONES TABLA
-    
     //BOTONES TABLA
     
     @FXML
-    public void a00(){
+    public void a00(ActionEvent Event){
         int x=0,y=0;
-        char z='a';
-        if(pantano1.comprobarCasilla(x,y)==0){
-            a00.setVisible(false);
-        }
-        if(pantano1.comprobarCasilla(x,y)==1){
-            a00.setText("");
-            a00.setStyle("-fx-background-image: url(\"/img/personita1.png\");");       
-        }
-        if(pantano1.comprobarCasilla(x,y)==2){
-            a00.setText("");
-            a00.setStyle("-fx-background-image: url(\"/img/caza.png\");");
-            pantano1.barraVida(vida1, x, y);
-          //  pantano1.restaurarCasilla(x,y);
-        } 
-        pantano1.casillaTabla(pantano1, vida1, x, y);
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a00,pantano1,vida1,x,y);
     }
     
     @FXML
-    public void a01(){
+    public void a01(ActionEvent Event){
         int x=0,y=1;
-        char z='a';
-        if(pantano1.comprobarCasilla(x,y)==0){
-            a01.setVisible(false);
-        }
-        if(pantano1.comprobarCasilla(x,y)==1){
-            a01.setText("");
-            a01.setStyle("-fx-background-image: url(\"/img/personita1.png\");");       
-        }
-        if(pantano1.comprobarCasilla(x,y)==2){
-            a01.setText("");
-            a01.setStyle("-fx-background-image: url(\"/img/caza.png\");");
-            pantano1.barraVida(vida1, x, y);
-          //  pantano1.restaurarCasilla(x,y);
-        } 
-        pantano1.casillaTabla(pantano1, vida1, x, y);
-        Casilla(x, y, z);    
+        pantano1.Casilla(puntoA,a01,pantano1,vida1,x,y);  
     }
     
     @FXML
-    public void a02(){
+    public void a02(ActionEvent Event){
         int x=0,y=2;
-        char z='a';
-        if(pantano1.comprobarCasilla(x,y)==0){
-            a02.setVisible(false);
-        }
-        if(pantano1.comprobarCasilla(x,y)==1){
-            a02.setText("");
-            a02.setStyle("-fx-background-image: url(\"/img/personita1.png\");");       
-        }
-        if(pantano1.comprobarCasilla(x,y)==2){
-            a02.setText("");
-            a02.setStyle("-fx-background-image: url(\"/img/caza.png\");");
-            pantano1.barraVida(vida1, x, y);
-           // pantano1.restaurarCasilla(x,y);
-        } 
-        pantano1.casillaTabla(pantano1, vida1, x, y);
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a02,pantano1,vida1,x,y);
     }
     
     @FXML
-    public void a03(){
+    public void a03(ActionEvent Event){
         int x=0,y=3;
-        char z='a';
-        if(pantano1.comprobarCasilla(x,y)==0){
-            a03.setVisible(false);
-        }
-        if(pantano1.comprobarCasilla(x,y)==1){
-            a03.setText("");
-            a03.setStyle("-fx-background-image: url(\"/img/personita1.png\");");       
-        }
-        if(pantano1.comprobarCasilla(x,y)==2){
-            a03.setText("");
-            a03.setStyle("-fx-background-image: url(\"/img/caza.png\");");
-            pantano1.barraVida(vida1, x, y);
-           // pantano1.restaurarCasilla(x,y);
-        } 
-        pantano1.casillaTabla(pantano1, vida1, x, y);
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a03,pantano1,vida1,x,y);
     }
     
     @FXML
-    public void a04(){
+    public void a04(ActionEvent Event){
         int x=0,y=4;
-        char z='a';
-        if(pantano1.comprobarCasilla(x,y)==0){
-            a04.setVisible(false);
-        }
-        if(pantano1.comprobarCasilla(x,y)==1){
-            a04.setText("");
-            a04.setStyle("-fx-background-image: url(\"/img/personita1.png\");");       
-        }
-        if(pantano1.comprobarCasilla(x,y)==2){
-            a04.setText("");
-            a04.setStyle("-fx-background-image: url(\"/img/caza.png\");");
-            pantano1.barraVida(vida1, x, y);
-           // pantano1.restaurarCasilla(x,y);
-        } 
-        pantano1.casillaTabla(pantano1, vida1, x, y);
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a04,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a10(){
+    public void a10(ActionEvent Event){
         int x=1,y=0;
         char z='a';
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a10,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a11(){
+    public void a11(ActionEvent Event){
         int x=1,y=1;
         char z='a';
-        Casilla(x, y, z);   
+        pantano1.Casilla(puntoA,a11,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a12(){
+    public void a12(ActionEvent Event){
         int x=1,y=2;
-        char z='a';
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a12,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a13(){
+    public void a13(ActionEvent Event){
         int x=1,y=3;
-        char z='a';
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a13,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a14(){
+    public void a14(ActionEvent Event){
         int x=1,y=4;
-        char z='a';
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a14,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a20(){
+    public void a20(ActionEvent Event){
         int x=2,y=0;
-        char z='a';
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a20,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a21(){
+    public void a21(ActionEvent Event){
         int x=2,y=1;
-        char z='a';
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a21,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a22(){
+    public void a22(ActionEvent Event){
         int x=2,y=2;
-        char z='a';
-        Casilla(x, y, z);   
+        pantano1.Casilla(puntoA,a22,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a23(){
+    public void a23(ActionEvent Event){
         int x=2,y=3;
-        char z='a';
-        Casilla(x, y, z);   
+        pantano1.Casilla(puntoA,a23,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a24(){
+    public void a24(ActionEvent Event){
         int x=2,y=4;
-        char z='a';
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a24,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a30(){
+    public void a30(ActionEvent Event){
         int x=3,y=0;
-        char z='a';
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a30,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a31(){
+    public void a31(ActionEvent Event){
         int x=3,y=1;
-        char z='a';
-        Casilla(x, y, z);  
+        pantano1.Casilla(puntoA,a31,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a32(){
+    public void a32(ActionEvent Event){
         int x=3,y=2;
-        char z='a';
-        Casilla(x, y, z);   
+        pantano1.Casilla(puntoA,a32,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a33(){
+    public void a33(ActionEvent Event){
         int x=3,y=3;
-        char z='a';
-        Casilla(x, y, z);    
+        pantano1.Casilla(puntoA,a33,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a34(){
+    public void a34(ActionEvent Event){
         int x=3,y=4;
-        char z='a';
-        Casilla(x, y, z);    
+        pantano1.Casilla(puntoA,a34,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a40(){
+    public void a40(ActionEvent Event){
         int x=4,y=0;
-        char z='a';
-        Casilla(x, y, z);    
+        pantano1.Casilla(puntoA,a40,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a41(){
+    public void a41(ActionEvent Event){
         int x=4,y=1;
-        char z='a';
-        Casilla(x, y, z);    
+        pantano1.Casilla(puntoA,a41,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a42(){
+    public void a42(ActionEvent Event){
         int x=4,y=2;
-        char z='a';
-        Casilla(x, y, z);    
+        pantano1.Casilla(puntoA,a42,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a43(){
+    public void a43(ActionEvent Event){
         int x=4,y=3;
-        char z='a';
-        Casilla(x, y, z);    
+        pantano1.Casilla(puntoA,a43,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void a44(){
+    public void a44(ActionEvent Event){
         int x=4,y=4;
-        char z='a';
-        Casilla(x, y, z);    
+        pantano1.Casilla(puntoA,a44,pantano1,vida1,x,y); 
     }
     
     @FXML
-    public void b00(){
+    public void b00(ActionEvent Event){
         int x=0,y=0;
-        char z='b';
-        Casilla(x, y, z);
-         System.out.println("TABLA1"); 
+        pantano2.Casilla(puntoB,b00,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b01(){
+    public void b01(ActionEvent Event){
         int x=0,y=1;
-        char z='b';
-        Casilla(x, y, z);   
+        pantano2.Casilla(puntoB,b01,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b02(){
+    public void b02(ActionEvent Event){
         int x=0,y=2;
-        char z='b';
-        Casilla(x, y, z);
+        pantano2.Casilla(puntoB,b02,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b03(){
+    public void b03(ActionEvent Event){
         int x=0,y=3;
-        char z='b';
-        Casilla(x, y, z);
+        pantano2.Casilla(puntoB,b03,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b04(){
+    public void b04(ActionEvent Event){
         int x=0,y=4;
-        char z='b';
-        Casilla(x, y, z);
+        pantano2.Casilla(puntoB,b04,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b10(){
+    public void b10(ActionEvent Event){
         int x=1,y=0;
-        char z='b';
-        Casilla(x, y, z);
+        pantano2.Casilla(puntoB,b10,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b11(){
+    public void b11(ActionEvent Event){
         int x=1,y=1;
-        char z='b';
-        Casilla(x, y, z);
+        pantano2.Casilla(puntoB,b11,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b12(){
+    public void b12(ActionEvent Event){
         int x=1,y=2;
-        char z='b';
-        Casilla(x, y, z);    
+        pantano2.Casilla(puntoB,b12,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b13(){
+    public void b13(ActionEvent Event){
         int x=1,y=3;
-        char z='b';
-        Casilla(x, y, z);   
+        pantano2.Casilla(puntoB,b13,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b14(){
+    public void b14(ActionEvent Event){
         int x=1,y=4;
-        char z='b';
-        Casilla(x, y, z);    
+        pantano2.Casilla(puntoB,b14,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b20(){
+    public void b20(ActionEvent Event){
         int x=2,y=0;
-        char z='b';
-        Casilla(x, y, z);    
+        pantano2.Casilla(puntoB,b20,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b21(){
+    public void b21(ActionEvent Event){
         int x=2,y=1;
-        char z='b';
-        Casilla(x, y, z);  
+        pantano2.Casilla(puntoB,b21,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b22(){
+    public void b22(ActionEvent Event){
         int x=2,y=2;
-        char z='b';
-        Casilla(x, y, z);  
+        pantano2.Casilla(puntoB,b22,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b23(){
+    public void b23(ActionEvent Event){
         int x=2,y=3;
-        char z='b';
-        Casilla(x, y, z);  
+        pantano2.Casilla(puntoB,b23,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b24(){
+    public void b24(ActionEvent Event){
         int x=2,y=4;
-        char z='b';
-        Casilla(x, y, z);  
+        pantano2.Casilla(puntoB,b24,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b30(){
+    public void b30(ActionEvent Event){
         int x=3,y=0;
-        char z='b';
-        Casilla(x, y, z);   
+        pantano2.Casilla(puntoB,b30,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b31(){
+    public void b31(ActionEvent Event){
         int x=3,y=1;
-        char z='b';
-        Casilla(x, y, z);   
+        pantano2.Casilla(puntoB,b31,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b32(){
+    public void b32(ActionEvent Event){
         int x=3,y=2;
-        char z='b';
-        Casilla(x, y, z);  
+        pantano2.Casilla(puntoB,b32,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b33(){
+    public void b33(ActionEvent Event){
         int x=3,y=3;
-        char z='b';
-        Casilla(x, y, z);  
+        pantano2.Casilla(puntoB,b33,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b34(){
+    public void b34(ActionEvent Event){
         int x=3,y=4;
-        char z='b';
-        Casilla(x, y, z);  
+        pantano2.Casilla(puntoB,b34,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b40(){
+    public void b40(ActionEvent Event){
         int x=4,y=0;
-        char z='b';
-        Casilla(x, y, z);  
+        pantano2.Casilla(puntoB,b40,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b41(){
+    public void b41(ActionEvent Event){
         int x=4,y=1;
-        char z='b';
-        Casilla(x, y, z);   
+        pantano2.Casilla(puntoB,b41,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b42(){
+    public void b42(ActionEvent Event){
         int x=4,y=2;
-        char z='b';
-        Casilla(x, y, z);   
+        pantano2.Casilla(puntoB,b42,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b43(){
+    public void b43(ActionEvent Event){
         int x=4,y=3;
-        char z='b';
-        Casilla(x, y, z);   
+        pantano2.Casilla(puntoB,b43,pantano2,vida2,x,y); 
     }
     
     @FXML
-    public void b44(){
+    public void b44(ActionEvent Event){
         int x=4,y=4;
-        char z='b';
-        Casilla(x, y, z);  
+        pantano2.Casilla(puntoB,b44,pantano2,vida2,x,y); 
     }
 }
