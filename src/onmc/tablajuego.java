@@ -91,7 +91,7 @@ public class tablajuego {
     public double barraVida(ProgressBar vida, int x, int y){
       
         if (comprobarCasilla(x,y) == 2){
-            restaurarCasilla(x,y);
+       //   restaurarCasilla(x,y);
             pantanoCazadores();
 
             return vida.getProgress()-0.33333333333;

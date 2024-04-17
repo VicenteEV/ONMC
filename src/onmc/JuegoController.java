@@ -1,7 +1,6 @@
 
 package onmc;
 
-import java.awt.Image;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -99,6 +98,8 @@ public class JuegoController {
    
     //BOTONES TABLA
     
+    //BOTONES TABLA
+    
     @FXML
     public void a00(){
         int x=0,y=0;
@@ -107,12 +108,15 @@ public class JuegoController {
             a00.setVisible(false);
         }
         if(pantano1.comprobarCasilla(x,y)==1){
-            a00.setText(1+"");
+            a00.setText("");
+            a00.setStyle("-fx-background-image: url(\"/img/personita1.png\");");       
         }
         if(pantano1.comprobarCasilla(x,y)==2){
-            a00.setText(2+"");
-        }
-        
+            a00.setText("");
+            a00.setStyle("-fx-background-image: url(\"/img/caza.png\");");
+            pantano1.barraVida(vida1, x, y);
+          //  pantano1.restaurarCasilla(x,y);
+        } 
         pantano1.casillaTabla(pantano1, vida1, x, y);
         Casilla(x, y, z);  
     }
@@ -125,12 +129,17 @@ public class JuegoController {
             a01.setVisible(false);
         }
         if(pantano1.comprobarCasilla(x,y)==1){
-            a01.setText(1+"");
+            a01.setText("");
+            a01.setStyle("-fx-background-image: url(\"/img/personita1.png\");");       
         }
         if(pantano1.comprobarCasilla(x,y)==2){
-            a01.setText(2+"");
-        }
-        Casilla(x, y, z);  
+            a01.setText("");
+            a01.setStyle("-fx-background-image: url(\"/img/caza.png\");");
+            pantano1.barraVida(vida1, x, y);
+          //  pantano1.restaurarCasilla(x,y);
+        } 
+        pantano1.casillaTabla(pantano1, vida1, x, y);
+        Casilla(x, y, z);    
     }
     
     @FXML
@@ -141,11 +150,16 @@ public class JuegoController {
             a02.setVisible(false);
         }
         if(pantano1.comprobarCasilla(x,y)==1){
-            a02.setText(1+"");
+            a02.setText("");
+            a02.setStyle("-fx-background-image: url(\"/img/personita1.png\");");       
         }
         if(pantano1.comprobarCasilla(x,y)==2){
-            a02.setText(2+"");
-        }
+            a02.setText("");
+            a02.setStyle("-fx-background-image: url(\"/img/caza.png\");");
+            pantano1.barraVida(vida1, x, y);
+           // pantano1.restaurarCasilla(x,y);
+        } 
+        pantano1.casillaTabla(pantano1, vida1, x, y);
         Casilla(x, y, z);  
     }
     
@@ -157,11 +171,16 @@ public class JuegoController {
             a03.setVisible(false);
         }
         if(pantano1.comprobarCasilla(x,y)==1){
-            a03.setText(1+"");
+            a03.setText("");
+            a03.setStyle("-fx-background-image: url(\"/img/personita1.png\");");       
         }
         if(pantano1.comprobarCasilla(x,y)==2){
-            a03.setText(2+"");
-        }
+            a03.setText("");
+            a03.setStyle("-fx-background-image: url(\"/img/caza.png\");");
+            pantano1.barraVida(vida1, x, y);
+           // pantano1.restaurarCasilla(x,y);
+        } 
+        pantano1.casillaTabla(pantano1, vida1, x, y);
         Casilla(x, y, z);  
     }
     
@@ -173,11 +192,16 @@ public class JuegoController {
             a04.setVisible(false);
         }
         if(pantano1.comprobarCasilla(x,y)==1){
-            a04.setText(1+"");
+            a04.setText("");
+            a04.setStyle("-fx-background-image: url(\"/img/personita1.png\");");       
         }
         if(pantano1.comprobarCasilla(x,y)==2){
-            a04.setText(2+"");
-        }
+            a04.setText("");
+            a04.setStyle("-fx-background-image: url(\"/img/caza.png\");");
+            pantano1.barraVida(vida1, x, y);
+           // pantano1.restaurarCasilla(x,y);
+        } 
+        pantano1.casillaTabla(pantano1, vida1, x, y);
         Casilla(x, y, z);  
     }
     
