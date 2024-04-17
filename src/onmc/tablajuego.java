@@ -80,29 +80,24 @@ public class tablajuego {
     
     public void Casilla(Label lb, Button btn, tablajuego pantano, ProgressBar vida, int x, int y){
             
-            switch(pantano.comprobarCasilla(x,y)){
-                case 0:{                                  //Desaparece el boton
-                        System.out.println("Agua");
-                        btn.setVisible(false);
-                        break;
-                }
-                case 1:{                                 //Cambia el boton por una imagen de las mismas dimensiones
-                        System.out.println("Bañista");
-                        pt=pt+150;
-                        btn.setText("");
-                        btn.setStyle("-fx-background-image: url(\"/img/personita1.png\");");
-                        break;
-                }
-                case 2:{                                //Cambia el boton por una imagen de las mismas dimensiones
-                   System.out.println("Cazador");
-                   pt=pt-50;
-                        btn.setText("");
-                        btn.setStyle("-fx-background-image: url(\"/img/caza.png\");");
-                        break;
-                }
+        switch(pantano.comprobarCasilla(x,y)){
+            case 0:{                                 
+                btn.setVisible(false);
+                break;
             }
-            vida.setProgress(barraVida(vida, x, y));
-            lb.setText(pt +" pt.");
+            case 1:{                                 
+                pt=pt+150;
+                btn.setStyle("-fx-background-image: url(\"/img/personita1.png\");");
+                break;
+            }
+            case 2:{                                
+                pt=pt-50;
+                btn.setStyle("-fx-background-image: url(\"/img/caza.png\");");
+                break;
+            }
+        }
+        vida.setProgress(barraVida(vida, x, y));
+        lb.setText(pt +" pt.");
     }
     
     public void finalizarPartida (int x, ProgressBar vida){
@@ -112,10 +107,6 @@ public class tablajuego {
         }
         if (x >= 1000) {
             System.out.println("Fin partida");
-        }
-
-        
-        
+        }  
     }
-   
 }

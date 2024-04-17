@@ -108,14 +108,12 @@ public class JuegoController {
     @FXML
     public void a10(ActionEvent Event){
         int x=1,y=0;
-        char z='a';
         pantano1.Casilla(puntoA,a10,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a11(ActionEvent Event){
         int x=1,y=1;
-        char z='a';
         pantano1.Casilla(puntoA,a11,pantano1,vida1,x,y); 
     }
     
