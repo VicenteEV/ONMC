@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.stage.Stage;
 
+
 public class JuegoController {
     
     @FXML
@@ -75,6 +76,8 @@ public class JuegoController {
             io.printStackTrace();
         }
     }
+   
+    
 
     public void Casilla(int x, int y, char z){
         
@@ -82,13 +85,17 @@ public class JuegoController {
             pantano1.casillaTabla(pantano1, vida1, x, y);
             pt1= pantano1.puntuacion(x, y, pt1);
             puntoA.setText(pt1 + " pt.");
+            pantano1.finalizarPartida(pt1, vida1);
         }
         if(z=='b'){
             pantano2.casillaTabla(pantano2, vida2, x, y);
             pt2= pantano1.puntuacion(x, y, pt2);
             puntoB.setText(pt2 + " pt.");
+            pantano2.finalizarPartida(pt2, vida2);
         }
-    } 
+    }
+    
+
    
     //BOTONES TABLA
     

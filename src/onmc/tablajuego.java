@@ -8,9 +8,12 @@ public class tablajuego {
     public final int[][] TABLA=new int [5][5];
     private final int PS=7;
     private final int CZ=1;
+    
+
 
     tablajuego(){
     }
+    
 
     public void pantanoPersonas(){
         Random rnd=new Random();
@@ -113,6 +116,21 @@ public class tablajuego {
                 }
             }
             vida.setProgress(barraVida(vida,x,y));         
+        
+    }
+    
+    public void finalizarPartida (int x, ProgressBar vida){
+        
+        
+        
+        if (vida.getProgress() < 0.33333333333) {
+            System.out.println("Fin partida");
+        }
+        if (x >= 1000) {
+            System.out.println("Fin partida");
+        }
+
+        
         
     }
    
