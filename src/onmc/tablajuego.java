@@ -98,15 +98,16 @@ public class tablajuego {
         }
         vida.setProgress(barraVida(vida, x, y));
         lb.setText(pt +" pt.");
+        finalizarPartida(pt, vida);
     }
     
     public void finalizarPartida (int x, ProgressBar vida){
         
         if (vida.getProgress() < 0.33333333333) {
-            System.out.println("Fin partida");
+            System.out.println("Fin partida vida");
         }
-        if (x >= 1000) {
-            System.out.println("Fin partida");
+        if (x >= 350) {
+            System.out.println("Fin partida pt");
         }  
     }
 }
