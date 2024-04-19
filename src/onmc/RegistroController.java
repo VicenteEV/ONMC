@@ -17,6 +17,7 @@ import utilidades.bbdd.Gestor_conexion_POSTGRE;
 import javax.xml.bind.DatatypeConverter;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
+import javafx.scene.Parent;
 
 
 
@@ -35,16 +36,10 @@ public class RegistroController {
     
     
     @FXML
-    public void btnConfig(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Inicio.fxml"));
-            Stage stage = (Stage) config.getScene().getWindow();
-            Scene scene = new Scene(loader.load());
-            stage.setScene(scene);
-            stage.setFullScreen(true);
-        }catch (IOException io){
-            io.printStackTrace();
-        }
+    public void btnConfig(ActionEvent event) throws Exception {
+        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Inicio.fxml"));
+        ONMC.stage.getScene().setRoot(loader);
+        ONMC.stage.show();
     }
     
     @FXML
@@ -68,16 +63,9 @@ public class RegistroController {
         Bd.consultaModificacion(conection, consulta);
         System.out.println("Te has registrado");
         
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Inicio.fxml"));
-            Stage stage = (Stage) rAceptar.getScene().getWindow();
-            Scene scene = new Scene(loader.load());
-            stage.setScene(scene);
-            stage.setFullScreen(true);
-            
-        }catch (IOException io){
-            io.printStackTrace();
-        }
+        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Inicio.fxml"));
+        ONMC.stage.getScene().setRoot(loader);
+        ONMC.stage.show();
    
     }
 }

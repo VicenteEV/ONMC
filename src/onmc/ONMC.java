@@ -9,8 +9,13 @@ import javafx.stage.Stage;
 
 public class ONMC extends Application {
     
+    public static Stage stage;
+    
+    static void getStage(Stage s){stage=s;}
+    
     @Override
     public void start(Stage stage) throws Exception {
+        getStage(stage);
 
         Parent root = FXMLLoader.load(getClass().getResource("Escenas/Inicio.fxml"));
         
