@@ -1,6 +1,9 @@
 
 package onmc;
 import java.util.Random;
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
@@ -88,7 +91,7 @@ public class tablajuego {
         return vida.getProgress();
     }
     
-    public void Casilla(Label puntos,Label turnos, Button btn, tablajuego pantano, ProgressBar vida, int x, int y){
+    public void Casilla(Label puntos,Label turnos, Button btn, tablajuego pantano, ProgressBar vida, int x, int y) throws Exception{
             
         switch(pantano.comprobarCasilla(x,y)){
             case 0:{                                 
@@ -110,21 +113,32 @@ public class tablajuego {
             }
         }
         vida.setProgress(barraVida(vida, x, y));
-        puntos.setText(pt +"");
+        puntos.setText(pt + "");
         finalizarPartida(pt, vida, turno);
         turnos.setText(turno + "");
     }
     
-    public void finalizarPartida (int x, ProgressBar vida, int turno){
+    public void finalizarPartida (int x, ProgressBar vida, int turno) throws Exception{
         
         if (vida.getProgress() < 0.33333333333) {
             System.out.println("Fin partida vida");
+            Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Victoria.fxml"));
+            ONMC.stage.getScene().setRoot(loader);
+            ONMC.stage.show();
         }
         if (x >= 350) {
             System.out.println("Fin partida pt");
+            Platform.setImplicitExit(true);
+            Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Victoria.fxml"));
+            ONMC.stage.getScene().setRoot(loader);
+            ONMC.stage.show();
         } 
         if(turno==0){
-            System.out.println("AAAAAAAAAAAAAAAAA");
+            System.out.println("Fin partida turnos");
+            Platform.setImplicitExit(true);
+            Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Victoria.fxml"));
+            ONMC.stage.getScene().setRoot(loader);
+            ONMC.stage.show();
         }
     }
 }
