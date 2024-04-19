@@ -14,13 +14,14 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.JuegoController">
     <children>
     <AnchorPane maxHeight="633.0" maxWidth="1084.0" prefHeight="633.0" prefWidth="1084.0">
         <children>
          <Button fx:id="config" layoutX="456.0" layoutY="175.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="43.0" prefWidth="150.0" text="Configuración" />
-         <AnchorPane layoutX="59.0" layoutY="54.0" prefHeight="43.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-background-color: white; -fx-border-width: 3px;">
+         <AnchorPane layoutX="28.0" layoutY="54.0" prefHeight="43.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-background-color: white; -fx-border-width: 3px;">
          <children>
             <Label layoutX="54.0" layoutY="8.0" prefHeight="27.0" prefWidth="85.0" text="&quot;Usuario&quot;" textAlignment="JUSTIFY">
                <font>
@@ -29,7 +30,7 @@
             </Label>
          </children>
     </AnchorPane>
-    <AnchorPane layoutX="812.0" layoutY="55.0" prefHeight="43.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-background-color: white; -fx-border-width: 3px;">
+    <AnchorPane layoutX="838.0" layoutY="54.0" prefHeight="43.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-background-color: white; -fx-border-width: 3px;">
         <children>
             <Label layoutX="54.0" layoutY="8.0" prefHeight="27.0" prefWidth="85.0" text="&quot;Usuario&quot;" textAlignment="JUSTIFY">
                <font>
@@ -38,18 +39,18 @@
             </Label>
         </children>
     </AnchorPane>
-    <AnchorPane layoutX="313.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
+    <AnchorPane layoutX="324.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
          <children>
-            <Label fx:id="puntoA" layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="" textAlignment="JUSTIFY">
+            <Label fx:id="puntoA" layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
          </children>
     </AnchorPane>
-    <AnchorPane layoutX="650.0" layoutY="55.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
+    <AnchorPane layoutX="638.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
          <children>
-            <Label fx:id="puntoB" layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="" textAlignment="JUSTIFY">
+            <Label fx:id="puntoB" layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -194,6 +195,44 @@
                   <ColorAdjust brightness="0.14" contrast="0.19" hue="1.0" />
                </effect>
             </ProgressBar>
+            <AnchorPane layoutX="739.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
+               <children>
+                  <Label fx:id="turnoB" contentDisplay="CENTER" layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="224.0" layoutY="54.0" prefHeight="43.0" prefWidth="95.0" style="-fx-border-style: solid; -fx-background-color: gray; -fx-border-width: 3px;">
+               <children>
+                  <Label fx:id="turnoA" layoutX="9.0" layoutY="8.0" prefHeight="27.0" prefWidth="77.0" text="" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Text layoutX="324.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Puntuación" textAlignment="CENTER" wrappingWidth="94.99999383091927">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="638.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Puntuación" textAlignment="CENTER" wrappingWidth="94.99999383091927">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="739.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Turnos" textAlignment="CENTER" wrappingWidth="94.99999383091927">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="224.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Turnos" textAlignment="CENTER" wrappingWidth="94.99999383091927">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
    </children>
 </AnchorPane>
     </children>

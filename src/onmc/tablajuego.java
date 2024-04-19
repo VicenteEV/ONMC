@@ -10,7 +10,17 @@ public class tablajuego {
     public final int[][] TABLA=new int [5][5];
     private final int PS=7;
     private final int CZ=3;
-    int pt;
+    int pt=0,turno=15;
+
+    public int getPt() {
+        return pt;
+    }
+
+    public int getTurno() {
+        return turno;
+    }
+    
+    
     tablajuego(){
     }
     
@@ -78,36 +88,43 @@ public class tablajuego {
         return vida.getProgress();
     }
     
-    public void Casilla(Label lb, Button btn, tablajuego pantano, ProgressBar vida, int x, int y){
+    public void Casilla(Label puntos,Label turnos, Button btn, tablajuego pantano, ProgressBar vida, int x, int y){
             
         switch(pantano.comprobarCasilla(x,y)){
             case 0:{                                 
                 btn.setVisible(false);
+                turno--;
                 break;
             }
             case 1:{                                 
                 pt=pt+150;
+                turno--;
                 btn.setStyle("-fx-background-image: url(\"/img/personita1.png\");");
                 break;
             }
             case 2:{                                
                 pt=pt-50;
+                turno--;
                 btn.setStyle("-fx-background-image: url(\"/img/caza.png\");");
                 break;
             }
         }
         vida.setProgress(barraVida(vida, x, y));
-        lb.setText(pt +" pt.");
-        finalizarPartida(pt, vida);
+        puntos.setText(pt +"");
+        finalizarPartida(pt, vida, turno);
+        turnos.setText(turno + "");
     }
     
-    public void finalizarPartida (int x, ProgressBar vida){
+    public void finalizarPartida (int x, ProgressBar vida, int turno){
         
         if (vida.getProgress() < 0.33333333333) {
             System.out.println("Fin partida vida");
         }
         if (x >= 350) {
             System.out.println("Fin partida pt");
-        }  
+        } 
+        if(turno==0){
+            System.out.println("AAAAAAAAAAAAAAAAA");
+        }
     }
 }

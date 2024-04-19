@@ -37,16 +37,20 @@ public class JuegoController {
     private ProgressBar vida1, vida2;
    
     @FXML
-    private Label puntoA, puntoB;
+    private Label puntoA, puntoB, turnoA, turnoB;
     
     @FXML
     public void initialize(){
         pantano1=new tablajuego();
         pantano1.pantanoPersonas();
         pantano1.pantanoCazadores();
+        turnoA.setText(pantano1.getTurno()+"");
+        puntoA.setText(pantano1.getPt()+"");
         pantano2=new tablajuego();
         pantano2.pantanoPersonas();
         pantano2.pantanoCazadores();
+        turnoB.setText(pantano2.getTurno()+"");
+        puntoB.setText(pantano2.getPt()+"");
     }
    @FXML
     public void btnConfig(ActionEvent event) throws Exception {
@@ -67,300 +71,300 @@ public class JuegoController {
     @FXML
     public void a00(ActionEvent Event){
         int x=0,y=0;
-        pantano1.Casilla(puntoA,a00,pantano1,vida1,x,y);
+        pantano1.Casilla(puntoA,turnoA,a00,pantano1,vida1,x,y);
     }
     
     @FXML
     public void a01(ActionEvent Event){
         int x=0,y=1;
-        pantano1.Casilla(puntoA,a01,pantano1,vida1,x,y);  
+        pantano1.Casilla(puntoA,turnoA,a01,pantano1,vida1,x,y);  
     }
     
     @FXML
     public void a02(ActionEvent Event){
         int x=0,y=2;
-        pantano1.Casilla(puntoA,a02,pantano1,vida1,x,y);
+        pantano1.Casilla(puntoA,turnoA,a02,pantano1,vida1,x,y);
     }
     
     @FXML
     public void a03(ActionEvent Event){
         int x=0,y=3;
-        pantano1.Casilla(puntoA,a03,pantano1,vida1,x,y);
+        pantano1.Casilla(puntoA,turnoA,a03,pantano1,vida1,x,y);
     }
     
     @FXML
     public void a04(ActionEvent Event){
         int x=0,y=4;
-        pantano1.Casilla(puntoA,a04,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a04,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a10(ActionEvent Event){
         int x=1,y=0;
-        pantano1.Casilla(puntoA,a10,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a10,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a11(ActionEvent Event){
         int x=1,y=1;
-        pantano1.Casilla(puntoA,a11,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a11,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a12(ActionEvent Event){
         int x=1,y=2;
-        pantano1.Casilla(puntoA,a12,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a12,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a13(ActionEvent Event){
         int x=1,y=3;
-        pantano1.Casilla(puntoA,a13,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a13,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a14(ActionEvent Event){
         int x=1,y=4;
-        pantano1.Casilla(puntoA,a14,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a14,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a20(ActionEvent Event){
         int x=2,y=0;
-        pantano1.Casilla(puntoA,a20,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a20,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a21(ActionEvent Event){
         int x=2,y=1;
-        pantano1.Casilla(puntoA,a21,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a21,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a22(ActionEvent Event){
         int x=2,y=2;
-        pantano1.Casilla(puntoA,a22,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a22,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a23(ActionEvent Event){
         int x=2,y=3;
-        pantano1.Casilla(puntoA,a23,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a23,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a24(ActionEvent Event){
         int x=2,y=4;
-        pantano1.Casilla(puntoA,a24,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a24,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a30(ActionEvent Event){
         int x=3,y=0;
-        pantano1.Casilla(puntoA,a30,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a30,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a31(ActionEvent Event){
         int x=3,y=1;
-        pantano1.Casilla(puntoA,a31,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a31,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a32(ActionEvent Event){
         int x=3,y=2;
-        pantano1.Casilla(puntoA,a32,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a32,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a33(ActionEvent Event){
         int x=3,y=3;
-        pantano1.Casilla(puntoA,a33,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a33,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a34(ActionEvent Event){
         int x=3,y=4;
-        pantano1.Casilla(puntoA,a34,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a34,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a40(ActionEvent Event){
         int x=4,y=0;
-        pantano1.Casilla(puntoA,a40,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a40,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a41(ActionEvent Event){
         int x=4,y=1;
-        pantano1.Casilla(puntoA,a41,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a41,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a42(ActionEvent Event){
         int x=4,y=2;
-        pantano1.Casilla(puntoA,a42,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a42,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a43(ActionEvent Event){
         int x=4,y=3;
-        pantano1.Casilla(puntoA,a43,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a43,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void a44(ActionEvent Event){
         int x=4,y=4;
-        pantano1.Casilla(puntoA,a44,pantano1,vida1,x,y); 
+        pantano1.Casilla(puntoA,turnoA,a44,pantano1,vida1,x,y); 
     }
     
     @FXML
     public void b00(ActionEvent Event){
         int x=0,y=0;
-        pantano2.Casilla(puntoB,b00,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b00,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b01(ActionEvent Event){
         int x=0,y=1;
-        pantano2.Casilla(puntoB,b01,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b01,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b02(ActionEvent Event){
         int x=0,y=2;
-        pantano2.Casilla(puntoB,b02,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b02,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b03(ActionEvent Event){
         int x=0,y=3;
-        pantano2.Casilla(puntoB,b03,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b03,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b04(ActionEvent Event){
         int x=0,y=4;
-        pantano2.Casilla(puntoB,b04,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b04,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b10(ActionEvent Event){
         int x=1,y=0;
-        pantano2.Casilla(puntoB,b10,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b10,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b11(ActionEvent Event){
         int x=1,y=1;
-        pantano2.Casilla(puntoB,b11,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b11,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b12(ActionEvent Event){
         int x=1,y=2;
-        pantano2.Casilla(puntoB,b12,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b12,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b13(ActionEvent Event){
         int x=1,y=3;
-        pantano2.Casilla(puntoB,b13,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b13,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b14(ActionEvent Event){
         int x=1,y=4;
-        pantano2.Casilla(puntoB,b14,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b14,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b20(ActionEvent Event){
         int x=2,y=0;
-        pantano2.Casilla(puntoB,b20,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b20,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b21(ActionEvent Event){
         int x=2,y=1;
-        pantano2.Casilla(puntoB,b21,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b21,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b22(ActionEvent Event){
         int x=2,y=2;
-        pantano2.Casilla(puntoB,b22,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b22,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b23(ActionEvent Event){
         int x=2,y=3;
-        pantano2.Casilla(puntoB,b23,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b23,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b24(ActionEvent Event){
         int x=2,y=4;
-        pantano2.Casilla(puntoB,b24,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b24,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b30(ActionEvent Event){
         int x=3,y=0;
-        pantano2.Casilla(puntoB,b30,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b30,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b31(ActionEvent Event){
         int x=3,y=1;
-        pantano2.Casilla(puntoB,b31,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b31,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b32(ActionEvent Event){
         int x=3,y=2;
-        pantano2.Casilla(puntoB,b32,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b32,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b33(ActionEvent Event){
         int x=3,y=3;
-        pantano2.Casilla(puntoB,b33,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b33,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b34(ActionEvent Event){
         int x=3,y=4;
-        pantano2.Casilla(puntoB,b34,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b34,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b40(ActionEvent Event){
         int x=4,y=0;
-        pantano2.Casilla(puntoB,b40,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b40,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b41(ActionEvent Event){
         int x=4,y=1;
-        pantano2.Casilla(puntoB,b41,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b41,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b42(ActionEvent Event){
         int x=4,y=2;
-        pantano2.Casilla(puntoB,b42,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b42,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b43(ActionEvent Event){
         int x=4,y=3;
-        pantano2.Casilla(puntoB,b43,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b43,pantano2,vida2,x,y); 
     }
     
     @FXML
     public void b44(ActionEvent Event){
         int x=4,y=4;
-        pantano2.Casilla(puntoB,b44,pantano2,vida2,x,y); 
+        pantano2.Casilla(puntoB,turnoB,b44,pantano2,vida2,x,y); 
     }
 }
