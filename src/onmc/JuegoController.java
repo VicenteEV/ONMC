@@ -2,6 +2,7 @@
 package onmc;
 
 import java.io.IOException;
+import java.util.Random;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +15,11 @@ import javafx.stage.Stage;
 
 
 public class JuegoController {
+    
+    @FXML
+    private boolean TurnoJugA = false;
+    private boolean TurnoJugB = false;
+    private int Turno;
     
     @FXML
     private Button a00, a01, a02, a03, a04, a10, a11, a12, a13, a14, a20, a21, a22, a23, a24, a30, a31, a32, a33, a34, a40, a41, a42, a43, a44;
@@ -41,17 +47,45 @@ public class JuegoController {
     
     @FXML
     public void initialize(){
+        Random rnd=new Random();
+        
+        Turno = rnd.nextInt(1);
+       
         pantano1=new tablajuego();
         pantano1.pantanoPersonas();
         pantano1.pantanoCazadores();
         turnoA.setText(pantano1.getTurno()+"");
         puntoA.setText(pantano1.getPt()+"");
+        
         pantano2=new tablajuego();
         pantano2.pantanoPersonas();
         pantano2.pantanoCazadores();
         turnoB.setText(pantano2.getTurno()+"");
         puntoB.setText(pantano2.getPt()+"");
+        
+        if(Turno==1){
+            TurnoJugA=true;
+            TurnoJugB=false;
+        }else {
+            TurnoJugA=false;
+            TurnoJugB=true;
+        }  
     }
+    
+    @FXML
+    public void CambioTurno(){
+        
+        if(TurnoJugA==true){
+            TurnoJugB=true;
+            TurnoJugA=false;
+        }else {
+            TurnoJugB=false;
+            TurnoJugA=true;
+        }
+    }
+    
+    
+    
    @FXML
     public void btnConfig(ActionEvent event) throws Exception {
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Inicio.fxml"));
@@ -67,304 +101,455 @@ public class JuegoController {
     }
    
     //BOTONES TABLA
+
     
     @FXML
     public void a00(ActionEvent Event) throws Exception{
         int x=0,y=0;
-        pantano1.Casilla(puntoA,turnoA,a00,pantano1,vida1,x,y);
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a00,pantano1,vida1,x,y);
+            CambioTurno();
+        }
     }
     
     @FXML
     public void a01(ActionEvent Event) throws Exception{
         int x=0,y=1;
-        pantano1.Casilla(puntoA,turnoA,a01,pantano1,vida1,x,y);  
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a01,pantano1,vida1,x,y);
+            CambioTurno();
+        }  
     }
     
     @FXML
     public void a02(ActionEvent Event) throws Exception{
         int x=0,y=2;
-        pantano1.Casilla(puntoA,turnoA,a02,pantano1,vida1,x,y);
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a02,pantano1,vida1,x,y);
+            CambioTurno();
+        }
     }
     
     @FXML
     public void a03(ActionEvent Event) throws Exception{
         int x=0,y=3;
-        pantano1.Casilla(puntoA,turnoA,a03,pantano1,vida1,x,y);
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a03,pantano1,vida1,x,y);
+            CambioTurno();
+        }
     }
     
     @FXML
     public void a04(ActionEvent Event) throws Exception{
         int x=0,y=4;
-        pantano1.Casilla(puntoA,turnoA,a04,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a04,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a10(ActionEvent Event) throws Exception{
         int x=1,y=0;
-        pantano1.Casilla(puntoA,turnoA,a10,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a10,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a11(ActionEvent Event) throws Exception{
         int x=1,y=1;
-        pantano1.Casilla(puntoA,turnoA,a11,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a11,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a12(ActionEvent Event) throws Exception{
         int x=1,y=2;
-        pantano1.Casilla(puntoA,turnoA,a12,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a12,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a13(ActionEvent Event) throws Exception{
         int x=1,y=3;
-        pantano1.Casilla(puntoA,turnoA,a13,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a13,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a14(ActionEvent Event) throws Exception{
         int x=1,y=4;
-        pantano1.Casilla(puntoA,turnoA,a14,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a14,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a20(ActionEvent Event) throws Exception{
         int x=2,y=0;
-        pantano1.Casilla(puntoA,turnoA,a20,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a20,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a21(ActionEvent Event) throws Exception{
         int x=2,y=1;
-        pantano1.Casilla(puntoA,turnoA,a21,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a21,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a22(ActionEvent Event) throws Exception{
         int x=2,y=2;
-        pantano1.Casilla(puntoA,turnoA,a22,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a22,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a23(ActionEvent Event) throws Exception{
         int x=2,y=3;
-        pantano1.Casilla(puntoA,turnoA,a23,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a23,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a24(ActionEvent Event) throws Exception{
         int x=2,y=4;
-        pantano1.Casilla(puntoA,turnoA,a24,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a24,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a30(ActionEvent Event) throws Exception{
         int x=3,y=0;
-        pantano1.Casilla(puntoA,turnoA,a30,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a30,pantano1,vida1,x,y);
+            CambioTurno();
+        }
     }
     
     @FXML
     public void a31(ActionEvent Event) throws Exception{
         int x=3,y=1;
-        pantano1.Casilla(puntoA,turnoA,a31,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a31,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a32(ActionEvent Event) throws Exception{
         int x=3,y=2;
-        pantano1.Casilla(puntoA,turnoA,a32,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a32,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a33(ActionEvent Event) throws Exception{
         int x=3,y=3;
-        pantano1.Casilla(puntoA,turnoA,a33,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a33,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a34(ActionEvent Event) throws Exception{
         int x=3,y=4;
-        pantano1.Casilla(puntoA,turnoA,a34,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a34,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a40(ActionEvent Event) throws Exception{
         int x=4,y=0;
-        pantano1.Casilla(puntoA,turnoA,a40,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a40,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a41(ActionEvent Event) throws Exception{
         int x=4,y=1;
-        pantano1.Casilla(puntoA,turnoA,a41,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a41,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a42(ActionEvent Event) throws Exception{
         int x=4,y=2;
-        pantano1.Casilla(puntoA,turnoA,a42,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a42,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a43(ActionEvent Event) throws Exception{
         int x=4,y=3;
-        pantano1.Casilla(puntoA,turnoA,a43,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a43,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void a44(ActionEvent Event) throws Exception{
         int x=4,y=4;
-        pantano1.Casilla(puntoA,turnoA,a44,pantano1,vida1,x,y); 
+        if(TurnoJugA==true){
+            pantano1.Casilla(puntoA,turnoA,a44,pantano1,vida1,x,y);
+            CambioTurno();
+        } 
     }
-    
+
     @FXML
     public void b00(ActionEvent Event) throws Exception{
         int x=0,y=0;
-        pantano2.Casilla(puntoB,turnoB,b00,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b00,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b01(ActionEvent Event) throws Exception{
         int x=0,y=1;
-        pantano2.Casilla(puntoB,turnoB,b01,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b01,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b02(ActionEvent Event) throws Exception{
         int x=0,y=2;
-        pantano2.Casilla(puntoB,turnoB,b02,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b02,pantano2,vida2,x,y); 
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void b03(ActionEvent Event) throws Exception{
         int x=0,y=3;
-        pantano2.Casilla(puntoB,turnoB,b03,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b03,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b04(ActionEvent Event) throws Exception{
         int x=0,y=4;
-        pantano2.Casilla(puntoB,turnoB,b04,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b04,pantano2,vida2,x,y); 
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void b10(ActionEvent Event) throws Exception{
         int x=1,y=0;
-        pantano2.Casilla(puntoB,turnoB,b10,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b10,pantano2,vida2,x,y); 
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void b11(ActionEvent Event) throws Exception{
         int x=1,y=1;
-        pantano2.Casilla(puntoB,turnoB,b11,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b11,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b12(ActionEvent Event) throws Exception{
         int x=1,y=2;
-        pantano2.Casilla(puntoB,turnoB,b12,pantano2,vida2,x,y); 
+       if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b12,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b13(ActionEvent Event) throws Exception{
         int x=1,y=3;
-        pantano2.Casilla(puntoB,turnoB,b13,pantano2,vida2,x,y); 
+       if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b13,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b14(ActionEvent Event) throws Exception{
         int x=1,y=4;
-        pantano2.Casilla(puntoB,turnoB,b14,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b14,pantano2,vida2,x,y); 
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void b20(ActionEvent Event) throws Exception{
         int x=2,y=0;
-        pantano2.Casilla(puntoB,turnoB,b20,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b20,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b21(ActionEvent Event) throws Exception{
         int x=2,y=1;
-        pantano2.Casilla(puntoB,turnoB,b21,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b21,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b22(ActionEvent Event) throws Exception{
         int x=2,y=2;
-        pantano2.Casilla(puntoB,turnoB,b22,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b22,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b23(ActionEvent Event) throws Exception{
         int x=2,y=3;
-        pantano2.Casilla(puntoB,turnoB,b23,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b23,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b24(ActionEvent Event) throws Exception{
         int x=2,y=4;
-        pantano2.Casilla(puntoB,turnoB,b24,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b24,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b30(ActionEvent Event) throws Exception{
         int x=3,y=0;
-        pantano2.Casilla(puntoB,turnoB,b30,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b30,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b31(ActionEvent Event) throws Exception{
         int x=3,y=1;
-        pantano2.Casilla(puntoB,turnoB,b31,pantano2,vida2,x,y); 
+       if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b31,pantano2,vida2,x,y); 
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void b32(ActionEvent Event) throws Exception{
         int x=3,y=2;
-        pantano2.Casilla(puntoB,turnoB,b32,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b32,pantano2,vida2,x,y); 
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void b33(ActionEvent Event) throws Exception{
         int x=3,y=3;
-        pantano2.Casilla(puntoB,turnoB,b33,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b33,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b34(ActionEvent Event) throws Exception{
         int x=3,y=4;
-        pantano2.Casilla(puntoB,turnoB,b34,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b34,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b40(ActionEvent Event) throws Exception{
         int x=4,y=0;
-        pantano2.Casilla(puntoB,turnoB,b40,pantano2,vida2,x,y); 
+          if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b40,pantano2,vida2,x,y); 
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void b41(ActionEvent Event) throws Exception{
         int x=4,y=1;
-        pantano2.Casilla(puntoB,turnoB,b41,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b41,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b42(ActionEvent Event) throws Exception{
         int x=4,y=2;
-        pantano2.Casilla(puntoB,turnoB,b42,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b42,pantano2,vida2,x,y); 
+            CambioTurno();
+        }
     }
     
     @FXML
     public void b43(ActionEvent Event) throws Exception{
         int x=4,y=3;
-        pantano2.Casilla(puntoB,turnoB,b43,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b43,pantano2,vida2,x,y); 
+            CambioTurno();
+        } 
     }
     
     @FXML
     public void b44(ActionEvent Event) throws Exception{
         int x=4,y=4;
-        pantano2.Casilla(puntoB,turnoB,b44,pantano2,vida2,x,y); 
+        if(TurnoJugB==true){
+            pantano2.Casilla(puntoB,turnoB,b44,pantano2,vida2,x,y); 
+            CambioTurno();
+        } 
     }
 }

@@ -96,29 +96,30 @@ public class tablajuego {
     
     public void Casilla(Label puntos,Label turnos, Button btn, tablajuego pantano, ProgressBar vida, int x, int y) throws Exception{
             
-        switch(pantano.comprobarCasilla(x,y)){
-            case 0:{                                 
-                btn.setVisible(false);
-                turno--;
-                break;
+        
+            switch(pantano.comprobarCasilla(x,y)){
+                case 0:{                                 
+                    btn.setVisible(false);
+                    turno--;
+                    break;
+                }
+                case 1:{                                 
+                    pt=pt+150;
+                    turno--;
+                    btn.setStyle("-fx-background-image: url(\"/img/personita1.png\");");
+                    break;
+                }
+                case 2:{                                
+                    pt=pt-50;
+                    turno--;
+                    btn.setStyle("-fx-background-image: url(\"/img/caza.png\");");
+                    break;
+                }
             }
-            case 1:{                                 
-                pt=pt+150;
-                turno--;
-                btn.setStyle("-fx-background-image: url(\"/img/personita1.png\");");
-                break;
-            }
-            case 2:{                                
-                pt=pt-50;
-                turno--;
-                btn.setStyle("-fx-background-image: url(\"/img/caza.png\");");
-                break;
-            }
-        }
-        vida.setProgress(barraVida(vida, x, y));
-        puntos.setText(pt + "");
-        finalizarPartida(pt, vida, turno);
-        turnos.setText(turno + "");
+            vida.setProgress(barraVida(vida, x, y));
+            puntos.setText(pt + "");
+            finalizarPartida(pt, vida, turno);
+            turnos.setText(turno + "");
     }
     
     public void finalizarPartida (int x, ProgressBar vida, int turno) throws Exception{
