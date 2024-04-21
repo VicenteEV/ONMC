@@ -7,6 +7,8 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import utilidades.bbdd.Bd;
+import utilidades.bbdd.Gestor_conexion_POSTGRE;
 
 
 public class tablajuego {
@@ -14,6 +16,7 @@ public class tablajuego {
     private final int PS=7;
     private final int CZ=3;
     int pt=0,turno=15;
+    Gestor_conexion_POSTGRE conection = new Gestor_conexion_POSTGRE("juego", true);
 
     public int getPt() {
         return pt;
@@ -123,6 +126,8 @@ public class tablajuego {
         if (vida.getProgress() < 0.33333333333) {
             System.out.println("Fin partida vida");
             CambioVictoria();
+            String consulta = "update partida set victoria = false";
+            Bd.consultaModificacion(conection, consulta);
         }
         if (x >= 350) {
             System.out.println("Fin partida pt");
@@ -136,10 +141,10 @@ public class tablajuego {
     
     public void CambioVictoria () throws Exception{
         
+        String consulta = "update partida set victoria = true";
+        Bd.consultaModificacion(conection, consulta);
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Victoria.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
-    
-    
     }
 }
