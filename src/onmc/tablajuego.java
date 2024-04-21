@@ -94,8 +94,8 @@ public class tablajuego {
         return vida.getProgress();
     }
     
-    public void Casilla(Label puntos,Label turnos, Button btn, tablajuego pantano, ProgressBar vida, int x, int y) throws Exception{
-            
+    public int Casilla(Label puntos,Label turnos, Button btn, tablajuego pantano, ProgressBar vida, int x, int y) throws Exception{
+            int temp = 0;
         
             switch(pantano.comprobarCasilla(x,y)){
                 case 0:{                                 
@@ -105,8 +105,8 @@ public class tablajuego {
                 }
                 case 1:{                                 
                     pt=pt+150;
-                    turno--;
                     btn.setStyle("-fx-background-image: url(\"/img/personita1.png\");");
+                    temp = 1;
                     break;
                 }
                 case 2:{                                
@@ -120,6 +120,8 @@ public class tablajuego {
             puntos.setText(pt + "");
             finalizarPartida(pt, vida, turno);
             turnos.setText(turno + "");
+            
+            return temp;
     }
     
     public void finalizarPartida (int x, ProgressBar vida, int turno) throws Exception{
