@@ -20,14 +20,7 @@ import utilidades.bbdd.Gestor_conexion_POSTGRE;
 
 public class InicioController {
     
-    public static void mostrar (String [][] vec) {
-        for (int i = 0; i < vec.length; i++) {
-            for (int j = 0; j < vec[0].length; j++) {
-                System.out.println(vec[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
+
     
     @FXML
     private Button registro, inicioSesion, jugarInvitado, config;
@@ -36,7 +29,7 @@ public class InicioController {
     @FXML
     TextField iUsuario;
     Gestor_conexion_POSTGRE conection = new Gestor_conexion_POSTGRE("juego", true);
-       @FXML
+    @FXML
     public void btnRegistro(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Registro.fxml"));
@@ -77,6 +70,8 @@ public class InicioController {
     
     @FXML
     public void btnJugarInvitado(ActionEvent event) throws Exception {
+        
+        
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Juego.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
