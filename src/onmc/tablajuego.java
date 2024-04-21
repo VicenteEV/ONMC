@@ -122,23 +122,24 @@ public class tablajuego {
         
         if (vida.getProgress() < 0.33333333333) {
             System.out.println("Fin partida vida");
-            Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Victoria.fxml"));
-            ONMC.stage.getScene().setRoot(loader);
-            ONMC.stage.show();
+            CambioVictoria();
         }
         if (x >= 350) {
             System.out.println("Fin partida pt");
-            Platform.setImplicitExit(true);
-            Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Victoria.fxml"));
-            ONMC.stage.getScene().setRoot(loader);
-            ONMC.stage.show();
+            CambioVictoria();
         } 
         if(turno==0){
             System.out.println("Fin partida turnos");
-            Platform.setImplicitExit(true);
-            Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Victoria.fxml"));
-            ONMC.stage.getScene().setRoot(loader);
-            ONMC.stage.show();
+            CambioVictoria();
         }
+    }
+    
+    public void CambioVictoria () throws Exception{
+        
+        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Victoria.fxml"));
+        ONMC.stage.getScene().setRoot(loader);
+        ONMC.stage.show();
+    
+    
     }
 }

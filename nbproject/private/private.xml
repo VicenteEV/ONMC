@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/tablajuego.java</file>
-            <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/JuegoController.java</file>
-            <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/Escenas/Juego.fxml</file>
-            <file>file:/Z:/NetBeansProjects/ONMC/src/onmc/Escenas/estilo.css</file>
+            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/Escenas/estilo.css</file>
+            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/Escenas/Juego.fxml</file>
+            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/tablajuego.java</file>
+            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/Escenas/Inicio.fxml</file>
+            <file>file:/C:/Users/vicen/Desktop/ABPGITHUB/ONMC/src/onmc/JuegoController.java</file>
         </group>
     </open-files>
 </project-private>
