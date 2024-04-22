@@ -4,7 +4,9 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,7 +17,7 @@
    <children>
         <AnchorPane maxHeight="624.0" maxWidth="1084.0" prefHeight="624.0" prefWidth="1084.0">
            <children>
-              <Label layoutX="453.0" layoutY="1.0" prefHeight="73.0" prefWidth="179.0" text="Registro" textAlignment="JUSTIFY">
+              <Label layoutX="453.0" prefHeight="73.0" prefWidth="179.0" text="Registro" textAlignment="JUSTIFY">
                  <font>
                     <Font name="System Bold" size="45.0" />
                  </font>
@@ -71,6 +73,8 @@
                     <Image url="@../../img/dsa.png" />
                  </image>
               </ImageView>
+            <Slider layoutX="483.0" layoutY="563.0" prefHeight="14.0" prefWidth="246.0" />
+            <ToggleButton layoutX="375.0" layoutY="558.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Musica" />
            </children>
         </AnchorPane>
     </children>
