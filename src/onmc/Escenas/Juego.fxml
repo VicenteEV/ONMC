@@ -23,7 +23,7 @@
          <Button fx:id="config" layoutX="456.0" layoutY="175.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="43.0" prefWidth="150.0" text="Configuración" />
          <AnchorPane layoutX="28.0" layoutY="54.0" prefHeight="43.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-background-color: white; -fx-border-width: 3px;">
          <children>
-            <Label layoutX="54.0" layoutY="8.0" prefHeight="27.0" prefWidth="85.0" text="&quot;Usuario&quot;" textAlignment="JUSTIFY">
+            <Label fx:id="usuarioA" layoutX="54.0" layoutY="8.0" prefHeight="27.0" prefWidth="85.0" text="&quot;Usuario&quot;" textAlignment="JUSTIFY">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -32,7 +32,7 @@
     </AnchorPane>
     <AnchorPane layoutX="838.0" layoutY="54.0" prefHeight="43.0" prefWidth="192.0" style="-fx-border-style: solid; -fx-background-color: white; -fx-border-width: 3px;">
         <children>
-            <Label layoutX="54.0" layoutY="8.0" prefHeight="27.0" prefWidth="85.0" text="&quot;Usuario&quot;" textAlignment="JUSTIFY">
+            <Label fx:id="usuarioB" layoutX="54.0" layoutY="8.0" prefHeight="27.0" prefWidth="85.0" text="&quot;Usuario&quot;" textAlignment="JUSTIFY">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

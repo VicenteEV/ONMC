@@ -20,6 +20,7 @@ public class JuegoController {
     private boolean TurnoJugA = false;
     private boolean TurnoJugB = false;
     private int Turno;
+    //private InicioController nom = new InicioController();
     
     @FXML
     private Button a00, a01, a02, a03, a04, a10, a11, a12, a13, a14, a20, a21, a22, a23, a24, a30, a31, a32, a33, a34, a40, a41, a42, a43, a44;
@@ -43,25 +44,29 @@ public class JuegoController {
     private ProgressBar vida1, vida2;
    
     @FXML
-    private Label puntoA, puntoB, turnoA, turnoB;
+    private Label puntoA, puntoB, turnoA, turnoB, usuarioA, usuarioB;
+    @FXML
+    String [] nombre = {"Jose", "Dani", "Monica", "Ana", "Mila"};
     
     @FXML
     public void initialize(){
         Random rnd=new Random();
         
-        Turno = rnd.nextInt(1);
+        Turno = rnd.nextInt(2);
        
         pantano1=new tablajuego();
         pantano1.pantanoPersonas();
         pantano1.pantanoCazadores();
         turnoA.setText(pantano1.getTurno()+"");
         puntoA.setText(pantano1.getPt()+"");
+        usuarioA.setText(InicioController.user);
         
         pantano2=new tablajuego();
         pantano2.pantanoPersonas();
         pantano2.pantanoCazadores();
         turnoB.setText(pantano2.getTurno()+"");
         puntoB.setText(pantano2.getPt()+"");
+        usuarioB.setText(nombre[rnd.nextInt(5)]);
         
         
         if(Turno==1){
