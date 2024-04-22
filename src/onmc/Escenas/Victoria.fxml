@@ -1,31 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@estilo.css">
+      <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@estilo.css" VBox.vgrow="ALWAYS">
          <children>
-            <Text layoutX="133.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VICTORIA">
+            <Text layoutX="193.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VICTORIA" AnchorPane.bottomAnchor="290.451171875" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="192.3271484375" AnchorPane.topAnchor="44.044921875">
                <font>
-                  <Font size="78.0" />
+                  <Font size="50.0" />
                </font>
             </Text>
-            <AnchorPane layoutX="200.0" layoutY="89.0" prefHeight="55.0" prefWidth="200.0">
-               <children>
-                  <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="181.0" text="&quot;USUARIO&quot;" textAlignment="CENTER">
-                     <font>
-                        <Font size="27.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
+            <Label layoutX="231.0" layoutY="111.0" prefHeight="40.0" prefWidth="138.0" text="&quot;USUARIO&quot;" textAlignment="CENTER" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="231.0" AnchorPane.topAnchor="111.0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="171.0" fitWidth="130.0" layoutX="237.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/chipi.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="67.0" fitWidth="47.0" layoutX="376.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/chipi.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="56.0" fitWidth="47.0" layoutX="187.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/chipi.gif" />
+               </image>
+            </ImageView>
          </children>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
       </AnchorPane>
    </children>
 </VBox>
