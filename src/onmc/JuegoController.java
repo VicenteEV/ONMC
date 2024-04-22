@@ -45,7 +45,6 @@ public class JuegoController {
    
     @FXML
     private Label puntoA, puntoB, turnoA, turnoB, usuarioA, usuarioB;
-    
     @FXML
     String [] nombre = {"Jose", "Dani", "Monica", "Ana", "Mila"};
     
@@ -67,7 +66,7 @@ public class JuegoController {
         pantano2.pantanoCazadores();
         turnoB.setText(pantano2.getTurno()+"");
         puntoB.setText(pantano2.getPt()+"");
-        usuarioB.setText("AAAAAAAA");
+        usuarioB.setText(nombre[rnd.nextInt(5)]);
         
         if(Turno==1){
             TurnoJugA=true;

@@ -2,12 +2,14 @@
 package onmc;
 
 import java.io.IOException;
+import java.util.Random;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import utilidades.bbdd.Bd;
 import utilidades.bbdd.Gestor_conexion_POSTGRE;
@@ -18,8 +20,16 @@ public class PerfilController {
     
     @FXML
     private Button config, puntuacion, jugar, jugarSolo;
+    @FXML
+    private Label usuario;
     
-     Gestor_conexion_POSTGRE conection = new Gestor_conexion_POSTGRE("juego", true);
+    Gestor_conexion_POSTGRE conection = new Gestor_conexion_POSTGRE("juego", true);
+    
+    @FXML
+    public void initialize(){
+        usuario.setText(InicioController.user);
+    }
+    
 
     
     @FXML
