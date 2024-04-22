@@ -63,6 +63,7 @@ public class JuegoController {
         turnoB.setText(pantano2.getTurno()+"");
         puntoB.setText(pantano2.getPt()+"");
         
+        
         if(Turno==1){
             TurnoJugA=true;
             TurnoJugB=false;

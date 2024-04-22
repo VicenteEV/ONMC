@@ -95,7 +95,8 @@ public class tablajuego {
     }
     
     public int Casilla(Label puntos,Label turnos, Button btn, tablajuego pantano, ProgressBar vida, int x, int y) throws Exception{
-            int temp = 0;
+        Random rnd=new Random ();    
+        int temp = 0;
         
             switch(pantano.comprobarCasilla(x,y)){
                 case 0:{                                 
@@ -105,7 +106,20 @@ public class tablajuego {
                 }
                 case 1:{                                 
                     pt=pt+150;
-                    btn.setStyle("-fx-background-image: url(\"/img/personita1.png\");");
+                    switch(rnd.nextInt(3)){
+                        case 0:
+                            btn.setStyle("-fx-background-image: url(\"/img/bañista1.png\");");
+                            System.out.println("AAAAAAaa");
+                            break;
+                        case 1:
+                            btn.setStyle("-fx-background-image: url(\"/img/bañista3.png\");");
+                            System.out.println("BBBBBBBB");
+                            break;
+                        case 2:
+                            btn.setStyle("-fx-background-image: url(\"/img/personita1.png\");");
+                            System.out.println("CCCCCCCC");
+                            break;
+                    }
                     temp = 1;
                     break;
                 }
@@ -144,8 +158,9 @@ public class tablajuego {
     
     public void CambioVictoria () throws Exception{
         
-        String consulta = "update partida set victoria = true";
-        Bd.consultaModificacion(conection, consulta);
+        System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAA");
+        //String consulta = "update partida set victoria = true";
+        //Bd.consultaModificacion(conection, consulta);
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Victoria.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
