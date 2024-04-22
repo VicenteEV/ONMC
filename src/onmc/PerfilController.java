@@ -2,6 +2,7 @@
 package onmc;
 
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Random;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.media.Media;
 import javafx.stage.Stage;
 import utilidades.bbdd.Bd;
 import utilidades.bbdd.Gestor_conexion_POSTGRE;
@@ -17,6 +19,7 @@ import utilidades.bbdd.Gestor_conexion_POSTGRE;
 
 
 public class PerfilController {
+    Media audio = new Media (Paths.get("audio/Chipi.wav").toUri().toString()); 
     
     @FXML
     private Button config, puntuacion, jugar, jugarSolo;
