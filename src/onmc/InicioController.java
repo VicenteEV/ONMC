@@ -28,7 +28,13 @@ public class InicioController {
     PasswordField iContrasenya;
     @FXML
     TextField iUsuario;
+    @FXML
+    public static String user;
+    private String password;
+    
     Gestor_conexion_POSTGRE conection = new Gestor_conexion_POSTGRE("juego", true);
+    
+    
     @FXML
     public void btnRegistro(ActionEvent event) {
         try {
@@ -42,13 +48,13 @@ public class InicioController {
         }
     }
     
-       @FXML
+    @FXML
     public void btnInicioSesion(ActionEvent event) throws Exception{
         
         boolean temp = false;
         String consultaUsuario;
-        String user =  iUsuario.getText();
-        String password = iContrasenya.getText();
+        user = iUsuario.getText();
+        password = iContrasenya.getText();
         
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         byte[] digest = md.digest(password.getBytes(StandardCharsets.UTF_8));
@@ -65,7 +71,9 @@ public class InicioController {
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Perfil.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
+        
         }
+
     }
     
     @FXML
@@ -83,6 +91,9 @@ public class InicioController {
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
     }
+    
+    
+    
     
     
 }
