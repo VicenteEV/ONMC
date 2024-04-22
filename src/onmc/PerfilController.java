@@ -19,7 +19,7 @@ import utilidades.bbdd.Gestor_conexion_POSTGRE;
 
 
 public class PerfilController {
-    Media audio = new Media (Paths.get("audio/Chipi.wav").toUri().toString()); 
+   // Media audio = new Media (Paths.get("audio/Chipi.wav").toUri().toString()); 
     
     @FXML
     private Button config, puntuacion, jugar, jugarSolo;
@@ -59,7 +59,7 @@ public class PerfilController {
         String consulta = "insert into partida (fecha) values (current_timestamp)";
         Bd.consultaModificacion(conection, consulta);
         
-        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Juego.fxml"));
+        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/JuegoPC.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
     }

@@ -85,7 +85,7 @@ public class InicioController implements Initializable{
     public void btnJugarInvitado(ActionEvent event) throws Exception {
         
         
-        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Juego.fxml"));
+        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/JuegoPC.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
     }
