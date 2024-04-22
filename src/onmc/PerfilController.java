@@ -17,10 +17,9 @@ import utilidades.bbdd.Gestor_conexion_POSTGRE;
 
 
 public class PerfilController {
-<<<<<<< Updated upstream
+
    // Media audio = new Media (Paths.get("audio/Chipi.wav").toUri().toString()); 
-=======
->>>>>>> Stashed changes
+
     
     @FXML
     private Button config, puntuacion, jugar, jugarSolo;
