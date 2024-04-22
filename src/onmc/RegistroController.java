@@ -34,14 +34,6 @@ public class RegistroController {
     
     Gestor_conexion_POSTGRE conection = new Gestor_conexion_POSTGRE("juego", true);
     
-    
-    @FXML
-    public void btnConfig(ActionEvent event) throws Exception {
-        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Inicio.fxml"));
-        ONMC.stage.getScene().setRoot(loader);
-        ONMC.stage.show();
-    }
-    
     @FXML
     public void btnRAceptar(ActionEvent event) throws Exception {
         

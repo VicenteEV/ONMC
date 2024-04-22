@@ -41,7 +41,6 @@
                 <Image url="@../../img/dsa.png" />
              </image>
           </ImageView>
-          <Button fx:id="config" layoutX="883.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="46.0" prefWidth="136.0" text="Configuración" AnchorPane.bottomAnchor="541.0" AnchorPane.leftAnchor="883.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="30.0" />
           <Button fx:id="jugarInvitado" layoutX="295.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnJugarInvitado" prefHeight="70.0" prefWidth="226.0" text="Jugar como invitado" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="295.0" />
           <Button fx:id="registro" layoutX="571.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnRegistro" prefHeight="70.0" prefWidth="226.0" text="Registrase" AnchorPane.bottomAnchor="64.0" AnchorPane.rightAnchor="300.0" />
           <ImageView fitHeight="340.0" fitWidth="304.0" layoutX="771.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="172.06515502929688" AnchorPane.leftAnchor="771.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="117.0">

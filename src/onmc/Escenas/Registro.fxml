@@ -15,7 +15,6 @@
    <children>
         <AnchorPane maxHeight="624.0" maxWidth="1084.0" prefHeight="624.0" prefWidth="1084.0">
            <children>
-              <Button fx:id="config" layoutX="890.0" layoutY="37.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="44.0" prefWidth="167.0" text="Configuración" />
               <Label layoutX="453.0" layoutY="1.0" prefHeight="73.0" prefWidth="179.0" text="Registro" textAlignment="JUSTIFY">
                  <font>
                     <Font name="System Bold" size="45.0" />

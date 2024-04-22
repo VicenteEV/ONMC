@@ -17,7 +17,6 @@
                   <Image url="@miau.png" />
                </image>
             </ImageView>
-      <Button id="btnConfig" fx:id="config" layoutX="483.0" layoutY="181.0" mnemonicParsing="false" onAction="#btnConfig" prefHeight="44.0" prefWidth="136.0" text="Configuración" />
       <Button fx:id="jugarSolo" layoutX="178.0" layoutY="507.0" mnemonicParsing="false" onAction="#btnJugarSolo" prefHeight="67.0" prefWidth="264.0" text="Jugar solo">
          <font>
             <Font size="20.0" />

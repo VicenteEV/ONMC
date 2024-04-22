@@ -90,15 +90,6 @@ public class JuegoController {
         }
     }
     
-    
-    
-   @FXML
-    public void btnConfig(ActionEvent event) throws Exception {
-        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Inicio.fxml"));
-        ONMC.stage.getScene().setRoot(loader);
-        ONMC.stage.show();
-    }
-    
     @FXML
     public void btnSalir(ActionEvent event) throws Exception {
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Perfil.fxml"));

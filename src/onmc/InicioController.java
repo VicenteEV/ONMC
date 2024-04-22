@@ -85,15 +85,4 @@ public class InicioController {
         ONMC.stage.show();
     }
     
-    @FXML
-    public void btnConfig(ActionEvent event) throws Exception {
-        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Inicio.fxml"));
-        ONMC.stage.getScene().setRoot(loader);
-        ONMC.stage.show();
-    }
-    
-    
-    
-    
-    
 }
