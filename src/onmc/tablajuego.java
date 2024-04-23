@@ -1,7 +1,10 @@
 
 package onmc;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Random;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
@@ -9,6 +12,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import utilidades.bbdd.Bd;
 import utilidades.bbdd.Gestor_conexion_POSTGRE;
+import java.lang.reflect.InvocationTargetException;
+
+
 
 
 public class tablajuego {
@@ -165,4 +171,24 @@ public class tablajuego {
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
     }
+    
+    
+    /*public void jugadorBot (Button [] tabla) {
+        Random rnd=new Random();
+        
+        int x = rnd.nextInt(2);
+        int y = rnd.nextInt(2);
+        
+        String boton = "b" + x + y;
+        
+        for (int i = 0; i < tabla.length; i++) {
+            if(tabla [i] != null) {
+                System.out.println("Botón actual: " + tabla[i].getId());
+                if (tabla[i].getId().equals(boton)) {
+                    tabla [i].fire();
+                    System.out.println("¡Botón activado!");
+                }
+            }
+        }
+    }*/      
 }

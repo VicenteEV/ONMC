@@ -5,6 +5,7 @@
  */
 package onmc;
 
+
 import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
@@ -16,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+
 
 /**
  * FXML Controller class
@@ -40,7 +42,7 @@ public class JuegoPCController implements Initializable {
     private Button b00, b01, b02, b03, b04, b10, b11, b12, b13, b14, b20, b21, b22, b23, b24, b30, b31, b32, b33, b34, b40, b41, b42, b43, b44;
    
     @FXML
-    private final Button[][] TABLA2= {{b00, b01, b02, b03, b04},{b10, b11, b12, b13, b14},{b20, b21, b22, b23, b24},{b30, b31, b32, b33, b34},{b40, b41, b42, b43, b44}};
+    public final Button[] TABLA2 = {b00, b01, b02, b03, b04,b10, b11, b12, b13, b14,b20, b21, b22, b23, b24,b30, b31, b32, b33, b34,b40, b41, b42, b43, b44};
     
     @FXML
     private tablajuego pantano1, pantano2;
@@ -60,6 +62,8 @@ public class JuegoPCController implements Initializable {
     public void initialize(){
         
     }
+    
+    
     
     @FXML
     public void CambioTurno(){
@@ -533,6 +537,10 @@ public class JuegoPCController implements Initializable {
             CambioTurno();
         } 
     }
+    
+   
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         Random rnd=new Random();
@@ -552,6 +560,7 @@ public class JuegoPCController implements Initializable {
         turnoB.setText(pantano2.getTurno()+"");
         puntoB.setText(pantano2.getPt()+"");
         usuarioB.setText(nombre[rnd.nextInt(5)]);
+        //pantano2.jugadorBot(TABLA2);
         
         
         if(Turno==1){
