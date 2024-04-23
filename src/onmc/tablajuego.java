@@ -13,6 +13,7 @@ import javafx.scene.control.ProgressBar;
 import utilidades.bbdd.Bd;
 import utilidades.bbdd.Gestor_conexion_POSTGRE;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Set;
 
 
 
@@ -173,22 +174,27 @@ public class tablajuego {
     }
     
     
-    /*public void jugadorBot (Button [] tabla) {
+    public void jugadorBot (Label puntos,Label turnos, tablajuego pantano, ProgressBar vida, Button [] tabla) throws Exception {
         Random rnd=new Random();
-        
-        int x = rnd.nextInt(2);
-        int y = rnd.nextInt(2);
+        JuegoPCController turn = new JuegoPCController();
+        int x = rnd.nextInt(5);
+        int y = rnd.nextInt(5);
         
         String boton = "b" + x + y;
-        
-        for (int i = 0; i < tabla.length; i++) {
-            if(tabla [i] != null) {
-                System.out.println("Botón actual: " + tabla[i].getId());
-                if (tabla[i].getId().equals(boton)) {
-                    tabla [i].fire();
-                    System.out.println("¡Botón activado!");
+
+       for (int i = 0; i < tabla.length; i++) {
+           if(tabla [i] != null) {
+               if (tabla[i].getId().equals(boton)) {
+                   if (Casilla(puntos, turnos, tabla[i], pantano, vida, x, y) != 1) {
+                       turn.setTurnoJugA(true);
+                       turn.setTurnoJugB(false);
+                       
+                       
+                       System.out.println("¡turnoactiuvcado");
+                   }
+                   System.out.println("¡Botón activado!");
                 }
-            }
+           }
         }
-    }*/      
+    }     
 }

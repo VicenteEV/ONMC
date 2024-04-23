@@ -24,7 +24,7 @@ import javafx.scene.control.ProgressBar;
  *
  * @author Usuario
  */
-public class JuegoPCController implements Initializable {
+public class JuegoPCController{
 
      @FXML
     private boolean TurnoJugA = false;
@@ -40,9 +40,7 @@ public class JuegoPCController implements Initializable {
    
     @FXML
     private Button b00, b01, b02, b03, b04, b10, b11, b12, b13, b14, b20, b21, b22, b23, b24, b30, b31, b32, b33, b34, b40, b41, b42, b43, b44;
-   
-    @FXML
-    public final Button[] TABLA2 = {b00, b01, b02, b03, b04,b10, b11, b12, b13, b14,b20, b21, b22, b23, b24,b30, b31, b32, b33, b34,b40, b41, b42, b43, b44};
+  
     
     @FXML
     private tablajuego pantano1, pantano2;
@@ -58,12 +56,43 @@ public class JuegoPCController implements Initializable {
     @FXML
     String [] nombre = {"Jose", "Dani", "Monica", "Ana", "Mila"};
     
-    @FXML
-    public void initialize(){
+    boolean t = false;
+    
+
+    public void initialize() throws Exception{
+        Random rnd=new Random();
+         
+            Turno = rnd.nextInt(2);
+
+            pantano1=new tablajuego();
+            pantano1.pantanoPersonas();
+            pantano1.pantanoCazadores();
+            turnoA.setText(pantano1.getTurno()+"");
+            puntoA.setText(pantano1.getPt()+"");
+            usuarioA.setText(InicioController.user);
+
+            Button[] TABLA2 = {b00, b01, b02, b03, b04,b10, b11, b12, b13, b14,b20, b21, b22, b23, b24,b30, b31, b32, b33, b34,b40, b41, b42, b43, b44};
+            pantano2=new tablajuego();
+            pantano2.pantanoPersonas();
+            pantano2.pantanoCazadores();
+            turnoB.setText(pantano2.getTurno()+"");
+            puntoB.setText(pantano2.getPt()+"");
+            usuarioB.setText(nombre[rnd.nextInt(5)]);
         
+        
+        
+        pantano2.jugadorBot(puntoB,turnoB,pantano2,vida2, TABLA2);
+
+        
+        
+        if(Turno==1){
+            TurnoJugA=true;
+            TurnoJugB=false;
+        }else {
+            TurnoJugA=false;
+            TurnoJugB=true;
+        }
     }
-    
-    
     
     @FXML
     public void CambioTurno(){
@@ -76,6 +105,16 @@ public class JuegoPCController implements Initializable {
             TurnoJugA=true;
         }
     }
+
+    public void setTurnoJugA(boolean TurnoJugA) {
+        this.TurnoJugA = TurnoJugA;
+    }
+
+    public void setTurnoJugB(boolean TurnoJugB) {
+        this.TurnoJugB = TurnoJugB;
+    }
+    
+   
     
     @FXML
     public void btnSalir(ActionEvent event) throws Exception {
@@ -536,41 +575,6 @@ public class JuegoPCController implements Initializable {
             if(pantano2.Casilla(puntoB,turnoB,b44,pantano2,vida2,x,y) != 1)  
             CambioTurno();
         } 
-    }
-    
-   
-    
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        Random rnd=new Random();
-        
-        Turno = rnd.nextInt(2);
-       
-        pantano1=new tablajuego();
-        pantano1.pantanoPersonas();
-        pantano1.pantanoCazadores();
-        turnoA.setText(pantano1.getTurno()+"");
-        puntoA.setText(pantano1.getPt()+"");
-        usuarioA.setText(InicioController.user);
-        
-        pantano2=new tablajuego();
-        pantano2.pantanoPersonas();
-        pantano2.pantanoCazadores();
-        turnoB.setText(pantano2.getTurno()+"");
-        puntoB.setText(pantano2.getPt()+"");
-        usuarioB.setText(nombre[rnd.nextInt(5)]);
-        //pantano2.jugadorBot(TABLA2);
-        
-        
-        if(Turno==1){
-            TurnoJugA=true;
-            TurnoJugB=false;
-        }else {
-            TurnoJugA=false;
-            TurnoJugB=true;
-        }  
-        
-    }    
+    }   
     
 }
