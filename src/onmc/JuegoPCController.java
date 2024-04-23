@@ -10,6 +10,8 @@ import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -81,7 +83,7 @@ public class JuegoPCController{
         
         
         
-        pantano2.jugadorBot(puntoB,turnoB,pantano2,vida2, TABLA2);
+        //pantano2.jugadorBot(puntoB,turnoB,pantano2,vida2, TABLA2);
 
         
         
@@ -91,6 +93,7 @@ public class JuegoPCController{
         }else {
             TurnoJugA=false;
             TurnoJugB=true;
+            AccionTablaB();
         }
     }
     
@@ -100,6 +103,7 @@ public class JuegoPCController{
         if(TurnoJugA==true){
             TurnoJugB=true;
             TurnoJugA=false;
+            AccionTablaB();
         }else {
             TurnoJugB=false;
             TurnoJugA=true;
@@ -351,13 +355,98 @@ public class JuegoPCController{
             CambioTurno();
         } 
     }
+    
+    @FXML
+    public void AccionTablaB(){
+        Random rnd=new Random();
+        int x=rnd.nextInt(5),y=rnd.nextInt(5);
+        String llama = "b" + x + y;
+
+        if (llama.equals("b00")) {
+            b00.fire();     
+        } 
+        if (llama.equals("b01")) {
+            b01.fire();     
+        }
+        if (llama.equals("b02")) {
+            b02.fire();     
+        }
+        if (llama.equals("b03")) {
+            b03.fire();     
+        }
+        if (llama.equals("b04")) {
+            b04.fire();     
+        }
+        if (llama.equals("b10")) {
+            b10.fire();     
+        }
+        if (llama.equals("b11")) {
+            b11.fire();     
+        }
+        if (llama.equals("b12")) {
+            b12.fire();     
+        }
+        if (llama.equals("b13")) {
+            b13.fire();     
+        }
+        if (llama.equals("b14")) {
+            b14.fire();     
+        }
+        if (llama.equals("b20")) {
+            b20.fire();     
+        }
+        if (llama.equals("b21")) {
+            b21.fire();     
+        }
+        if (llama.equals("b22")) {
+            b22.fire();     
+        }
+        if (llama.equals("b23")) {
+            b23.fire();     
+        }
+        if (llama.equals("b24")) {
+            b24.fire();     
+        }
+        if (llama.equals("b30")) {
+            b30.fire();     
+        }
+        if (llama.equals("b31")) {
+            b31.fire();     
+        }
+        if (llama.equals("b32")) {
+            b32.fire();     
+        }
+        if (llama.equals("b33")) {
+            b33.fire();     
+        }
+        if (llama.equals("b34")) {
+            b34.fire();     
+        }
+        if (llama.equals("b40")) {
+            b40.fire();     
+        }
+        if (llama.equals("b41")) {
+            b41.fire();     
+        }
+        if (llama.equals("b42")) {
+            b42.fire();     
+        }
+        if (llama.equals("b43")) {
+            b43.fire();     
+        }
+        if (llama.equals("b44")) {
+            b44.fire();     
+        }
+    }
 
     @FXML
     public void b00(ActionEvent Event) throws Exception{
         int x=0,y=0;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b00,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -366,7 +455,9 @@ public class JuegoPCController{
         int x=0,y=1;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b01,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -375,7 +466,9 @@ public class JuegoPCController{
         int x=0,y=2;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b02,pantano2,vida2,x,y) != 1)  
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         } 
     }
     
@@ -384,7 +477,9 @@ public class JuegoPCController{
         int x=0,y=3;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b03,pantano2,vida2,x,y) != 1)  
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -393,7 +488,9 @@ public class JuegoPCController{
         int x=0,y=4;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b04,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         } 
     }
     
@@ -402,7 +499,9 @@ public class JuegoPCController{
         int x=1,y=0;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b10,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         } 
     }
     
@@ -411,7 +510,9 @@ public class JuegoPCController{
         int x=1,y=1;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b11,pantano2,vida2,x,y) != 1)  
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -420,7 +521,9 @@ public class JuegoPCController{
         int x=1,y=2;
        if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b12,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -429,7 +532,9 @@ public class JuegoPCController{
         int x=1,y=3;
        if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b13,pantano2,vida2,x,y) != 1)  
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -438,7 +543,9 @@ public class JuegoPCController{
         int x=1,y=4;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b14,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         } 
     }
     
@@ -447,7 +554,9 @@ public class JuegoPCController{
         int x=2,y=0;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b20,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -456,7 +565,9 @@ public class JuegoPCController{
         int x=2,y=1;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b21,pantano2,vida2,x,y) != 1)  
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -465,7 +576,9 @@ public class JuegoPCController{
         int x=2,y=2;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b22,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -474,7 +587,9 @@ public class JuegoPCController{
         int x=2,y=3;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b23,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -483,7 +598,9 @@ public class JuegoPCController{
         int x=2,y=4;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b24,pantano2,vida2,x,y) != 1)  
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -492,7 +609,9 @@ public class JuegoPCController{
         int x=3,y=0;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b30,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -501,7 +620,9 @@ public class JuegoPCController{
         int x=3,y=1;
        if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b31,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         } 
     }
     
@@ -510,7 +631,9 @@ public class JuegoPCController{
         int x=3,y=2;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b32,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         } 
     }
     
@@ -519,7 +642,9 @@ public class JuegoPCController{
         int x=3,y=3;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b33,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -528,7 +653,9 @@ public class JuegoPCController{
         int x=3,y=4;
         if(TurnoJugB==true){
            if(pantano2.Casilla(puntoB,turnoB,b34,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+           else
+                AccionTablaB();
         }
     }
     
@@ -537,7 +664,9 @@ public class JuegoPCController{
         int x=4,y=0;
           if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b40,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         } 
     }
     
@@ -546,7 +675,9 @@ public class JuegoPCController{
         int x=4,y=1;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b41,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -555,7 +686,9 @@ public class JuegoPCController{
         int x=4,y=2;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b42,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         }
     }
     
@@ -564,7 +697,9 @@ public class JuegoPCController{
         int x=4,y=3;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b43,pantano2,vida2,x,y) != 1) 
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         } 
     }
     
@@ -573,7 +708,9 @@ public class JuegoPCController{
         int x=4,y=4;
         if(TurnoJugB==true){
             if(pantano2.Casilla(puntoB,turnoB,b44,pantano2,vida2,x,y) != 1)  
-            CambioTurno();
+                CambioTurno();
+            else
+                AccionTablaB();
         } 
     }   
     

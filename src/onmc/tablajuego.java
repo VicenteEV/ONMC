@@ -186,11 +186,11 @@ public class tablajuego {
            if(tabla [i] != null) {
                if (tabla[i].getId().equals(boton)) {
                    if (Casilla(puntos, turnos, tabla[i], pantano, vida, x, y) != 1) {
+                       System.out.println("¡turnoactiuvcado");
+                       
                        turn.setTurnoJugA(true);
                        turn.setTurnoJugB(false);
-                       
-                       
-                       System.out.println("¡turnoactiuvcado");
+                       jugadorBot(puntos, turnos, pantano, vida, tabla);
                    }
                    System.out.println("¡Botón activado!");
                 }
