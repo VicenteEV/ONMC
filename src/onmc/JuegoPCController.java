@@ -370,12 +370,11 @@ public class JuegoPCController{
         String boton = "b" + x + y;
 
         for (int i = 0; i < tablita2.length; i++) {
-            for (int j = 0; j < tablita2.length; j++) {
-                if(boton.equals(tablita2[i].getId())){
-                    tablita2[i].fire(); 
-                    System.out.println("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW");
-                    }
-            }
+            if(boton.equals(tablita2[i].getId())){
+                tablita2[i].fire(); 
+                System.out.println("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW");
+                }
+            
         }
     }
 

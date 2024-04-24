@@ -91,7 +91,7 @@ public class InicioController implements Initializable{
     }
     @Override
     public void initialize(URL url, ResourceBundle rb){
-        //cocodrilo.play();
+        cocodrilo.play();
       //cocodrilo.stop();
     }
 }
