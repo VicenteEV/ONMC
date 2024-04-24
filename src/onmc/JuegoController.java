@@ -37,7 +37,7 @@ public class JuegoController {
     private ProgressBar vida1, vida2;
    
     @FXML
-    private Label puntoA, puntoB, turnoA, turnoB, usuarioA, usuarioB;
+    private Label puntoA, puntoB, turnoA, turnoB, usuarioA, usuarioB, idPartida;
     @FXML
     String [] nombre = {"Jose", "Dani", "Monica", "Ana", "Mila"};
     
@@ -59,6 +59,7 @@ public class JuegoController {
         puntoB.setText(pantano2.getPt()+"");
         usuarioB.setText(nombre[rnd.nextInt(5)]);
         
+        idPartida.setText("Partida: " + InicioController.idPar);
         
         if(Turno==1){
             TurnoJugA=true;

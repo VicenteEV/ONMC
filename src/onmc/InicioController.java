@@ -37,8 +37,19 @@ public class InicioController implements Initializable{
     public static String user;
     private String password;
     
+    public static String idPar;
+    public String [][] vec;
+    
     Gestor_conexion_POSTGRE conection = new Gestor_conexion_POSTGRE("juego", true);
     
+    
+    public static void  mostrar (String [][] vec) {
+        for (int i = 0; i < vec.length-1; i++) {
+            for (int j = 0; j < vec[0].length; j++) {
+                System.out.println(vec [i][j]);
+            }
+        }
+    }
     
     @FXML
     public void btnRegistro(ActionEvent event) {
@@ -84,11 +95,17 @@ public class InicioController implements Initializable{
     @FXML
     public void btnJugarInvitado(ActionEvent event) throws Exception {
         
+        String consulta = "insert into partida (fecha) values (current_timestamp)";
+        Bd.consultaModificacion(conection, consulta);
+        String consultaIdPartida = "select id_partida from partida order by id_partida desc limit 1";
+        vec = Bd.consultaSelect(conection, consultaIdPartida);
+        idPar = vec[0][0];
         
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/JuegoPC.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
     }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb){
         cocodrilo.play();

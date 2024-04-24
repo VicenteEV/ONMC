@@ -19,6 +19,8 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import utilidades.bbdd.Bd;
+import utilidades.bbdd.Gestor_conexion_POSTGRE;
 
 
 /**
@@ -28,7 +30,7 @@ import javafx.scene.control.ProgressBar;
  */
 public class JuegoPCController{
 
-     @FXML
+    @FXML
     private boolean TurnoJugA = false;
     private boolean TurnoJugB = false;
     private int Turno;
@@ -45,7 +47,6 @@ public class JuegoPCController{
     
     public Button [] tablita1;
     public Button [] tablita2;
-  
     
     @FXML
     private tablajuego pantano1, pantano2;
@@ -57,14 +58,15 @@ public class JuegoPCController{
     private ProgressBar vida1, vida2;
    
     @FXML
-    private Label puntoA, puntoB, turnoA, turnoB, usuarioA, usuarioB;
+    private Label puntoA, puntoB, turnoA, turnoB, usuarioA, usuarioB, idPartida;
     @FXML
     String [] nombre = {"Jose", "Dani", "Monica", "Ana", "Mila"};
     
-    boolean t = false;
-    
+
     
 
+    
+    
     public void initialize() throws Exception{
         Random rnd=new Random();
          
@@ -87,8 +89,8 @@ public class JuegoPCController{
             turnoB.setText(pantano2.getTurno()+"");
             puntoB.setText(pantano2.getPt()+"");
             usuarioB.setText(nombre[rnd.nextInt(5)]);
-        
-        
+            
+            idPartida.setText(InicioController.idPar);
         
         //pantano2.jugadorBot(puntoB,turnoB,pantano2,vida2, TABLA2);
 

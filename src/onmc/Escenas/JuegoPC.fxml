@@ -59,7 +59,7 @@
     </AnchorPane>
     <AnchorPane layoutX="446.0" layoutY="76.0" prefHeight="73.0" prefWidth="169.0" style="-fx-border-style: solid; -fx-border-width: 3px;">
          <children>
-            <Label layoutX="31.0" layoutY="23.0" prefHeight="27.0" prefWidth="107.0" text="&quot;ID Partida&quot;" textAlignment="JUSTIFY">
+            <Label fx:id="idPartida" layoutX="31.0" layoutY="23.0" prefHeight="27.0" prefWidth="107.0" text="&quot;ID Partida&quot;" textAlignment="JUSTIFY">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
