@@ -49,14 +49,12 @@ public class JuegoController {
        
         pantano1=new tablajuego();
         pantano1.pantanoPersonas();
-        pantano1.pantanoCazadores();
         turnoA.setText(pantano1.getTurno()+"");
         puntoA.setText(pantano1.getPt()+"");
         usuarioA.setText(InicioController.user);
         
         pantano2=new tablajuego();
         pantano2.pantanoPersonas();
-        pantano2.pantanoCazadores();
         turnoB.setText(pantano2.getTurno()+"");
         puntoB.setText(pantano2.getPt()+"");
         usuarioB.setText(nombre[rnd.nextInt(5)]);
