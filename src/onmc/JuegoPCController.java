@@ -42,6 +42,8 @@ public class JuegoPCController{
    
     @FXML
     private Button b00, b01, b02, b03, b04, b10, b11, b12, b13, b14, b20, b21, b22, b23, b24, b30, b31, b32, b33, b34, b40, b41, b42, b43, b44;
+    
+    public Button [] tablita2;
   
     
     @FXML
@@ -60,6 +62,7 @@ public class JuegoPCController{
     
     boolean t = false;
     
+    
 
     public void initialize() throws Exception{
         Random rnd=new Random();
@@ -72,8 +75,10 @@ public class JuegoPCController{
             turnoA.setText(pantano1.getTurno()+"");
             puntoA.setText(pantano1.getPt()+"");
             usuarioA.setText(InicioController.user);
-
-            Button[] TABLA2 = {b00, b01, b02, b03, b04,b10, b11, b12, b13, b14,b20, b21, b22, b23, b24,b30, b31, b32, b33, b34,b40, b41, b42, b43, b44};
+            
+            Button [] tablaTemp = {b00, b01, b02, b03, b04,b10, b11, b12, b13, b14,b20, b21, b22, b23, b24,b30, b31, b32, b33, b34,b40, b41, b42, b43, b44};
+            tablita2=tablaTemp;
+            
             pantano2=new tablajuego();
             pantano2.pantanoPersonas();
             pantano2.pantanoCazadores();
@@ -97,7 +102,9 @@ public class JuegoPCController{
         }
     }
     
-    @FXML
+    
+    
+
     public void CambioTurno(){
         
         if(TurnoJugA==true){
@@ -360,82 +367,15 @@ public class JuegoPCController{
     public void AccionTablaB(){
         Random rnd=new Random();
         int x=rnd.nextInt(5),y=rnd.nextInt(5);
-        String llama = "b" + x + y;
+        String boton = "b" + x + y;
 
-        if (llama.equals("b00")) {
-            b00.fire();     
-        } 
-        if (llama.equals("b01")) {
-            b01.fire();     
-        }
-        if (llama.equals("b02")) {
-            b02.fire();     
-        }
-        if (llama.equals("b03")) {
-            b03.fire();     
-        }
-        if (llama.equals("b04")) {
-            b04.fire();     
-        }
-        if (llama.equals("b10")) {
-            b10.fire();     
-        }
-        if (llama.equals("b11")) {
-            b11.fire();     
-        }
-        if (llama.equals("b12")) {
-            b12.fire();     
-        }
-        if (llama.equals("b13")) {
-            b13.fire();     
-        }
-        if (llama.equals("b14")) {
-            b14.fire();     
-        }
-        if (llama.equals("b20")) {
-            b20.fire();     
-        }
-        if (llama.equals("b21")) {
-            b21.fire();     
-        }
-        if (llama.equals("b22")) {
-            b22.fire();     
-        }
-        if (llama.equals("b23")) {
-            b23.fire();     
-        }
-        if (llama.equals("b24")) {
-            b24.fire();     
-        }
-        if (llama.equals("b30")) {
-            b30.fire();     
-        }
-        if (llama.equals("b31")) {
-            b31.fire();     
-        }
-        if (llama.equals("b32")) {
-            b32.fire();     
-        }
-        if (llama.equals("b33")) {
-            b33.fire();     
-        }
-        if (llama.equals("b34")) {
-            b34.fire();     
-        }
-        if (llama.equals("b40")) {
-            b40.fire();     
-        }
-        if (llama.equals("b41")) {
-            b41.fire();     
-        }
-        if (llama.equals("b42")) {
-            b42.fire();     
-        }
-        if (llama.equals("b43")) {
-            b43.fire();     
-        }
-        if (llama.equals("b44")) {
-            b44.fire();     
+        for (int i = 0; i < tablita2.length; i++) {
+            for (int j = 0; j < tablita2.length; j++) {
+                if(boton.equals(tablita2[i].getId())){
+                    tablita2[i].fire(); 
+                    System.out.println("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW");
+                    }
+            }
         }
     }
 

@@ -115,15 +115,15 @@ public class tablajuego {
                     pt=pt+150;
                     switch(rnd.nextInt(3)){
                         case 0:
-                            btn.setStyle("-fx-background-image: url(\"/img/bañista1.png\");");
+                            btn.setStyle("-fx-background-image: url(\"/img/bañistaA.png\");");
                             System.out.println("AAAAAAaa");
                             break;
                         case 1:
-                            btn.setStyle("-fx-background-image: url(\"/img/bañista3.png\");");
+                            btn.setStyle("-fx-background-image: url(\"/img/bañistaB.png\");");
                             System.out.println("BBBBBBBB");
                             break;
                         case 2:
-                            btn.setStyle("-fx-background-image: url(\"/img/personita1.png\");");
+                            btn.setStyle("-fx-background-image: url(\"/img/bañistaC.png\");");
                             System.out.println("CCCCCCCC");
                             break;
                     }
@@ -148,16 +148,19 @@ public class tablajuego {
     public void finalizarPartida (int x, ProgressBar vida, int turno) throws Exception{
         
         if (vida.getProgress() < 0.33333333333) {
+            Thread.sleep(3000);
             System.out.println("Fin partida vida");
             CambioVictoria();
             String consulta = "update partida set victoria = false";
             Bd.consultaModificacion(conection, consulta);
         }
         if (x >= 350) {
+            Thread.sleep(3000);
             System.out.println("Fin partida pt");
             CambioVictoria();
         } 
         if(turno==0){
+            Thread.sleep(3000);
             System.out.println("Fin partida turnos");
             CambioVictoria();
         }
@@ -196,5 +199,19 @@ public class tablajuego {
                 }
            }
         }
-    }     
+    }
+    
+    public void mostrar (Button [] g){
+        
+        for (int i = 0; i < g.length; i++) {
+            System.out.println(g[i]);
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
 }
