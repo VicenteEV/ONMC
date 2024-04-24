@@ -90,7 +90,7 @@ public class JuegoPCController{
             puntoB.setText(pantano2.getPt()+"");
             usuarioB.setText(nombre[rnd.nextInt(5)]);
             
-            idPartida.setText(InicioController.idPar);
+            idPartida.setText("Partida: " + InicioController.idPar);
         
         //pantano2.jugadorBot(puntoB,turnoB,pantano2,vida2, TABLA2);
 
