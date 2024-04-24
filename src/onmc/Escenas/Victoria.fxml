@@ -9,39 +9,46 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1084.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="622.0" prefWidth="1084.0">
+      <AnchorPane prefHeight="622.0" prefWidth="1084.0" stylesheets="@estilo.css" VBox.vgrow="ALWAYS">
          <children>
-            <Text layoutX="379.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VICTORIA" textAlignment="CENTER" wrappingWidth="327.6728515625" AnchorPane.bottomAnchor="488.451171875" AnchorPane.leftAnchor="379.0" AnchorPane.rightAnchor="378.3271484375" AnchorPane.topAnchor="67.044921875">
+            <Text layoutX="269.0" layoutY="120.955078125" strokeType="OUTSIDE" strokeWidth="0.0" text="VICTORIA" textAlignment="CENTER" wrappingWidth="548.6728515625" AnchorPane.bottomAnchor="488.0" AnchorPane.leftAnchor="269.0" AnchorPane.rightAnchor="281.0" AnchorPane.topAnchor="67.0">
                <font>
-                  <Font size="50.0" />
+                  <Font size="78.0" />
                </font>
             </Text>
-            <Label alignment="CENTER" layoutX="427.0" layoutY="134.0" prefHeight="48.0" prefWidth="231.0" text="&quot;USUARIO&quot;" textAlignment="CENTER" AnchorPane.bottomAnchor="440.0" AnchorPane.leftAnchor="427.0" AnchorPane.rightAnchor="426.0" AnchorPane.topAnchor="134.0">
+            <Label alignment="CENTER" layoutX="428.0" layoutY="171.0" prefHeight="85.0" prefWidth="243.0" text="&quot;USUARIO&quot;" textAlignment="CENTER" AnchorPane.bottomAnchor="403.0" AnchorPane.leftAnchor="428.0" AnchorPane.rightAnchor="428.0" AnchorPane.topAnchor="171.0">
                <font>
                   <Font size="27.0" />
                </font>
             </Label>
-            <ImageView fitHeight="171.0" fitWidth="130.0" layoutX="479.0" layoutY="310.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="141.0" AnchorPane.rightAnchor="479.2040786743164" AnchorPane.topAnchor="310.0">
-               <image>
-                  <Image url="@../../img/chipi.gif" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="100.0" fitWidth="98.0" layoutX="707.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="141.0" AnchorPane.leftAnchor="707.0" AnchorPane.rightAnchor="303.850341796875" AnchorPane.topAnchor="381.0">
-               <image>
-                  <Image url="@../../img/chipi.gif" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="92.0" fitWidth="74.0" layoutX="301.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="145.0" AnchorPane.leftAnchor="301.0" AnchorPane.rightAnchor="715.7823104858398" AnchorPane.topAnchor="385.0">
-               <image>
-                  <Image url="@../../img/chipi.gif" />
-               </image>
-            </ImageView>
+            <AnchorPane layoutX="7.0" layoutY="19.0" prefHeight="194.0" prefWidth="1085.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="11.0">
+               <children>
+                  <ImageView fitHeight="250.0" fitWidth="252.0" layoutX="450.0" layoutY="241.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="131.0" AnchorPane.rightAnchor="449.6258544921875" AnchorPane.topAnchor="241.0">
+                     <image>
+                        <Image url="@../../img/chipi.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="231.0" fitWidth="127.0" layoutX="718.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="131.7247772216797" AnchorPane.leftAnchor="718.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="319.0">
+                     <image>
+                        <Image url="@../../img/chipi.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="171.0" fitWidth="148.0" layoutX="234.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="724.2040786743164" AnchorPane.topAnchor="328.0">
+                     <image>
+                        <Image url="@../../img/chipi.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
          </children>
          <opaqueInsets>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </opaqueInsets>
       </AnchorPane>
    </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
 </VBox>

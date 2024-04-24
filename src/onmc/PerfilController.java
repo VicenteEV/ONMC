@@ -20,7 +20,6 @@ public class PerfilController {
 
    // Media audio = new Media (Paths.get("audio/Chipi.wav").toUri().toString()); 
 
-    
     @FXML
     private Button config, puntuacion, jugar, jugarSolo;
     @FXML
