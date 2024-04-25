@@ -2,6 +2,8 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.VictoriaController">
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8.0.381" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onmc.VictoriaController">
    <children>
       <AnchorPane prefHeight="622.0" prefWidth="1084.0" stylesheets="@estilo.css" VBox.vgrow="ALWAYS">
          <children>
@@ -40,6 +42,8 @@
                         <Image url="@../../img/chipi.gif" />
                      </image>
                   </ImageView>
+                  <Slider fx:id="musica" layoutX="499.0" layoutY="563.0" prefHeight="14.0" prefWidth="151.0" />
+                  <ToggleButton fx:id="plst" layoutX="422.0" layoutY="557.0" mnemonicParsing="false" text="Musica" />
                </children>
             </AnchorPane>
          </children>

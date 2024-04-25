@@ -234,8 +234,8 @@
                   <Font size="16.0" />
                </font>
             </Text>
-            <Slider layoutX="450.0" layoutY="167.0" prefHeight="14.0" prefWidth="162.0" />
-            <ToggleButton layoutX="495.0" layoutY="195.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Musica" />
+            <Slider fx:id="volumen" layoutX="450.0" layoutY="167.0" max="100.0" prefHeight="14.0" prefWidth="162.0" />
+            <ToggleButton fx:id="plst" layoutX="495.0" layoutY="195.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Musica" />
    </children>
 </AnchorPane>
     </children>

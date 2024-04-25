@@ -154,7 +154,7 @@ public class tablajuego {
             String consulta = "update partida set victoria = false";
             Bd.consultaModificacion(conection, consulta);
         }
-        if (x >= 950) {
+        if (x >= 750) {
             victoria = true;
             CambioVictoria();
         } 

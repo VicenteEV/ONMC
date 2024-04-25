@@ -1,41 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package onmc;
 
-
-import java.net.URL;
 import java.util.Random;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.Slider;
+import javafx.scene.control.ToggleButton;
 import utilidades.bbdd.Bd;
 import utilidades.bbdd.Gestor_conexion_POSTGRE;
 
 
-/**
- * FXML Controller class
- *
- * @author Usuario
- */
-public class JuegoPCController{
-
+public class JuegoPCController {
+    @FXML
+    Slider volumen;
+    @FXML
+    ToggleButton plst;
+    @FXML
+    audio audioJuegoPC;
+    
     @FXML
     private boolean TurnoJugA = false;
     private boolean TurnoJugB = false;
 
     private int Turno;
-    //private InicioController nom = new InicioController();
     
     @FXML
     private Button a00, a01, a02, a03, a04, a10, a11, a12, a13, a14, a20, a21, a22, a23, a24, a30, a31, a32, a33, a34, a40, a41, a42, a43, a44;
@@ -65,55 +59,52 @@ public class JuegoPCController{
     public Label usuarioB;
     public static String n;
     
-    
     public void initialize() throws Exception{
+        
+        audioJuegoPC=new audio(volumen, plst);
+        audioJuegoPC.musicaAudio2();
+    
         Random rnd=new Random();
-         
-            Turno = rnd.nextInt(2);
+        Turno = rnd.nextInt(2);
 
-            pantano1=new tablajuego();
-            pantano1.pantanoPersonas();
-            turnoA.setText(pantano1.getTurno()+"");
-            puntoA.setText(pantano1.getPt()+"");
-            usuarioA.setText(InicioController.user);
+        pantano1=new tablajuego();
+        pantano1.pantanoPersonas();
+        turnoA.setText(pantano1.getTurno()+"");
+        puntoA.setText(pantano1.getPt()+"");
+        usuarioA.setText(InicioController.user);
             
-            Button [] tablaTemp = {a00, a01, a02, a03, a04,a10, a11, a12, a13, a14,a20, a21, a22, a23, a24,a30, a31, a32, a33, a34,a40, a41, a42, a43, a44};
-            Button [] tablaTemp2 = {b00, b01, b02, b03, b04,b10, b11, b12, b13, b14,b20, b21, b22, b23, b24,b30, b31, b32, b33, b34,b40, b41, b42, b43, b44};
+        Button [] tablaTemp = {a00, a01, a02, a03, a04,a10, a11, a12, a13, a14,a20, a21, a22, a23, a24,a30, a31, a32, a33, a34,a40, a41, a42, a43, a44};
+        Button [] tablaTemp2 = {b00, b01, b02, b03, b04,b10, b11, b12, b13, b14,b20, b21, b22, b23, b24,b30, b31, b32, b33, b34,b40, b41, b42, b43, b44};
             
-            tablita1=tablaTemp;
-            tablita2=tablaTemp2;
+        tablita1=tablaTemp;
+        tablita2=tablaTemp2;
             
-            pantano2=new tablajuego();
-            pantano2.pantanoPersonas();
-            turnoB.setText(pantano2.getTurno()+"");
-            puntoB.setText(pantano2.getPt()+"");
-            usuarioB.setText(nombre[rnd.nextInt(5)]);
+        pantano2=new tablajuego();
+        pantano2.pantanoPersonas();
+        turnoB.setText(pantano2.getTurno()+"");
+        puntoB.setText(pantano2.getPt()+"");
+        usuarioB.setText(nombre[rnd.nextInt(5)]);
             
-            idPartida.setText("Partida: " + InicioController.idPar);
-        
-        //pantano2.jugadorBot(puntoB,turnoB,pantano2,vida2, TABLA2);
-
-        
-        
+        idPartida.setText("Partida: " + InicioController.idPar);
+ 
         if(Turno==1){
             TurnoJugA=true;
             TurnoJugB=false;
-        }else {
+        }
+        else {
             TurnoJugA=false;
             TurnoJugB=true;
             AccionTablaB();
         }
     }
    
-    
-
     public void CambioTurno() throws Exception{
-        
         if(TurnoJugA==true){
             TurnoJugB=true;
             TurnoJugA=false;
             AccionTablaB();
-        }else {
+        }
+        else {
             TurnoJugB=false;
             TurnoJugA=true;
         }
@@ -124,14 +115,13 @@ public class JuegoPCController{
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Perfil.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
+        audioJuegoPC.musicaOff2();
     }
    
     //BOTONES TABLA
 
-    public void ases(int x, int y) throws Exception{
-        
+    public void ases(int x, int y) throws Exception{ 
         Random rnd=new Random();
-        
         String temp = "a" + x + y;
         
         for (int i = 0; i < tablita1.length; i++) {
@@ -163,6 +153,7 @@ public class JuegoPCController{
         }
     }
     
+    //TABLA A
     
     @FXML
     public void a00(ActionEvent Event) throws Exception{
@@ -289,8 +280,7 @@ public class JuegoPCController{
         ases(4,4);
     }
     
-    
-
+    //TABLA B
     @FXML
     public void b00(ActionEvent Event) {
     }
@@ -389,6 +379,5 @@ public class JuegoPCController{
     
     @FXML
     public void b44(ActionEvent Event) {
-    }   
-    
+    }     
 }

@@ -4,7 +4,6 @@ package onmc;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -18,8 +17,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javax.xml.bind.DatatypeConverter;
 import utilidades.bbdd.Bd;
@@ -31,6 +28,9 @@ public class InicioController implements Initializable{
     Slider volumen;
     @FXML
     ToggleButton plst;
+    @FXML
+    audio audioInicio;
+            
     @FXML
     private Button registro, inicioSesion, jugarInvitado, config;
     @FXML
@@ -46,6 +46,11 @@ public class InicioController implements Initializable{
     
     Gestor_conexion_POSTGRE conection = new Gestor_conexion_POSTGRE("juego", true);
     
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
+        audioInicio=new audio(volumen, plst);
+        audioInicio.musicaAudio1();
+    }
     
     public static void  mostrar (String [][] vec) {
         for (int i = 0; i < vec.length-1; i++) {
@@ -54,7 +59,7 @@ public class InicioController implements Initializable{
             }
         }
     }
-    
+  
     @FXML
     public void btnRegistro(ActionEvent event) {
         try {
@@ -98,21 +103,16 @@ public class InicioController implements Initializable{
     
     @FXML
     public void btnJugarInvitado(ActionEvent event) throws Exception {
-        
-        String consulta = "insert into partida (fecha) values (current_timestamp)";
-        Bd.consultaModificacion(conection, consulta);
-        String consultaIdPartida = "select id_partida from partida order by id_partida desc limit 1";
-        vec = Bd.consultaSelect(conection, consultaIdPartida);
-        idPar = vec[0][0];
+//        
+//        String consulta = "insert into partida (fecha) values (current_timestamp)";
+//        Bd.consultaModificacion(conection, consulta);
+//        String consultaIdPartida = "select id_partida from partida order by id_partida desc limit 1";
+//        vec = Bd.consultaSelect(conection, consultaIdPartida);
+//        idPar = vec[0][0];
         
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/JuegoPC.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
-    }
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb){
-        audio audioInicio=new audio(volumen, plst);
-        audioInicio.musicaAudio1();
+        audioInicio.musicaOff1();
     }
 }

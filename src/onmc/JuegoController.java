@@ -11,10 +11,18 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.Slider;
+import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
 
 
 public class JuegoController {
+    @FXML
+    Slider volumen;
+    @FXML
+    ToggleButton plst;
+    @FXML
+    audio audioJuego;
     
     @FXML
     private boolean TurnoJugA = false;
@@ -33,6 +41,7 @@ public class JuegoController {
     @FXML
     private Button config, salir;
     
+    @FXML
     public Button t1 [];
     public Button t2 [];
     
@@ -41,13 +50,17 @@ public class JuegoController {
    
     @FXML
     private Label puntoA, puntoB, turnoA, turnoB, usuarioA, usuarioB, idPartida;
-    @FXML
-    String [] nombre = {"Jose", "Dani", "Monica", "Ana", "Mila"};
     
     @FXML
+    String [] nombre = {"Jose", "Dani", "Monica", "Ana", "Mila"};
+       
+    @FXML
     public void initialize(){
-        Random rnd=new Random();
         
+        audioJuego=new audio(volumen, plst);
+        audioJuego.musicaAudio2();
+        
+        Random rnd=new Random();
         Turno = rnd.nextInt(2);
        
         pantano1=new tablajuego();
@@ -73,7 +86,8 @@ public class JuegoController {
         if(Turno==1){
             TurnoJugA=true;
             TurnoJugB=false;
-        }else {
+        }
+        else {
             TurnoJugA=false;
             TurnoJugB=true;
         }  
@@ -81,11 +95,11 @@ public class JuegoController {
     
     @FXML
     public void CambioTurno(){
-        
         if(TurnoJugA==true){
             TurnoJugB=true;
             TurnoJugA=false;
-        }else {
+        }
+        else {
             TurnoJugB=false;
             TurnoJugA=true;
         }
@@ -96,13 +110,12 @@ public class JuegoController {
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Perfil.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
+        audioJuego.musicaOff2();
     }
    
     //BOTONES TABLA
-
     
     public void ases(int x, int y) throws Exception{
-        
         String temp = "a" + x + y;
         
         for (int i = 0; i < t1.length; i++) {
@@ -115,7 +128,6 @@ public class JuegoController {
             }
         }
     }
-    
     
     @FXML
     public void a00(ActionEvent Event) throws Exception{
@@ -243,7 +255,6 @@ public class JuegoController {
     }
     
     public void bses(int x, int y) throws Exception{
-        
         String temp = "b" + x + y;
         
         for (int i = 0; i < t2.length; i++) {

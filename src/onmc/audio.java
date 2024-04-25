@@ -3,16 +3,20 @@ package onmc;
 
 import java.nio.file.Paths;
 import javafx.beans.InvalidationListener;
-import javafx.fxml.FXML;
 import javafx.scene.control.Slider;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
 public class audio{
-    
     ToggleButton plst;
     Slider volumen;
+    
+    audio(Slider volumen, ToggleButton plst){
+        this.plst= plst;
+        this.volumen= volumen;
+    } 
+    
     Media audio1 = new Media(Paths.get("src/audio/cocodrilo.wav").toUri().toString());
     MediaPlayer aud1=new MediaPlayer(audio1);
 
@@ -22,11 +26,7 @@ public class audio{
     Media audio3 = new Media(Paths.get("src/audio/Chipi.wav").toUri().toString());
     MediaPlayer aud3=new MediaPlayer(audio3); 
     
-    audio(Slider volumen, ToggleButton plst){
-        this.plst= plst;
-        this.volumen= volumen;
-    } 
-
+    
     public void musicaAudio1(){
         aud1.play();
         volumen.setValue(aud1.getVolume() * 50);
@@ -80,5 +80,15 @@ public class audio{
                 aud3.play(); 
             }
         });
+    }
+    
+    public void musicaOff1(){
+        aud1.stop();
+    }
+    public void musicaOff2(){
+        aud2.stop();
+    }
+    public void musicaOff3(){
+        aud2.stop();
     }
 }
