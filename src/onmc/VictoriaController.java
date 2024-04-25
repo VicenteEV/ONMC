@@ -13,10 +13,16 @@ import javafx.fxml.FXML;
  */
 public class VictoriaController {
     
+    
+    
     @FXML
     private Label vUsuario;
     
     public void initialize() {
-        vUsuario.setText(InicioController.user);
+        if (JuegoPCController.pantano1.isVictoria() == true) {
+            vUsuario.setText(InicioController.user);
+        } else {
+            vUsuario.setText("Profe WIN");
+        }
     }
 }
