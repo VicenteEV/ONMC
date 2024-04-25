@@ -62,6 +62,7 @@ public class JuegoPCController{
     @FXML
     String [] nombre = {"Jose", "Dani", "Monica", "Ana", "Mila"};
     
+    private boolean enabled=true;
 
     
 
@@ -120,16 +121,6 @@ public class JuegoPCController{
             TurnoJugA=true;
         }
     }
-
-    public void setTurnoJugA(boolean TurnoJugA) {
-        this.TurnoJugA = TurnoJugA;
-    }
-
-    public void setTurnoJugB(boolean TurnoJugB) {
-        this.TurnoJugB = TurnoJugB;
-    }
-    
-   
     
     @FXML
     public void btnSalir(ActionEvent event) throws Exception {
@@ -147,12 +138,31 @@ public class JuegoPCController{
         String temp = "a" + x + y;
         
         for (int i = 0; i < tablita1.length; i++) {
-            if(temp.equals(tablita1[i].getId())) 
-               if(TurnoJugA==true){
-                 if(pantano1.Casilla(puntoA,turnoA,tablita1[i],pantano1,vida1,x,y) != 1){
-                     CambioTurno();
-                 }
-             }                       
+            if(temp.equals(tablita1[i].getId())){
+                if(TurnoJugA==true){
+                    if(pantano1.Casilla(puntoA,turnoA,tablita1[i],pantano1,vida1,x,y) != 1){
+                        CambioTurno();
+                    }
+                }                       
+            }
+        }
+    }
+    
+    @FXML
+    public void AccionTablaB() throws Exception{
+        Random rnd=new Random();
+        int x=rnd.nextInt(5),y=rnd.nextInt(5);
+        String boton = "b" + x + y;
+
+        for (int i = 0; i < tablita2.length; i++) {
+            if(boton.equals(tablita2[i].getId())){
+                if(TurnoJugB==true){
+                    if(pantano2.Casilla(puntoB,turnoB,tablita2[i],pantano2,vida2,x,y) != 1) 
+                        CambioTurno();
+                    else
+                        AccionTablaB();
+                }
+            }
         }
     }
     
@@ -282,297 +292,106 @@ public class JuegoPCController{
         ases(4,4);
     }
     
-    @FXML
-    public void AccionTablaB() throws Exception{
-        Random rnd=new Random();
-        int x=rnd.nextInt(5),y=rnd.nextInt(5);
-        String boton = "b" + x + y;
-
-        for (int i = 0; i < tablita2.length; i++) {
-            if(boton.equals(tablita2[i].getId())){
-                if(TurnoJugB==true){
-                    if(pantano2.Casilla(puntoB,turnoB,tablita2[i],pantano2,vida2,x,y) != 1) 
-                        CambioTurno();
-                    else
-                        AccionTablaB();
-                }
-            }
-        }
-    }
+    
 
     @FXML
-    public void b00(ActionEvent Event) throws Exception{
-        int x=0,y=0;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b00,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b00(ActionEvent Event) {
     }
     
     @FXML
-    public void b01(ActionEvent Event) throws Exception{
-        int x=0,y=1;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b01,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b01(ActionEvent Event) {  
     }
     
     @FXML
-    public void b02(ActionEvent Event) throws Exception{
-        int x=0,y=2;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b02,pantano2,vida2,x,y) != 1)  
-                CambioTurno();
-            else
-                AccionTablaB();
-        } 
+    public void b02(ActionEvent Event) {       
     }
     
     @FXML
-    public void b03(ActionEvent Event) throws Exception{
-        int x=0,y=3;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b03,pantano2,vida2,x,y) != 1)  
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b03(ActionEvent Event) {      
     }
     
     @FXML
-    public void b04(ActionEvent Event) throws Exception{
-        int x=0,y=4;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b04,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        } 
+    public void b04(ActionEvent Event) {      
     }
     
     @FXML
-    public void b10(ActionEvent Event) throws Exception{
-        int x=1,y=0;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b10,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        } 
+    public void b10(ActionEvent Event) {      
     }
     
     @FXML
-    public void b11(ActionEvent Event) throws Exception{
-        int x=1,y=1;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b11,pantano2,vida2,x,y) != 1)  
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b11(ActionEvent Event) {      
     }
     
     @FXML
-    public void b12(ActionEvent Event) throws Exception{
-        int x=1,y=2;
-       if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b12,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b12(ActionEvent Event) {     
     }
     
     @FXML
-    public void b13(ActionEvent Event) throws Exception{
-        int x=1,y=3;
-       if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b13,pantano2,vida2,x,y) != 1)  
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b13(ActionEvent Event) {
     }
     
     @FXML
-    public void b14(ActionEvent Event) throws Exception{
-        int x=1,y=4;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b14,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        } 
+    public void b14(ActionEvent Event) {
     }
     
     @FXML
-    public void b20(ActionEvent Event) throws Exception{
-        int x=2,y=0;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b20,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b20(ActionEvent Event) {
     }
     
     @FXML
-    public void b21(ActionEvent Event) throws Exception{
-        int x=2,y=1;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b21,pantano2,vida2,x,y) != 1)  
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b21(ActionEvent Event) {
     }
     
     @FXML
-    public void b22(ActionEvent Event) throws Exception{
-        int x=2,y=2;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b22,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b22(ActionEvent Event) {
     }
     
     @FXML
-    public void b23(ActionEvent Event) throws Exception{
-        int x=2,y=3;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b23,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b23(ActionEvent Event) {
     }
     
     @FXML
-    public void b24(ActionEvent Event) throws Exception{
-        int x=2,y=4;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b24,pantano2,vida2,x,y) != 1)  
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b24(ActionEvent Event) {
     }
     
     @FXML
-    public void b30(ActionEvent Event) throws Exception{
-        int x=3,y=0;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b30,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b30(ActionEvent Event) {
     }
     
     @FXML
-    public void b31(ActionEvent Event) throws Exception{
-        int x=3,y=1;
-       if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b31,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        } 
+    public void b31(ActionEvent Event) {
     }
     
     @FXML
-    public void b32(ActionEvent Event) throws Exception{
-        int x=3,y=2;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b32,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        } 
+    public void b32(ActionEvent Event) {
     }
     
     @FXML
-    public void b33(ActionEvent Event) throws Exception{
-        int x=3,y=3;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b33,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b33(ActionEvent Event) {
     }
     
     @FXML
-    public void b34(ActionEvent Event) throws Exception{
-        int x=3,y=4;
-        if(TurnoJugB==true){
-           if(pantano2.Casilla(puntoB,turnoB,b34,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-           else
-                AccionTablaB();
-        }
+    public void b34(ActionEvent Event) {
     }
     
     @FXML
-    public void b40(ActionEvent Event) throws Exception{
-        int x=4,y=0;
-          if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b40,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        } 
+    public void b40(ActionEvent Event) { 
     }
     
     @FXML
-    public void b41(ActionEvent Event) throws Exception{
-        int x=4,y=1;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b41,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b41(ActionEvent Event) {
     }
     
     @FXML
-    public void b42(ActionEvent Event) throws Exception{
-        int x=4,y=2;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b42,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        }
+    public void b42(ActionEvent Event) {
     }
     
     @FXML
-    public void b43(ActionEvent Event) throws Exception{
-        int x=4,y=3;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b43,pantano2,vida2,x,y) != 1) 
-                CambioTurno();
-            else
-                AccionTablaB();
-        } 
+    public void b43(ActionEvent Event) {
     }
     
     @FXML
-    public void b44(ActionEvent Event) throws Exception{
-        int x=4,y=4;
-        if(TurnoJugB==true){
-            if(pantano2.Casilla(puntoB,turnoB,b44,pantano2,vida2,x,y) != 1)  
-                CambioTurno();
-            else
-                AccionTablaB();
-        } 
+    public void b44(ActionEvent Event) {
     }   
     
 }

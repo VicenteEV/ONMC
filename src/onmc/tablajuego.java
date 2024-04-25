@@ -92,6 +92,7 @@ public class tablajuego {
             case 0:{                                 
                 btn.setVisible(false);
                 turno--;
+                btn.setDisable(true);
                 break;
             }
             case 1:{                                 
@@ -108,14 +109,14 @@ public class tablajuego {
                         break;
                 }
                 temp = 1;
-                //btn.setDisable(true);
+                btn.setDisable(true);
                 break;
             }
             case 2:{                                
                 pt=pt-50;
+                btn.setDisable(true);
                 turno--;
-                btn.setStyle("-fx-background-image: url(\"/img/caza.png\");");
-                //btn.setDisable(true);
+                btn.setStyle("-fx-background-image: url(\"/img/caza.png\");");                               
                 break;
             }
         }
