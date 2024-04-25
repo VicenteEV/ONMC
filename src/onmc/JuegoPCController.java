@@ -33,6 +33,7 @@ public class JuegoPCController{
     @FXML
     private boolean TurnoJugA = false;
     private boolean TurnoJugB = false;
+
     private int Turno;
     //private InicioController nom = new InicioController();
     
@@ -49,7 +50,7 @@ public class JuegoPCController{
     public Button [] tablita2;
     
     @FXML
-    private tablajuego pantano1, pantano2;
+    public static tablajuego pantano1, pantano2;
   
     @FXML
     private Button config, salir;
@@ -58,14 +59,11 @@ public class JuegoPCController{
     private ProgressBar vida1, vida2;
    
     @FXML
-    private Label puntoA, puntoB, turnoA, turnoB, usuarioA, usuarioB, idPartida;
-    @FXML
-    String [] nombre = {"Jose", "Dani", "Monica", "Ana", "Mila"};
+    private Label puntoA, puntoB, turnoA, turnoB, usuarioA, idPartida;
     
-    private boolean enabled=true;
-
-    
-
+    public String [] nombre = {"Jose", "Dani", "Monica", "Ana", "Mila"};
+    public Label usuarioB;
+    public static String n;
     
     
     public void initialize() throws Exception{
@@ -106,8 +104,7 @@ public class JuegoPCController{
             AccionTablaB();
         }
     }
-    
-    
+   
     
 
     public void CambioTurno() throws Exception{

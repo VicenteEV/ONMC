@@ -19,6 +19,8 @@ public class tablajuego {
     @FXML
     private Label vUsuario;
     
+    private boolean victoria = false;
+    
     public final int[][] TABLA=new int [5][5];
     private final int PS=7,CZ=3;
     int pt=0,turno=15;
@@ -32,6 +34,12 @@ public class tablajuego {
     public int getTurno() {
         return turno;
     }
+
+    public boolean isVictoria() {
+        return victoria;
+    }
+    
+    
     
     public void pantanoPersonas(){
         Random rnd=new Random();
@@ -62,7 +70,7 @@ public class tablajuego {
         
         for (int i=0; i<TABLA.length; i++){                 //Cazadores aleatorios
             for (int j=0; j<TABLA.length; j++){
-                System.out.println(TABLA[i][j]);
+                System.out.print(TABLA[i][j]);
             }
             System.out.println();
         }
@@ -122,7 +130,7 @@ public class tablajuego {
         }
         vida.setProgress(barraVida(vida, x, y));
         puntos.setText(pt + "");
-        finalizarPartida(pt, vida, turno);
+        finalizarPartida(pt, vida, turno, pantano);
         turnos.setText(turno + "");
         //Thread.sleep(1000);  
         
@@ -139,17 +147,19 @@ public class tablajuego {
         ONMC.stage.show();
     }
     
-    public void finalizarPartida (int x, ProgressBar vida, int turno) throws Exception{
+    public void finalizarPartida (int x, ProgressBar vida, int turno, tablajuego p) throws Exception{
         
         if (vida.getProgress() < 0.33333333333) {
             CambioVictoria();
             String consulta = "update partida set victoria = false";
             Bd.consultaModificacion(conection, consulta);
         }
-        if (x >= 350) {
+        if (x >= 950) {
+            victoria = true;
             CambioVictoria();
         } 
         if(turno==0){
+            
             CambioVictoria();
         }
     }   
