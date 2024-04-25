@@ -73,8 +73,8 @@
                     <Image url="@../../img/dsa.png" />
                  </image>
               </ImageView>
-            <Slider layoutX="483.0" layoutY="563.0" prefHeight="14.0" prefWidth="246.0" />
-            <ToggleButton layoutX="375.0" layoutY="558.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Musica" />
+            <Slider fx:id="volumen" layoutX="483.0" layoutY="563.0" max="100.0" prefHeight="14.0" prefWidth="246.0" />
+            <ToggleButton fx:id="plst" layoutX="375.0" layoutY="558.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Musica" />
            </children>
         </AnchorPane>
     </children>

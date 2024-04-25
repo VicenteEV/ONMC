@@ -36,8 +36,8 @@
                 <TextField fx:id="iUsuario" layoutX="171.0" layoutY="86.0" prefHeight="34.0" prefWidth="272.0" />
                 <Button fx:id="inicioSesion" layoutX="173.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnInicioSesion" prefHeight="60.0" prefWidth="171.0" text="Iniciar sesion" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="152.0" />
                 <PasswordField fx:id="iContrasenya" layoutX="170.0" layoutY="161.0" prefHeight="34.0" prefWidth="272.0" />
-                  <Slider layoutX="173.0" layoutY="28.0" prefHeight="21.0" prefWidth="272.0" />
-                  <ToggleButton layoutX="48.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Musica" />
+                  <Slider fx:id="volumen" layoutX="173.0" layoutY="28.0" prefHeight="21.0" max="100.0" prefWidth="272.0" />
+                  <ToggleButton fx:id="plst" layoutX="48.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Musica" />
              </children>
           </AnchorPane>
           <ImageView fitHeight="338.0" fitWidth="272.0" layoutX="45.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="172.83050537109375" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="767.0" AnchorPane.topAnchor="118.0">

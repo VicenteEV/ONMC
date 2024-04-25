@@ -15,7 +15,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
@@ -25,8 +27,10 @@ import utilidades.bbdd.Gestor_conexion_POSTGRE;
 
 
 public class InicioController implements Initializable{
-    Media audioInicio = new Media(Paths.get("src/audio/cocodrilo.wav").toUri().toString());
-    MediaPlayer cocodrilo=new MediaPlayer(audioInicio);
+    @FXML
+    Slider volumen;
+    @FXML
+    ToggleButton plst;
     @FXML
     private Button registro, inicioSesion, jugarInvitado, config;
     @FXML
@@ -108,7 +112,7 @@ public class InicioController implements Initializable{
     
     @Override
     public void initialize(URL url, ResourceBundle rb){
-        cocodrilo.play();
-      //cocodrilo.stop();
+        audio audioInicio=new audio(volumen, plst);
+        audioInicio.musicaAudio1();
     }
 }

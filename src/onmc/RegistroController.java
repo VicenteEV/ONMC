@@ -2,6 +2,7 @@
 package onmc;
 
 import java.io.IOException;
+import java.net.URL;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,12 +18,19 @@ import utilidades.bbdd.Gestor_conexion_POSTGRE;
 import javax.xml.bind.DatatypeConverter;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
+import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Slider;
+import javafx.scene.control.ToggleButton;
 
 
 
-public class RegistroController {
-    
+public class RegistroController implements Initializable{
+    @FXML
+    Slider volumen;
+    @FXML
+    ToggleButton plst;
     @FXML
     Button config, rAceptar;
     @FXML
@@ -58,6 +66,11 @@ public class RegistroController {
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Inicio.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
-   
+        
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
+        audio audioInicio=new audio(volumen, plst);
+        audioInicio.musicaAudio1();
     }
 }
