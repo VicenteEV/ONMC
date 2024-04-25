@@ -5,14 +5,18 @@
  */
 package onmc;
 import javafx.scene.control.Label;
+import javafx.fxml.FXML;
+
 /**
  *
  * @author Usuario
  */
 public class VictoriaController {
+    
+    @FXML
     private Label vUsuario;
     
     public void initialize() {
-        vUsuario.setText("sdfsd" + InicioController.user);
+        vUsuario.setText(InicioController.user);
     }
 }

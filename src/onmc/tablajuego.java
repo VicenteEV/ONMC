@@ -2,6 +2,7 @@
 package onmc;
 
 import java.util.Random;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
@@ -11,7 +12,13 @@ import utilidades.bbdd.Bd;
 import utilidades.bbdd.Gestor_conexion_POSTGRE;
 
 
+
+
 public class tablajuego {
+    
+    @FXML
+    private Label vUsuario;
+    
     public final int[][] TABLA=new int [5][5];
     private final int PS=7,CZ=3;
     int pt=0,turno=15;
@@ -51,6 +58,13 @@ public class tablajuego {
                     }
                 }
             }
+        }
+        
+        for (int i=0; i<TABLA.length; i++){                 //Cazadores aleatorios
+            for (int j=0; j<TABLA.length; j++){
+                System.out.println(TABLA[i][j]);
+            }
+            System.out.println();
         }
     }
 
@@ -118,6 +132,7 @@ public class tablajuego {
         
         //String consulta = "update partida set victoria = true";
         //Bd.consultaModificacion(conection, consulta);
+        //vUsuario.setText(InicioController.user);
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Victoria.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
