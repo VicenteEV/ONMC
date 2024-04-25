@@ -116,7 +116,7 @@ public class tablajuego {
                 pt=pt-50;
                 btn.setDisable(true);
                 turno--;
-                btn.setStyle("-fx-background-image: url(\"/img/caza.png\");");                               
+                btn.setStyle("-fx-background-image: url(\"/img/newcaza2.png\");");                               
                 break;
             }
         }
