@@ -26,7 +26,7 @@
       </Button>
       <AnchorPane layoutX="428.0" layoutY="44.0" prefHeight="89.0" prefWidth="246.0">
          <children>
-            <Label fx:id="usuario" layoutY="11.0" prefHeight="67.0" prefWidth="241.0" text=" &quot;Usuario&quot;" textAlignment="JUSTIFY" textFill="#070000">
+            <Label fx:id="usuario" layoutY="11.0" prefHeight="67.0" prefWidth="241.0" text=" &quot;Usuario&quot;" textAlignment="CENTER" textFill="#070000">
                <font>
                   <Font name="Comic Sans MS" size="48.0" />
                </font>
