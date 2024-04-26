@@ -59,7 +59,7 @@ public class InicioController implements Initializable{
     }
   
     @FXML
-    public void btnRegistro(ActionEvent event) {
+    public void btnRegistro(ActionEvent event) { 
         audioInicio.musicaOff1();
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Registro.fxml"));

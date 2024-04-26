@@ -66,7 +66,7 @@ public class tablajuego {
         }
     }
 
-    public int comprobarCasilla(int x, int y){
+    public int comprobarCasilla(int x, int y){             //Comprueba los parametros y asigna un valor
         int resultado = 0;
         if (TABLA[x][y]==0){resultado=0;}
         else if (TABLA[x][y]==1){resultado=1;}
@@ -74,7 +74,7 @@ public class tablajuego {
         return resultado; 
     }
     
-    public double barraVida(ProgressBar vida, int x, int y){
+    public double barraVida(ProgressBar vida, int x, int y){    //Comprueba el valor y gestina la barra de la vida
       
         if (comprobarCasilla(x,y) == 2){
             return vida.getProgress()-0.33333333333;
@@ -82,7 +82,7 @@ public class tablajuego {
         return vida.getProgress();
     }
     
-    public int Casilla(Label puntos, Label turnos, Button btn, tablajuego pantano, ProgressBar vida, int x, int y, audio adc) throws Exception{
+    public int Casilla(Label puntos, Label turnos, Button btn, tablajuego pantano, ProgressBar vida, int x, int y, audio adc) throws Exception{ //Cambia imagen casilla, resta turno y da puntuacion
         Random rnd=new Random ();    
         int temp = 0;
         
@@ -126,7 +126,7 @@ public class tablajuego {
         return temp;
     }
     
-    public void CambioVictoria (audio adc) throws Exception{
+    public void CambioVictoria (audio adc) throws Exception{ //Cambia escena victoria
        
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Victoria.fxml"));
         ONMC.stage.getScene().setRoot(loader);
@@ -134,7 +134,7 @@ public class tablajuego {
         adc.musicaOff2();
     }
     
-    public void finalizarPartida (int x, ProgressBar vida, int turno, tablajuego p, audio adc) throws Exception{
+    public void finalizarPartida (int x, ProgressBar vida, int turno, tablajuego p, audio adc) throws Exception{ //Condicion para finalizar partida
         
         if (vida.getProgress() < 0.33333333333) {
             CambioVictoria(adc);
