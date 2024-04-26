@@ -25,7 +25,7 @@ public class PerfilController {
     audio audioPerfil;
     
     @FXML
-    private Label usuario;
+    private Label usuario, ptUsuario;
     
     @FXML
     String [][] vec;
@@ -41,9 +41,12 @@ public class PerfilController {
     
     @FXML
     public void btnPuntuacion(ActionEvent event) throws Exception {
-        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Inicio.fxml"));
-        ONMC.stage.getScene().setRoot(loader);
-        ONMC.stage.show();
+        
+        String consultaPtPartida = "select puntuacion from usuario where usuario=" +"'"+ InicioController.user +"'";
+        System.out.println (InicioController.user);
+        vec = Bd.consultaSelect (conection, consultaPtPartida);
+        System.out.println (vec[0][0] + "asdasdasdasd");
+        ptUsuario.setText(vec[0][0] + "Pt.");
     }
     
     @FXML

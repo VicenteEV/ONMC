@@ -11,9 +11,6 @@ import javafx.scene.control.ProgressBar;
 import utilidades.bbdd.Bd;
 import utilidades.bbdd.Gestor_conexion_POSTGRE;
 
-
-
-
 public class tablajuego {
     
     @FXML
@@ -66,13 +63,6 @@ public class tablajuego {
                     }
                 }
             }
-        }
-        
-        for (int i=0; i<TABLA.length; i++){                 //Cazadores aleatorios
-            for (int j=0; j<TABLA.length; j++){
-                System.out.print(TABLA[i][j]);
-            }
-            System.out.println();
         }
     }
 
@@ -132,7 +122,6 @@ public class tablajuego {
         puntos.setText(pt + "");
         finalizarPartida(pt, vida, turno, pantano, adc);
         turnos.setText(turno + "");
-        //Thread.sleep(1000);  
         
         return temp;
     }
@@ -149,12 +138,18 @@ public class tablajuego {
         
         if (vida.getProgress() < 0.33333333333) {
             CambioVictoria(adc);
-            String consulta = "update partida set victoria = false";
+            
+            String consulta = "update partida set victoria = false where id_partida = (select max(id_partida) from partida)";
             Bd.consultaModificacion(conection, consulta);
         }
         if (x >= 750) {
             victoria = true;
             CambioVictoria(adc);
+            
+            String consulta = "update partida set victoria = true where id_partida = (select max(id_partida) from partida)";
+            String consulta2 = "update usuario set puntuacion = "+ pt +" where usuario =" + "'" + InicioController.user +"'";
+            Bd.consultaModificacion(conection, consulta);
+            Bd.consultaModificacion(conection, consulta2);
         } 
         if(turno==0){
             
