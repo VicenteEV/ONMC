@@ -29,13 +29,16 @@ public class VictoriaController implements Initializable{
     public void initialize(URL url, ResourceBundle rb){
         audioVictoria=new audio(volumen, plst);
         audioVictoria.musicaAudio3();
+        initializeUsuario();
     }
     
-    public void initialize() {
+    @FXML
+    public void initializeUsuario() {
         
         if (JuegoPCController.pantano1.isVictoria() == true) {
             vUsuario.setText(InicioController.user);
-        } else {
+        } 
+        else {
             vUsuario.setText("Profe WIN");
         } 
     }

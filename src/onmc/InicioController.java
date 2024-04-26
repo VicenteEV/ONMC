@@ -67,7 +67,8 @@ public class InicioController implements Initializable{
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
             stage.setFullScreen(true);
-        }catch (IOException io){
+        }
+        catch (IOException io){
             io.printStackTrace();
         }
     }

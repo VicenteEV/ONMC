@@ -1,7 +1,6 @@
 
 package onmc;
 
-import java.io.IOException;
 import java.net.URL;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

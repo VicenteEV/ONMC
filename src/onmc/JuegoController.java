@@ -1,7 +1,6 @@
 
 package onmc;
 
-import java.io.IOException;
 import java.util.Random;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,8 +24,7 @@ public class JuegoController {
     audio audioJuego;
     
     @FXML
-    private boolean TurnoJugA = false;
-    private boolean TurnoJugB = false;
+    private boolean TurnoJugA = false, TurnoJugB = false;
     
     @FXML
     private int Turno;
@@ -41,8 +39,7 @@ public class JuegoController {
     private tablajuego pantano1, pantano2;
     
     @FXML
-    public Button t1 [];
-    public Button t2 [];
+    public Button t1 [], t2 [];
     
     @FXML
     private ProgressBar vida1, vida2;
@@ -68,18 +65,17 @@ public class JuegoController {
         puntoA.setText(pantano1.getPt()+"");
         usuarioA.setText(InicioController.user);
         
-        Button temp [] = {a00, a01, a02, a03, a04,a10, a11, a12, a13, a14,a20, a21, a22, a23, a24,a30, a31, a32, a33, a34,a40, a41, a42, a43, a44};
-        Button [] temp2 = {b00, b01, b02, b03, b04,b10, b11, b12, b13, b14,b20, b21, b22, b23, b24,b30, b31, b32, b33, b34,b40, b41, b42, b43, b44};
-        
-        t1=temp;
-        t2=temp2;
-        
         pantano2=new tablajuego();
         pantano2.pantanoPersonas();
         turnoB.setText(pantano2.getTurno()+"");
         puntoB.setText(pantano2.getPt()+"");
         usuarioB.setText(nombre[rnd.nextInt(5)]);
         
+        Button [] temp1 = {a00, a01, a02, a03, a04,a10, a11, a12, a13, a14,a20, a21, a22, a23, a24,a30, a31, a32, a33, a34,a40, a41, a42, a43, a44};
+        Button [] temp2 = {b00, b01, b02, b03, b04,b10, b11, b12, b13, b14,b20, b21, b22, b23, b24,b30, b31, b32, b33, b34,b40, b41, b42, b43, b44};
+        t1=temp1;
+        t2=temp2;
+     
         idPartida.setText("Partida: " + InicioController.idPar);
         
         if(Turno==1){
@@ -112,8 +108,9 @@ public class JuegoController {
         audioJuego.musicaOff2();
     }
    
-    //BOTONES TABLA
     
+    
+    //BOTONES TABLA A
     public void ases(int x, int y) throws Exception{
         String temp = "a" + x + y;
         
@@ -129,130 +126,83 @@ public class JuegoController {
     }
     
     @FXML
-    public void a00(ActionEvent Event) throws Exception{
-        ases(0,0);
-    }
+    public void a00(ActionEvent Event) throws Exception {ases(0,0);}
     
     @FXML
-    public void a01(ActionEvent Event) throws Exception{
-         ases(0,1);
-    }
+    public void a01(ActionEvent Event) throws Exception {ases(0,1);}
     
     @FXML
-    public void a02(ActionEvent Event) throws Exception{
-        ases(0,2);
-    }
+    public void a02(ActionEvent Event) throws Exception {ases(0,2);}
     
     @FXML
-    public void a03(ActionEvent Event) throws Exception{
-       ases(0,3); 
-    }
+    public void a03(ActionEvent Event) throws Exception {ases(0,3);}
     
     @FXML
-    public void a04(ActionEvent Event) throws Exception{
-       ases(0,4);
-    }
+    public void a04(ActionEvent Event) throws Exception {ases(0,4);}
     
     @FXML
-    public void a10(ActionEvent Event) throws Exception{
-        ases(1,0); 
-    }
+    public void a10(ActionEvent Event) throws Exception {ases(1,0);}
     
     @FXML
-    public void a11(ActionEvent Event) throws Exception{
-        ases(1,1);
-    }
+    public void a11(ActionEvent Event) throws Exception {ases(1,1);}
     
     @FXML
-    public void a12(ActionEvent Event) throws Exception{
-       ases(1,2); 
-    }
+    public void a12(ActionEvent Event) throws Exception {ases(1,2);}
     
     @FXML
-    public void a13(ActionEvent Event) throws Exception{
-        ases(1,3);
-    }
+    public void a13(ActionEvent Event) throws Exception {ases(1,3);}
     
     @FXML
-    public void a14(ActionEvent Event) throws Exception{
-        ases(1,4);
-    }
+    public void a14(ActionEvent Event) throws Exception {ases(1,4);}
     
     @FXML
-    public void a20(ActionEvent Event) throws Exception{
-       ases(2,0);
-    }
+    public void a20(ActionEvent Event) throws Exception {ases(2,0);}
     
     @FXML
-    public void a21(ActionEvent Event) throws Exception{
-       ases(2,1);
-    }
+    public void a21(ActionEvent Event) throws Exception {ases(2,1);}
     
     @FXML
-    public void a22(ActionEvent Event) throws Exception{
-      ases(2,2);
-    }
+    public void a22(ActionEvent Event) throws Exception {ases(2,2);}
     
     @FXML
-    public void a23(ActionEvent Event) throws Exception{
-       ases(2,3);
-    }
+    public void a23(ActionEvent Event) throws Exception {ases(2,3);}
     
     @FXML
-    public void a24(ActionEvent Event) throws Exception{
-       ases(2,4);
-    }
+    public void a24(ActionEvent Event) throws Exception {ases(2,4);}
     
     @FXML
-    public void a30(ActionEvent Event) throws Exception{
-       ases(3,0);
-    }
+    public void a30(ActionEvent Event) throws Exception {ases(3,0);}
     
     @FXML
-    public void a31(ActionEvent Event) throws Exception{
-      ases(3,1);
-    }
+    public void a31(ActionEvent Event) throws Exception {ases(3,1);}
     
     @FXML
-    public void a32(ActionEvent Event) throws Exception{
-      ases(3,2);
-    }
+    public void a32(ActionEvent Event) throws Exception {ases(3,2);}
     
     @FXML
-    public void a33(ActionEvent Event) throws Exception{
-       ases(3,3);
-    }
+    public void a33(ActionEvent Event) throws Exception {ases(3,3);}
     
     @FXML
-    public void a34(ActionEvent Event) throws Exception{
-        ases(3,4);
-    }
+    public void a34(ActionEvent Event) throws Exception {ases(3,4);}
     
     @FXML
-    public void a40(ActionEvent Event) throws Exception{
-       ases(4,0);
-    }
+    public void a40(ActionEvent Event) throws Exception {ases(4,0);}
     
     @FXML
-    public void a41(ActionEvent Event) throws Exception{
-       ases(4,1); 
-    }
+    public void a41(ActionEvent Event) throws Exception {ases(4,1);}
     
     @FXML
-    public void a42(ActionEvent Event) throws Exception{
-       ases(4,2);
-    }
+    public void a42(ActionEvent Event) throws Exception {ases(4,2);}
     
     @FXML
-    public void a43(ActionEvent Event) throws Exception{
-       ases(4,3);
-    }
+    public void a43(ActionEvent Event) throws Exception {ases(4,3);}
     
     @FXML
-    public void a44(ActionEvent Event) throws Exception{
-        ases(4,4);
-    }
+    public void a44(ActionEvent Event) throws Exception {ases(4,4);}
     
+    
+    
+    //BOTONES TABLA B
     public void bses(int x, int y) throws Exception{
         String temp = "b" + x + y;
         
@@ -268,154 +218,77 @@ public class JuegoController {
     }
 
     @FXML
-    public void b00(ActionEvent Event) throws Exception{
-        int x=0,y=0;
-        bses(x, y);
-    }
+    public void b00(ActionEvent Event) throws Exception {bses(0, 0);}
     
     @FXML
-    public void b01(ActionEvent Event) throws Exception{
-        int x=0,y=1;
-        bses(x, y);
-        
-    }
+    public void b01(ActionEvent Event) throws Exception {bses(0, 1);}
     
     @FXML
-    public void b02(ActionEvent Event) throws Exception{
-        int x=0,y=2;
-        bses(x, y);
-         
-    }
+    public void b02(ActionEvent Event) throws Exception {bses(0, 2);}
     
     @FXML
-    public void b03(ActionEvent Event) throws Exception{
-        int x=0,y=3;
-        bses(x, y);
-    }
+    public void b03(ActionEvent Event) throws Exception {bses(0, 3);}
     
     @FXML
-    public void b04(ActionEvent Event) throws Exception{
-        int x=0,y=4;
-        bses(x, y); 
-    }
+    public void b04(ActionEvent Event) throws Exception {bses(0, 4);}
     
     @FXML
-    public void b10(ActionEvent Event) throws Exception{
-        int x=1,y=0;
-bses(x, y);
-    }
+    public void b10(ActionEvent Event) throws Exception {bses(1, 0);}
     
     @FXML
-    public void b11(ActionEvent Event) throws Exception{
-        int x=1,y=1;
-        bses(x, y);
-    }
+    public void b11(ActionEvent Event) throws Exception {bses(1, 1);}
     
     @FXML
-    public void b12(ActionEvent Event) throws Exception{
-        int x=1,y=2;
-        bses(x, y);
-    }
+    public void b12(ActionEvent Event) throws Exception {bses(1, 2);}
     
     @FXML
-    public void b13(ActionEvent Event) throws Exception{
-        int x=1,y=3;
-        bses(x, y); 
-    }
+    public void b13(ActionEvent Event) throws Exception {bses(1, 3);}
     
     @FXML
-    public void b14(ActionEvent Event) throws Exception{
-        int x=1,y=4;
-        bses(x, y); 
-    }
+    public void b14(ActionEvent Event) throws Exception {bses(1, 4);}
     
     @FXML
-    public void b20(ActionEvent Event) throws Exception{
-        int x=2,y=0;
-        bses(x, y);
-    }
+    public void b20(ActionEvent Event) throws Exception {bses(2, 0);}
     
     @FXML
-    public void b21(ActionEvent Event) throws Exception{
-        int x=2,y=1;
-        bses(x, y);
-    }
+    public void b21(ActionEvent Event) throws Exception {bses(2, 1);}
     
     @FXML
-    public void b22(ActionEvent Event) throws Exception{
-        int x=2,y=2;
-        bses(x, y);
-    }
+    public void b22(ActionEvent Event) throws Exception {bses(2, 2);}
     
     @FXML
-    public void b23(ActionEvent Event) throws Exception{
-        int x=2,y=3;
-        bses(x, y);
-    }
+    public void b23(ActionEvent Event) throws Exception {bses(2, 3);}
     
     @FXML
-    public void b24(ActionEvent Event) throws Exception{
-        int x=2,y=4;
-        bses(x, y);
-    }
+    public void b24(ActionEvent Event) throws Exception {bses(2, 4);}
     
     @FXML
-    public void b30(ActionEvent Event) throws Exception{
-        int x=3,y=0;
-        bses(x, y);
-    }
+    public void b30(ActionEvent Event) throws Exception {bses(3, 0);}
     
     @FXML
-    public void b31(ActionEvent Event) throws Exception{
-        int x=3,y=1;
-        bses(x, y); 
-    }
+    public void b31(ActionEvent Event) throws Exception {bses(3, 1);}
     
     @FXML
-    public void b32(ActionEvent Event) throws Exception{
-        int x=3,y=2;
-        bses(x, y);
-    }
+    public void b32(ActionEvent Event) throws Exception {bses(3, 2);}
     
     @FXML
-    public void b33(ActionEvent Event) throws Exception{
-        int x=3,y=3;
-        bses(x, y);
-    }
+    public void b33(ActionEvent Event) throws Exception {bses(3, 3);}
     
     @FXML
-    public void b34(ActionEvent Event) throws Exception{
-        int x=3,y=4;
-        bses(x, y);
-    }
+    public void b34(ActionEvent Event) throws Exception {bses(3, 4);}
     
     @FXML
-    public void b40(ActionEvent Event) throws Exception{
-        int x=4,y=0;
-        bses(x, y); 
-    }
+    public void b40(ActionEvent Event) throws Exception {bses(4, 0);}
     
     @FXML
-    public void b41(ActionEvent Event) throws Exception{
-        int x=4,y=1;
-        bses(x, y);
-    }
+    public void b41(ActionEvent Event) throws Exception {bses(4, 1);}
     
     @FXML
-    public void b42(ActionEvent Event) throws Exception{
-        int x=4,y=2;
-        bses(x, y);
-    }
+    public void b42(ActionEvent Event) throws Exception {bses(4, 2);}
     
     @FXML
-    public void b43(ActionEvent Event) throws Exception{
-        int x=4,y=3;
-        bses(x, y); 
-    }
+    public void b43(ActionEvent Event) throws Exception {bses(4, 3);}
     
     @FXML
-    public void b44(ActionEvent Event) throws Exception{
-        int x=4,y=4;
-        bses(x, y); 
-    }
+    public void b44(ActionEvent Event) throws Exception {bses(4, 4);}
 }

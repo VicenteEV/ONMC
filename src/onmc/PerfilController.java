@@ -1,7 +1,6 @@
 
 package onmc;
 
-import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,7 +27,7 @@ public class PerfilController {
     private Label usuario, ptUsuario;
     
     @FXML
-    String [][] vec;
+    String vec [][];
     
     Gestor_conexion_POSTGRE conection = new Gestor_conexion_POSTGRE("juego", true);
     
@@ -42,7 +41,7 @@ public class PerfilController {
     @FXML
     public void btnPuntuacion(ActionEvent event) throws Exception {
         
-        String consultaPtPartida = "select puntuacion from usuario where usuario=" +"'"+ InicioController.user +"'";
+        String consultaPtPartida = "select puntuacion from usuario where usuario=" +"'"+InicioController.user +"'";
         System.out.println (InicioController.user);
         vec = Bd.consultaSelect (conection, consultaPtPartida);
         System.out.println (vec[0][0] + "asdasdasdasd");
