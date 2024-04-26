@@ -17,7 +17,7 @@ public class audio{
         this.volumen= volumen;
     } 
     
-    Media audio1 = new Media(Paths.get("src/audio/cocodrilo.wav").toUri().toString());
+    Media audio1 = new Media(Paths.get("src/audio/jungla.wav").toUri().toString());
     MediaPlayer aud1=new MediaPlayer(audio1);
 
     Media audio2 = new Media(Paths.get("src/audio/cocodrilo2.wav").toUri().toString());
@@ -25,6 +25,9 @@ public class audio{
 
     Media audio3 = new Media(Paths.get("src/audio/Chipi.wav").toUri().toString());
     MediaPlayer aud3=new MediaPlayer(audio3); 
+    
+    Media audio4 = new Media(Paths.get("src/audio/cocodrilo.wav").toUri().toString());
+    MediaPlayer aud4=new MediaPlayer(audio4);
     
     
     public void musicaAudio1(){
@@ -81,6 +84,24 @@ public class audio{
             }
         });
     }
+    public void musicaAudio4(){
+        aud4.play();
+        volumen.setValue(aud4.getVolume() * 50);
+        volumen.valueProperty().addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(javafx.beans.Observable observable) {
+                aud4.setVolume(volumen.getValue() / 100);
+            } 
+        });
+        plst.setOnAction(reproductor ->{
+            if(plst.isSelected()){
+                aud4.stop();  
+            } 
+            else {
+                aud4.play(); 
+            }
+        });
+    }
     
     public void musicaOff1(){
         aud1.stop();
@@ -89,6 +110,9 @@ public class audio{
         aud2.stop();
     }
     public void musicaOff3(){
-        aud2.stop();
+        aud3.stop();
+    }
+    public void musicaOff4(){
+        aud4.stop();
     }
 }

@@ -34,9 +34,9 @@
                    </font>
                 </Label>
                 <TextField fx:id="iUsuario" layoutX="171.0" layoutY="86.0" prefHeight="34.0" prefWidth="272.0" />
-                <Button fx:id="inicioSesion" layoutX="173.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnInicioSesion" prefHeight="60.0" prefWidth="171.0" text="Iniciar sesion" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="152.0" />
+                <Button fx:id="inicioSesion" layoutX="161.0" layoutY="247.0" mnemonicParsing="false" onAction="#btnInicioSesion" prefHeight="60.0" prefWidth="210.0" text="Iniciar sesion" AnchorPane.leftAnchor="161.0" AnchorPane.rightAnchor="160.0" />
                 <PasswordField fx:id="iContrasenya" layoutX="170.0" layoutY="161.0" prefHeight="34.0" prefWidth="272.0" />
-                  <Slider fx:id="volumen" layoutX="173.0" layoutY="28.0" prefHeight="21.0" max="100.0" prefWidth="272.0" />
+                  <Slider fx:id="volumen" layoutX="173.0" layoutY="28.0" max="100.0" prefHeight="21.0" prefWidth="272.0" />
                   <ToggleButton fx:id="plst" layoutX="48.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Musica" />
              </children>
           </AnchorPane>
@@ -45,8 +45,7 @@
                 <Image url="@../../img/dsa.png" />
              </image>
           </ImageView>
-          <Button fx:id="jugarInvitado" layoutX="295.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnJugarInvitado" prefHeight="70.0" prefWidth="226.0" text="Jugar como invitado" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="295.0" />
-          <Button fx:id="registro" layoutX="571.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnRegistro" prefHeight="70.0" prefWidth="226.0" text="Registrase" AnchorPane.bottomAnchor="64.0" AnchorPane.rightAnchor="300.0" />
+          <Button fx:id="registro" layoutX="398.0" layoutY="498.0" mnemonicParsing="false" onAction="#btnRegistro" prefHeight="70.0" prefWidth="284.0" text="Registrase" AnchorPane.bottomAnchor="54.0" AnchorPane.rightAnchor="402.0" />
           <ImageView fitHeight="340.0" fitWidth="304.0" layoutX="774.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="175.06515502929688" AnchorPane.leftAnchor="774.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="117.0">
              <image>
                 <Image url="@../../img/asd.png" />

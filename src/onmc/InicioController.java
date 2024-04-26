@@ -22,25 +22,31 @@ import javax.xml.bind.DatatypeConverter;
 import utilidades.bbdd.Bd;
 import utilidades.bbdd.Gestor_conexion_POSTGRE;
 
-
 public class InicioController implements Initializable{
+    
     @FXML
     Slider volumen;
+    
     @FXML
     ToggleButton plst;
+    
     @FXML
     audio audioInicio;
             
     @FXML
-    private Button registro, inicioSesion, jugarInvitado, config;
+    private Button registro;
+    
     @FXML
     PasswordField iContrasenya;
+    
     @FXML
     TextField iUsuario;
+    
     @FXML
     public static String user;
     private String password;
     
+    @FXML
     public static String idPar;
     public String [][] vec;
     
@@ -51,17 +57,10 @@ public class InicioController implements Initializable{
         audioInicio=new audio(volumen, plst);
         audioInicio.musicaAudio1();
     }
-    
-    public static void  mostrar (String [][] vec) {
-        for (int i = 0; i < vec.length-1; i++) {
-            for (int j = 0; j < vec[0].length; j++) {
-                System.out.println(vec [i][j]);
-            }
-        }
-    }
   
     @FXML
     public void btnRegistro(ActionEvent event) {
+        audioInicio.musicaOff1();
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Escenas/Registro.fxml"));
             Stage stage = (Stage) registro.getScene().getWindow();
@@ -76,6 +75,8 @@ public class InicioController implements Initializable{
     @FXML
     public void btnInicioSesion(ActionEvent event) throws Exception{
         
+        audioInicio.musicaOff1();
+        
         boolean temp = false;
         String consultaUsuario;
         user = iUsuario.getText();
@@ -85,34 +86,15 @@ public class InicioController implements Initializable{
         byte[] digest = md.digest(password.getBytes(StandardCharsets.UTF_8));
         String sha256 = DatatypeConverter.printHexBinary(digest).toLowerCase();
         
-        consultaUsuario = "select usuario, contrasenya from usuario where usuario= " + "'" + user + "'" + "and" + " contrasenya="+ "'" + sha256 + "'";
-            
+        consultaUsuario = "select usuario, contrasenya from usuario where usuario= " + "'" + user + "'" + "and" + " contrasenya="+ "'" + sha256 + "'";  
         
         if (Bd.consultaSelect(conection, consultaUsuario) != null) {
             temp = true;
         }
-
         if (temp == true){     
-        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Perfil.fxml"));
-        ONMC.stage.getScene().setRoot(loader);
-        ONMC.stage.show();
-        
+            Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Perfil.fxml"));
+            ONMC.stage.getScene().setRoot(loader);
+            ONMC.stage.show();
         }
-
-    }
-    
-    @FXML
-    public void btnJugarInvitado(ActionEvent event) throws Exception {
-//        
-//        String consulta = "insert into partida (fecha) values (current_timestamp)";
-//        Bd.consultaModificacion(conection, consulta);
-//        String consultaIdPartida = "select id_partida from partida order by id_partida desc limit 1";
-//        vec = Bd.consultaSelect(conection, consultaIdPartida);
-//        idPar = vec[0][0];
-        
-        Parent loader = FXMLLoader.load(getClass().getResource("Escenas/JuegoPC.fxml"));
-        ONMC.stage.getScene().setRoot(loader);
-        ONMC.stage.show();
-        audioInicio.musicaOff1();
     }
 }

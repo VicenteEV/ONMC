@@ -7,26 +7,28 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.Slider;
 import javafx.scene.control.ToggleButton;
-import javafx.stage.Stage;
-
 
 public class JuegoController {
+    
     @FXML
     Slider volumen;
+    
     @FXML
     ToggleButton plst;
+    
     @FXML
     audio audioJuego;
     
     @FXML
     private boolean TurnoJugA = false;
     private boolean TurnoJugB = false;
+    
+    @FXML
     private int Turno;
     
     @FXML
@@ -37,9 +39,6 @@ public class JuegoController {
     
     @FXML
     private tablajuego pantano1, pantano2;
-  
-    @FXML
-    private Button config, salir;
     
     @FXML
     public Button t1 [];
@@ -121,7 +120,7 @@ public class JuegoController {
         for (int i = 0; i < t1.length; i++) {
             if(temp.equals(t1[i].getId())){
                 if(TurnoJugA==true){
-                    if(pantano1.Casilla(puntoA,turnoA,t1[i],pantano1,vida1,x,y) != 1){
+                    if(pantano1.Casilla(puntoA,turnoA,t1[i],pantano1,vida1,x,y, audioJuego) != 1){
                         CambioTurno();
                     }
                 }                       
@@ -260,7 +259,7 @@ public class JuegoController {
         for (int i = 0; i < t2.length; i++) {
             if(temp.equals(t2[i].getId())){
                 if(TurnoJugB==true){
-                    if(pantano2.Casilla(puntoB,turnoB,t2[i],pantano2,vida2,x,y) != 1){
+                    if(pantano2.Casilla(puntoB,turnoB,t2[i],pantano2,vida2,x,y, audioJuego) != 1){
                         CambioTurno();
                     }
                 }                       

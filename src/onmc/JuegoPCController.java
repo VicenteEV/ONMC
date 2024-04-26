@@ -45,9 +45,6 @@ public class JuegoPCController {
     
     @FXML
     public static tablajuego pantano1, pantano2;
-  
-    @FXML
-    private Button config, salir;
     
     @FXML
     private ProgressBar vida1, vida2;
@@ -127,7 +124,7 @@ public class JuegoPCController {
         for (int i = 0; i < tablita1.length; i++) {
             if(temp.equals(tablita1[i].getId())){
                 if(TurnoJugA==true){
-                    if(pantano1.Casilla(puntoA,turnoA,tablita1[i],pantano1,vida1,x,y) != 1){
+                    if(pantano1.Casilla(puntoA,turnoA,tablita1[i],pantano1,vida1,x,y, audioJuegoPC) != 1){
                         CambioTurno();
                     }
                 }                       
@@ -144,7 +141,7 @@ public class JuegoPCController {
         for (int i = 0; i < tablita2.length; i++) {
             if(boton.equals(tablita2[i].getId())){
                 if(TurnoJugB==true){
-                    if(pantano2.Casilla(puntoB,turnoB,tablita2[i],pantano2,vida2,x,y) != 1) 
+                    if(pantano2.Casilla(puntoB,turnoB,tablita2[i],pantano2,vida2,x,y, audioJuegoPC) != 1) 
                         CambioTurno();
                     else
                         AccionTablaB();

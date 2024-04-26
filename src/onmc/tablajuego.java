@@ -19,6 +19,7 @@ public class tablajuego {
     @FXML
     private Label vUsuario;
     
+    @FXML
     private boolean victoria = false;
     
     public final int[][] TABLA=new int [5][5];
@@ -38,7 +39,6 @@ public class tablajuego {
     public boolean isVictoria() {
         return victoria;
     }
-    
     
     
     public void pantanoPersonas(){
@@ -92,7 +92,7 @@ public class tablajuego {
         return vida.getProgress();
     }
     
-    public int Casilla(Label puntos, Label turnos, Button btn, tablajuego pantano, ProgressBar vida, int x, int y) throws Exception{
+    public int Casilla(Label puntos, Label turnos, Button btn, tablajuego pantano, ProgressBar vida, int x, int y, audio adc) throws Exception{
         Random rnd=new Random ();    
         int temp = 0;
         
@@ -130,37 +130,35 @@ public class tablajuego {
         }
         vida.setProgress(barraVida(vida, x, y));
         puntos.setText(pt + "");
-        finalizarPartida(pt, vida, turno, pantano);
+        finalizarPartida(pt, vida, turno, pantano, adc);
         turnos.setText(turno + "");
         //Thread.sleep(1000);  
         
         return temp;
     }
     
-    public void CambioVictoria () throws Exception{
-        
-        //String consulta = "update partida set victoria = true";
-        //Bd.consultaModificacion(conection, consulta);
-        //vUsuario.setText(InicioController.user);
+    public void CambioVictoria (audio adc) throws Exception{
+       
         Parent loader = FXMLLoader.load(getClass().getResource("Escenas/Victoria.fxml"));
         ONMC.stage.getScene().setRoot(loader);
         ONMC.stage.show();
+        adc.musicaOff2();
     }
     
-    public void finalizarPartida (int x, ProgressBar vida, int turno, tablajuego p) throws Exception{
+    public void finalizarPartida (int x, ProgressBar vida, int turno, tablajuego p, audio adc) throws Exception{
         
         if (vida.getProgress() < 0.33333333333) {
-            CambioVictoria();
+            CambioVictoria(adc);
             String consulta = "update partida set victoria = false";
             Bd.consultaModificacion(conection, consulta);
         }
         if (x >= 750) {
             victoria = true;
-            CambioVictoria();
+            CambioVictoria(adc);
         } 
         if(turno==0){
             
-            CambioVictoria();
+            CambioVictoria(adc);
         }
     }   
 }
