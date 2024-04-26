@@ -26,4 +26,5 @@ primary key (id_Usuario, id_Partida)
 
 alter table usuario rename Contraseña to contrasenya;
 alter table usuario alter contrasenya type varchar(150);
+alter table usuario add column puntuacion int;
 
