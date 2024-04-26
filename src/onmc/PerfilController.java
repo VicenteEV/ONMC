@@ -49,7 +49,7 @@ public class PerfilController {
     @FXML
     public void btnJugar(ActionEvent event) throws Exception {
         
-        audioPerfil.musicaAudio4();
+        audioPerfil.musicaOff4();
         
         String consulta = "insert into partida (fecha) values (current_timestamp)";
         Bd.consultaModificacion(conection, consulta);
@@ -66,7 +66,7 @@ public class PerfilController {
     @FXML
     public void btnJugarSolo(ActionEvent event) throws Exception {
         
-        audioPerfil.musicaAudio4();
+        audioPerfil.musicaOff4();
         
         String consulta = "insert into partida (fecha) values (current_timestamp)";
         Bd.consultaModificacion(conection, consulta);

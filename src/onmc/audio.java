@@ -7,6 +7,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 
 public class audio{
     ToggleButton plst;
@@ -29,8 +30,8 @@ public class audio{
     Media audio4 = new Media(Paths.get("src/audio/cocodrilo.wav").toUri().toString());
     MediaPlayer aud4=new MediaPlayer(audio4);
     
-    
     public void musicaAudio1(){
+        aud1.setOnEndOfMedia(()->{aud1.seek(Duration.ZERO);});
         aud1.play();
         volumen.setValue(aud1.getVolume() * 50);
         volumen.valueProperty().addListener(new InvalidationListener() {
@@ -72,7 +73,7 @@ public class audio{
         volumen.valueProperty().addListener(new InvalidationListener() {
             @Override
             public void invalidated(javafx.beans.Observable observable) {
-                aud1.setVolume(volumen.getValue() / 100);
+                aud3.setVolume(volumen.getValue() / 100);
             } 
         });
         plst.setOnAction(reproductor ->{
@@ -102,7 +103,7 @@ public class audio{
             }
         });
     }
-    
+
     public void musicaOff1(){
         aud1.stop();
     }
